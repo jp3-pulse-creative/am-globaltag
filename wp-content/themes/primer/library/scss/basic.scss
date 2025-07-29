@@ -1,0 +1,418 @@
+// GENERAL
+* {
+    transition: all .6s ease, width 0s, z-index 0s, border 0s;
+}
+
+body {
+    background-color: $bg-color;
+    font-size: $normal-text;
+}
+
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+span,
+button,
+ul,
+li,
+strong,
+small,
+label,
+input,
+select,
+textarea,
+button,
+option,
+ul li {
+    color: $main-color;
+    font-family: $font-family;
+    line-height: 1.3em;
+}
+
+ul {
+    padding-left: 30px;
+}
+
+input,
+select,
+textarea {
+    margin-bottom: 15px;
+    font-size: $normal-text;
+    line-height: 1.1em;
+    padding: 10px;
+    max-width: 100%;
+    outline: none;
+
+    &::placeholder {
+        color: $grey;
+        opacity: 1;
+    }
+}
+
+select {
+
+    font-family: $font-med;
+}
+
+a {
+    text-decoration: none;
+    line-height: 1;
+    outline: none;
+    border: 0;
+    font-size: $small-text;
+    cursor: pointer;
+
+    &:visited {
+        color: initial;
+    }
+
+    &:hover,
+    &:visited:hover,
+    &:visited:focus,
+    &:focus,
+    &:focus-within {
+        color: $hoverblue;
+        text-decoration: none;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+// DEFAULT FONTS
+h1 {
+    font-size: $header-text;
+
+    &.mega {
+        font-size: $mega-text;
+    }
+
+    &.bigger {
+        font-size: $bigger-text;
+    }
+}
+
+h2 {
+    font-size: $large-text;
+}
+
+h3 {
+    font-size: $med-text;
+}
+
+h4 {
+    font-size: $mn-text;
+}
+
+h5 {}
+
+h6 {}
+
+p,
+label {
+    //font-size:$normal-text;
+    font-size: $mn-text;
+    hyphens: none;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-family: $font-light;
+    /*
+    &:last-child{
+        margin-bottom:0;
+    }
+    */
+}
+
+p.last-child {
+    margin-bottom: 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+i {
+    font-family: FontAwesome;
+    transition: none;
+    min-width: 15px;
+    text-align: center;
+    font-style: normal;
+}
+
+.slick-track {
+    transition: none;
+}
+
+//bootstrap maxwidth
+$break-map: (
+    'xxl': $break-xxl,
+    'xl': $break-xl,
+    'lg': $break-lg,
+    'md': $break-md,
+    'sm': $break-sm,
+    'xs': $break-xs,
+);
+
+@each $element, $bp in $break-map {
+    .maxw-#{$element} {
+        @media screen and (max-width:$bp) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+@each $element, $bp in $break-map {
+    .hide-#{$element} {
+        @media screen and (max-width:$bp) {
+            display: none;
+        }
+    }
+}
+
+@mixin margin-addons {
+    @for $i from 0 through 24 {
+        .mrg-b-#{$i*5} {
+            margin-bottom:#{$i*5}px !important;
+        }
+
+        .mrg-t-#{$i*5} {
+            margin-top:#{$i*5}px !important;
+        }
+    }
+}
+
+@include margin-addons;
+
+.block-ctn {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block-1o2 {
+    display: inline-block;
+    width: calc(50% - 30px);
+
+    &:nth-child(2n+1) {
+        margin-right: 30px;
+    }
+
+    &:nth-child(2n+0) {
+        margin-left: 30px;
+    }
+}
+
+.block-1o3 {
+    display: inline-block;
+    width: calc(33% - 20px);
+
+    &:nth-child(3n+1) {
+        margin-right: 20px;
+    }
+
+    &:nth-child(3n+2) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    &:nth-child(3n+0) {
+        margin-left: 20px;
+    }
+}
+
+//plugin overwrites
+.main-navigation ul li a,
+.main-navigation ul li a:visited,
+button,
+a.button,
+a.fl-button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    font-family: $font-light;
+}
+
+//CLASS ADDONS
+.font-light {
+    font-family: $font-light;
+}
+
+.grid {
+    display: grid;
+}
+
+.full-bg {
+    @extend %full-bg;
+}
+
+.clearline {
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.light {
+    font-weight: 100;
+}
+
+.no-border {
+    border: none !important;
+}
+
+.mobile-only,
+.tiny-only {
+    display: none !important;
+}
+
+.flex-ctn {
+    display: flex;
+}
+
+.flex-right {
+    justify-content: flex-end;
+}
+
+.relative {
+    position: relative;
+}
+
+.indent {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.lesser {
+    font-size: $lesser-text;
+}
+
+.normal {
+    font-size: $normal-text;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.capital {
+    text-transform: uppercase;
+}
+
+.tiny {
+    font-size: $tiny-text;
+}
+
+.spaced {
+    letter-spacing: 3px;
+}
+
+.no-mb {
+    margin-bottom: 0 !important;
+}
+
+.centered {
+    text-align: center;
+}
+
+
+.flex-ctn {
+    display: flex;
+}
+
+.grid-ctn {
+    display: grid;
+}
+
+.cta-btn {
+    display: inline-flex;
+
+    .cta-inner {
+        @extend %cta-btn;
+
+
+    }
+
+    // .cta-inner--inverted {
+    //     @extend %cta-btn-inverted;
+
+    // }
+}
+
+.read-btn {
+    @extend %cta-btn-orig;
+    //add some more css here
+}
+
+.old-btn {
+    @extend %cta-btn-orig;
+}
+
+.color-overlay {
+    background-color: $amblue-overlay;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+//CRG STUFF
+
+
+@media screen and (max-width:$break-md) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width:$break-sm) {
+    .tiny-only {
+        display: block !important;
+    }
+}
+
+button:hover,
+button:active,
+button:focus,
+a.button:hover,
+a.button:active,
+a.button:focus,
+a.button:visited:hover,
+a.button:visited:active,
+a.button:visited:focus,
+input[type="button"]:hover,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+    background-color: transparent;
+    border-color: transparent;
+
+    @media (hover:hover) {
+
+        background-color: transparent;
+
+    }
+}

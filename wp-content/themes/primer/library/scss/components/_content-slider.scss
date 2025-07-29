@@ -1,0 +1,94 @@
+.content-slider {
+    margin-top: -165px;
+
+    @media (min-width: 1200px) {
+        margin-top: -232px;
+
+    }
+
+ .carousel-item {
+    height: 580px;
+
+     @media (min-width: 1200px) {
+        height: 670px;
+
+     }
+        .slide-description {
+            margin-top: 200px;
+
+     @media (min-width: 1200px) {
+        margin-top: 300px;
+
+     }
+            background-color: $white;
+            p {
+                font-family: $font-light;
+                font-weight: 300;
+            }
+           }
+
+           .display-3 {
+            font-size: 75px;
+            font-family: $font-57-cd;
+            @extend %absolute-center;
+           //  @extend %text-shadow;
+
+
+         }
+
+         }
+
+
+    .carousel-indicators {
+        top: 1rem; bottom: auto; right: 28px; left: auto; z-index: 9999;padding:0;
+        height: 125px; justify-content: space-between;
+        @media (min-width: 1200px) {
+            height: auto; justify-content: space-between;
+            height: 150px;
+        }
+        li {
+            width: fit-content!important;
+            background-color: transparent;
+            background: transparent;
+            opacity: 1.0;
+            height: auto!important;
+            text-indent: unset!important;
+            font-size: 36px;
+            max-height: 50px;
+
+            span {
+                font-size: 27px;
+                @media (min-width: 1200px) {
+                    font-size: 36px;
+
+                }
+                text-transform: uppercase;
+                color: $white;
+                font-family: $font-57-cd;
+                font-weight: 300;
+                letter-spacing: .03rem;
+                opacity: 1.0;
+                line-height: 36px;
+                transition: all .3s ease;
+            }
+            &.active span {
+                background-color: $gold;
+                padding: .5rem 1rem;
+            }
+            &:not(.active):hover span {
+                // font-weight: bold;
+                // font-family: $font-bold-cd;
+                text-shadow:
+                -.3px -.3px 0 $white,
+                .3px -.3px 0 $white,
+                -.3px .3px 0 $white,
+                .3px .3px 0 $white;
+                // -webkit-transition: all .5s;
+                // -moz-transition: all .5s;
+                // -o-transition: all .5s;
+                // transition: all .5s;
+                letter-spacing: .06rem;
+            }
+        }
+    }
+}

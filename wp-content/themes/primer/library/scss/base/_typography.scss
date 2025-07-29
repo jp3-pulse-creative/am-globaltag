@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'eleganticons';
+    src: url('fonts/ElegantIcons.woff') format('woff'),
+        url('fonts/ElegantIcons.ttf') format('ttf'),
+        url('fonts/ElegantIcons.svg') format('svg'),
+        url('fonts/ElegantIcons.eot') format('eot');
+
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT 53 Extended';
+    src: url('/fonts/Helvetica_LT_53_ExtendedOblique.ttf') format('ttf');
+
+}
+
+.arrow_carrot-left,
+.arrow_carrot-up,
+.arrow_carrot-down,
+.arrow_carrot-right,
+.icon_minus-box,
+.icon_plus-box,
+.social_instagram_square,
+.social_youtube,
+.social_twitter,
+.social_facebook,
+.social_linkedin_square,
+.social_linkedin,
+.icon_phone,
+.icon_mail,
+.icon_pin {
+    font-family: eleganticons;
+    speak: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.arrow_carrot {
+    &::before {
+        position: relative;
+    }
+
+    &-right {
+        &:before {
+            content: "\35";
+        }
+
+    }
+
+    &-left {
+        &:before {
+            content: "\34";
+        }
+
+    }
+
+    &-up {
+        &:before {
+            content: "\32";
+        }
+
+    }
+}
+
+.right-pointing-triangle {
+    position: absolute;
+    font-size: 11px;
+    margin-left: 8px;
+    top: 44%;
+    transform: translateY(-50%);
+
+    &::after {
+        content: "\25B6 \FE0E";
+    }
+}
+
+p {
+    line-height: 2rem;
+
+    &:empty {
+        display: none;
+    }
+
+}
+
+.wysiwyg {
+    p {
+        color: inherit;
+    }
+
+    a,
+    a:visited {
+        color: $brightblue;
+        font-family: inherit;
+        font-size: inherit;
+    }
+
+    a:hover {
+        color: gold;
+    }
+}
+
+.text- {
+    &amblue {
+        color: $amblue;
+    }
+}
+
+button,
+.btn {
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.link-decorate a {
+
+    text-decoration: underline !important;
+}
+
+.link-color-amblue a {
+    color: inherit !important;
+}
+
+@media (hover:hover) {
+
+    .link-hover-brightblue a:hover {
+        color: $brightblue !important;
+    }
+}

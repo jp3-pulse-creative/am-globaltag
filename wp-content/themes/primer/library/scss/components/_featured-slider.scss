@@ -1,0 +1,125 @@
+#featuredSlider {
+
+.carousel-item {
+    height: 60vh;
+
+    overflow: hidden;
+
+    @media (min-width: 992px) {
+        height: 490px;
+
+    }
+    img {
+        min-width: 100%!important;
+        height: 100%!important;
+        position: absolute;
+        @extend %absolute-center;
+        object-fit: cover;
+    }
+}
+    .carousel-caption {
+        position: absolute;
+        @extend %absolute-center;
+        max-width: 782px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1, ul li {
+            color: white;
+        }
+        h1 {
+            font-size: 34px;
+            @media (min-width: 992px) {
+
+            font-size: 50px;
+            margin-top: 60px;
+
+            }
+            font-family: $font-light-cd;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                display: inline-block;
+            }
+        }
+    }
+    .carousel-control-next, .carousel-control-prev, .slider-arrows {
+        opacity: 1.0;
+        position: absolute;
+        list-style: none;
+    }
+    .carousel-control-prev {
+        left: 0;
+        @media (min-width: 1200px) {
+
+        left: calc(50vw - 700px);
+        }
+    }
+    .carousel-control-next {
+        right: 0;
+        @media (min-width: 1200px) {
+
+        right: calc(50vw - 700px);
+        }
+    }
+        .carousel-control-prev-icon {
+            background-image: url("../images/reboot/slider-arrow-left.svg");
+
+        }
+        .carousel-control-next-icon {
+            background-image: url("../images/reboot/slider-arrow-right.svg");
+            &:hover {
+                background-image: url("../images/reboot/slider-arrow-right-hover.svg");
+            }
+        }
+
+        .carousel-control-next-icon, .carousel-control-prev-icon {
+            width: 13px;
+            height: 23px;
+            @media (min-width: 992px) {
+
+            width: 26px;
+            height: 45px;
+            }
+
+        }
+        .carousel-control-prev-icon:hover {
+            background-image: url("../images/reboot/slider-arrow-left-hover.svg");
+
+        }
+
+
+
+        .carousel-control-next-icon:hover {
+            &:hover {
+                background-image: url("../images/reboot/slider-arrow-right-hover.svg");
+            }
+        }
+
+
+
+
+
+
+}
+
+    #featuredSlider {
+        .carousel-item img {
+            background-color: rgba($black, .21);
+            background-blend-mode: multiply;
+        }
+        .gradient {
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right, rgba($black, .67)0%, rgba($black, .1)150%);
+            z-index: 1;
+        }
+    }

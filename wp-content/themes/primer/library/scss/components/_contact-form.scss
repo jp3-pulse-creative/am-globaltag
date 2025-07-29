@@ -1,0 +1,135 @@
+.wpcf7 {
+    max-width: 768px;
+    margin: 0 auto;
+
+    input {
+        padding: 1rem 0;
+
+        font-family: $font-family !important;
+        font-weight: normal !important;
+    }
+
+    select.wpcf7-form-control {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.014' height='6.007' viewBox='0 0 11.014 6.007'%3E%3Cpath id='button_-_arrow_down' data-name='button - arrow down' d='M7.5,17.1l4.8-4.8L7.5,7.5' transform='translate(17.807 -6.793) rotate(90)' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: right 10px top 50%;
+        font-family: $font-family !important;
+        font-weight: normal !important;
+    }
+
+    label,
+    .wpcf7-form-control:not([type="submit"]),
+    .wpcf7-form-control::placeholder {
+        width: 100%;
+        padding-left: 0;
+
+    }
+
+    label,
+    .wpcf7-form-control {
+        text-transform: none !important;
+        color: $amblue !important;
+
+    }
+
+    label::placeholder,
+    .wpcf7-form-control::placeholder,
+    .wpcf7-form-control::placeholder,
+    .wpcf7-form-control.wpcf7-select {
+        text-transform: uppercase !important;
+        color: $amblue !important;
+
+    }
+
+    .wpcf7-form-control[type="submit"] {
+        color: $amblue !important;
+        display: block;
+        margin-left: auto;
+
+    }
+
+    .wpcf7-form-control {
+        background: transparent;
+        box-shadow: none;
+
+    }
+
+    .wpcf7-form-control:not([type="submit"]) {
+        border: none;
+        border-bottom: 1px solid $light-grey;
+
+    }
+
+    .col-10 {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: .024rem;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    &-submit {
+        font-size: 17px;
+        position: relative;
+
+        @media (min-width: 1024px) {
+            font-size: 18px;
+
+        }
+
+        font-family: $font-med;
+
+    }
+
+    button[type=submit],
+    button.wpcf7-submit[type=submit],
+    .wpcf7-submit[type=submit],
+    .wpcf7-form-control[type=submit] {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.431' height='13.05' viewBox='0 0 11.431 13.05'%3E%3Cg id='Polygon_17' data-name='Polygon 17' transform='translate(11.431) rotate(90)' fill='%2300244a'%3E%3Cpath d='M 12.18868160247803 10.93059635162354 L 0.8611325025558472 10.93059635162354 L 6.524907112121582 1.008567810058594 L 12.18868160247803 10.93059635162354 Z' stroke='none'/%3E%3Cpath d='M 6.524907112121582 2.017167091369629 L 1.722283363342285 10.43059635162354 L 11.32753086090088 10.43059635162354 L 6.524907112121582 2.017167091369629 M 6.524907112121582 -3.814697265625e-06 L 13.04981708526611 11.43059635162354 L -2.86102294921875e-06 11.43059635162354 L 6.524907112121582 -3.814697265625e-06 Z' stroke='none' fill='%2300244a'/%3E%3C/g%3E%3C/svg%3E%0A");
+        display: inline-block !important;
+        background-repeat: no-repeat !important;
+        background-position: right center !important;
+        padding-right: 34px !important;
+        -webkit-transition: all .15s ease !important;
+        transition: all .15s ease !important;
+        padding: 0;
+
+        @media (hover:hover) {
+            &:hover {
+
+                color: $brightblue !important;
+
+
+
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.431' height='13.05' viewBox='0 0 11.431 13.05'%3E%3Cg id='Polygon_17' data-name='Polygon 17' transform='translate(11.431) rotate(90)' fill='%230084c7'%3E%3Cpath d='M 12.18868160247803 10.93059635162354 L 0.8611325025558472 10.93059635162354 L 6.524907112121582 1.008567810058594 L 12.18868160247803 10.93059635162354 Z' stroke='none'/%3E%3Cpath d='M 6.524907112121582 2.017167091369629 L 1.722283363342285 10.43059635162354 L 11.32753086090088 10.43059635162354 L 6.524907112121582 2.017167091369629 M 6.524907112121582 -3.814697265625e-06 L 13.04981708526611 11.43059635162354 L -2.86102294921875e-06 11.43059635162354 L 6.524907112121582 -3.814697265625e-06 Z' stroke='none' fill='%230084c7'/%3E%3C/g%3E%3C/svg%3E%0A");
+            }
+
+        }
+    }
+}
+
+.archive-client-stories {
+    #contact-form {
+        &.p--normal {
+            padding-top: 0;
+        }
+
+        margin-top: 0;
+
+        @media (min-width: 992px) {
+            &.p--normal {
+                padding-top: 100px;
+
+            }
+
+            margin-top: 100px;
+
+        }
+    }
+}
+
+.submit-col p {
+    text-align: right;
+}

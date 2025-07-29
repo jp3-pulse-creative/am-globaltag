@@ -1,0 +1,169 @@
+.logo {
+
+    &__baruch-college {
+        width: 151px;
+    }
+
+    &__university-of-illinois-urbana-champaign {
+        width: 231px;
+
+    }
+
+    &__university-of-houston {
+        width: 216px;
+
+    }
+
+    &__university-of-georgia {
+        width: 239px;
+
+    }
+
+    &__brigham-young-university {
+        width: 202px;
+
+    }
+
+    &__binghamton-university {
+        width: 212px;
+
+    }
+
+    &__fairfield-university {
+        width: 194px;
+
+    }
+
+    &__university-of-florida {
+        width: 211px;
+
+    }
+
+    &__csu-northridge {
+        width: 240px;
+
+    }
+
+    &__indiana-university {
+        width: 250px;
+
+    }
+
+    &__the-university-of-texas-at-austin {
+        width: 126px;
+
+    }
+
+    &__ucla {
+        width: 126px;
+
+    }
+}
+
+
+
+
+
+.d-grid {
+    display: grid;
+    gap: 1px; // This creates the space for the borders
+    width: 100%;
+
+    // Default to 1 column
+    grid-template-columns: repeat(1, 1fr);
+
+    .grid-item {
+        height: 220px; // Fixed height
+        background-color: white; // Ensure the background color is set
+        border-bottom: 1px solid #e5e5e5; // Set the border color
+        border-top: none;
+
+        box-sizing: border-box; // Ensure padding and border are included in the element's total width and height
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+
+
+    // At small screens, use 2 columns
+    @media (min-width: 576px) {
+        grid-template-columns: repeat(2, 1fr);
+
+        .grid-item {
+            border: 1px solid #e5e5e5; // Set the border color
+            border-top: none;
+            border-left: none;
+
+            &:nth-child(even) {
+                border-right: none;
+            }
+
+            &:nth-last-child(2) {
+                border-bottom: none;
+            }
+
+        }
+    }
+
+    // At medium screens, use 3 columns
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+
+        .grid-item {
+            border: 1px solid #e5e5e5; // Set the border color
+            border-top: none;
+            border-left: none;
+
+            &:nth-child(even) {
+                border-right: 1px solid #e5e5e5;
+            }
+
+            &:nth-child(3n) {
+                border-right: none;
+            }
+
+            &:nth-last-child(3) {
+                border-bottom: none;
+            }
+
+        }
+    }
+
+    // At large screens, use 4 columns
+    @media (min-width: 992px) {
+        grid-template-columns: repeat(4, 1fr);
+
+
+        .grid-item {
+            border: 1px solid #e5e5e5; // Set the border color
+            border-top: none;
+            border-left: none;
+
+            &:nth-child(even) {
+                border-right: 1px solid #e5e5e5;
+            }
+
+            &:nth-child(3n) {
+                border-right: 1px solid #e5e5e5;
+            }
+
+            &:nth-child(4n) {
+                border-right: none;
+            }
+
+            &:nth-last-child(4) {
+                border-bottom: none;
+            }
+
+        }
+    }
+
+
+
+
+}

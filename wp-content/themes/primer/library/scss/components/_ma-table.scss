@@ -1,0 +1,316 @@
+
+#gta6cc-table1 table {
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+#gta6cc-table1 table td {
+    border: 0px solid white;
+
+}
+
+#gta6cc-table1 table td strong {
+    color: #fff;
+}
+
+#gta6cc-table2 table {
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+#gta6cc-table2 table td {
+    border: 2px solid white;
+}
+
+.gta6cc-hr {
+    border-top: 1px solid #fff;
+    height: 1px;
+    margin: 0px auto;
+}
+
+.gta6cc-cell {
+    padding: 20px;
+}
+
+.gta6cc-title {
+    font-family: $font-light;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 800;
+    text-align: center !important;
+    color: $white;
+    strong {
+        color: $white;
+    }
+}
+
+.gtatt-1 {}
+
+.gtatt-2 {
+    margin-left: -55px;
+}
+
+.gtatt-3 {
+    margin-left: -74px;
+}
+
+.gtatt-4 {
+    margin-left: -104px;
+}
+
+.gtatt-5 {
+    margin-left: -128px;
+}
+
+li.gta6cc-list {
+    font-family: $font-light;
+    font-size: 12px;
+    line-height: 18px;
+    color: #002b49;
+    text-align: left !important;
+    margin: 0px 0px 0px 5px;
+    padding: 0px;
+    font-weight: 100;
+}
+
+.gta6cc-leader1 {
+    background-image: url(../images/reboot/services/table-back1.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    height: 91px;
+}
+
+.gta6cc-leader2 {
+    background-image: url(../images/reboot/services/table-back2.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    height: 91px;
+}
+
+.gta6cc-leader3 {
+    background-image: url(../images/reboot/services/table-back3.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    height: 91px;
+}
+
+.gta6cc-leader4 {
+    background-image: url(../images/reboot/services/table-back4.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    height: 91px;
+}
+
+.gta6cc-leader5 {
+    background-image: url(../images/reboot/services/table-back5.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    height: 91px;
+}
+
+
+#amgt-gta-6cc p {
+    font-family: $font-med;
+    font-family: $font-light;
+    font-size: 14px;
+    line-height: 18px;
+    color: #002b49;
+    text-align: left !important;
+    margin: 0px;
+    padding: 10px 0px 0px 0px;
+    font-weight: 100;
+}
+
+#amgt-gta-6cc h4 {
+    font-family: $font-light;
+    font-size: 16px;
+    color: #002b49;
+    text-align: left;
+    margin: 0px 0px 20px 0px;
+    padding: 0px 0px 0px 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#amgt-gta-6 h4 {
+    font-family: $font-med;
+    font-size: 16px;
+    color: #002b49;
+    text-align: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.amgt-gm-5b-btn {
+    font-family: $font-med;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding: 30px 10px;
+    border: 1px solid #fff;
+    text-align: center;
+    margin: 20px 10px 0px 0px;
+    color: #fff;
+    background-color: #4e8abe;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 20px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.20);
+}
+
+.amgt-gm-5b-btn:hover {
+    color: #fff;
+    background-color: #032c48;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.0);
+}
+
+.amgt-gm-5b-btn-2 {
+    font-family: $font-med;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    padding: 30px 10px;
+    border: 1px solid #fff;
+    text-align: center;
+    margin: 20px 10px 0px 0px;
+    color: #fff;
+    background-color: #4e8abe;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 20px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.20);
+}
+
+.amgt-gm-5b-btn-2:hover {
+    color: #fff;
+    background-color: #032c48;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.0);
+}
+
+.amgt-b5 {
+    background-image: url(../images/reboot/services/gta-img5.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 300px;
+}
+
+.amgt-b6 {
+    background-image: url(../images/reboot/services/gta-img6.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 300px;
+}
+
+.amgt-b7 {
+    background-image: url(../images/reboot/services/gta-img7.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 300px;
+}
+
+.amgt-b8 {
+    background-image: url(../images/reboot/services/gta-img8.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 300px;
+}
+
+.amgt-b9 {
+    background-image: url(../images/reboot/services/gta-img9.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 300px;
+}
+
+.amgt-b10 {
+    background-image: url(../images/reboot/services/gta-img10.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 300px;
+}
+
+.amgt-b11 {
+    background-image: url(../images/reboot/services/gta-img11.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 400px;
+}
+
+.amgt-b12 {
+    background-image: url(../images/reboot/services/gta-img12.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 300px;
+}
+
+.amgt-b13 {
+    background-image: url(../images/reboot/services/gta-img13.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 300px;
+}
+
+.amgt-b14 {
+    background-image: url(../images/reboot/services/gta-img14.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 300px;
+}
+
+.amgt-b15 {
+    background-image: url(../images/reboot/services/gta-img15.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 300px;
+}
+
+.amgt-b16 {
+    background-image: url(../images/reboot/services/gta-img16.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 300px;
+}
+
+
+
+.ma-mobile {
+    font-family: $font-light;
+font-size: 14px;
+line-height: 18px;
+          position: relative;
+    display: inline-block;
+color: #000;
+    margin: 10px 0px 40px 0px !important;
+padding: 0px 0px 0px 0px !important;
+}
+
+.ma-ico {
+    width: 68px;
+    display: inline-block;
+margin: 0px 0px 10px 0px;
+}

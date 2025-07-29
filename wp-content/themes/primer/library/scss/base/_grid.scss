@@ -1,0 +1,99 @@
+body {
+
+overflow-x: hidden;
+}
+.container {
+    max-width: 87.5%;
+
+    &-xl {
+        @media (min-width: 1200px) {
+            max-width: 87.5%;
+        }
+    }
+
+    &-lg c &-md {
+        @media (min-width: 768px) {
+            max-width: 87.5%;
+        }
+    }
+
+    &-sm {
+        @media (min-width: 576px) {
+            max-width: 87.5%;
+        }
+    }
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @media (min-width: 1024px) {
+        max-width: 1140px;
+        width: 85%;
+
+    }
+
+
+}
+
+.hero-image__container {
+    max-width: calc(87.5% - 55px);
+
+    @media (min-width: 1024px) {
+        max-width: 1140px;
+        width: 85%;
+
+    }
+
+}
+
+header {
+    .grid-header {
+        @media (min-width: 1333px) {
+            margin-left: calc(-10% - 30px);
+
+        }
+    }
+}
+
+// .container-fluid {
+//     &.left-edge {
+//        position: absolute;
+//        left: 0;
+//     }
+// }
+
+.col {
+    &-1 {
+        &.narrow {
+            flex: 0 0 5%;
+            max-width: 5%;
+        }
+    }
+
+    @media (min-width: 768px) {
+        &-md-5.forty-two {
+            flex: 0 0 42%;
+            max-width: 42%;
+
+        }
+
+        @media (min-width: 992px) {
+            &-lg-5.forty-two {
+                flex: 0 0 42%;
+                max-width: 42%;
+
+            }
+        }
+
+    }
+}
+.row.mx-flush-30 {
+    margin-left: -30px;
+    margin-right: -30px;
+}

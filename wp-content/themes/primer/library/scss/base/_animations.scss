@@ -1,0 +1,43 @@
+@-webkit-keyframes slideInLeftCustom {
+    100% { width: 82.5%; margin-left: 0;}
+}
+
+@keyframes slideInLeftCustom {
+    100% { width: 82.5%; margin-left: 0;}
+}
+@-webkit-keyframes slideInRightCustom {
+    100% { right: 10%; }
+}
+
+@keyframes slideInRightCustom {
+    100% { right: 10%; }
+}
+@-webkit-keyframes fadeInHero {
+    100% { opacity: 1.0; }
+}
+
+@keyframes fadeInHero {
+    100% { opacity: 1.0;  }
+}
+
+@-webkit-keyframes slideDownNav {
+    0% {top: -150px;  opacity: 1.0;}
+    100% { top: 0;  opacity: 1.0;}
+
+}
+
+@keyframes slideDownNav {
+    0% {top: -150px;  opacity: 1.0;}
+
+    100% { top: 0;   opacity: 1.0;}
+}
+
+// @-webkit-keyframes slideUpNav {
+//     100% { top: -132px;}
+
+// }
+
+// @keyframes slideUpNav {
+//     100% { top: -132px;}
+// }
+

@@ -1,0 +1,414 @@
+/*
+Fade content bs-carousel with hero headers
+Code snippet by maridlcrmn (Follow me on Twitter @maridlcrmn) for Bootsnipp.com
+Image credits: unsplash.com
+*/
+
+/********************************/
+/*       Fade Bs-carousel       */
+/********************************/
+
+.carousel-control {
+  z-index: 99;
+  top:50%;
+  transform:translateY(-50%);
+  height:80px;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0.0001) 0%
+  ) !important;
+}
+.fade-carousel .carousel-indicators > li {
+  margin: 0 6px;
+  background-color: #00254a;
+  border-color: #00254a;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.fade-carousel .carousel-indicators > li.active {
+  width: 10px;
+  height: 10px;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+}
+
+/********************************/
+/*          Hero Headers        */
+/********************************/
+/*
+.hero {
+    position: absolute;
+    top: 260px;
+    left: 32%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+*/
+.hero {
+  position: absolute;
+  top: 150px;
+  left: auto;
+  right: auto;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+.hero-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  /*    text-transform: uppercase;*/
+
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+.hero-2 h2 {
+  font-family: "Helvetica Neue LT W01_65 Md";
+  max-width: 720px;
+  margin-top: 5px;
+  font-style: normal !important;
+  font-size: 40px;
+  letter-spacing: 0px;
+  text-align: center !important;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: capitalize;
+}
+.hero-2 h3 {
+  font-family: "Helvetica Neue LT W01_65 Md";
+  max-width: 720px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-style: normal !important;
+  font-size: 20px;
+  letter-spacing: 0px;
+  text-align: center !important;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-2 p {
+  font-family: "Helvetica Neue LT W01_41488878";
+  max-width: 720px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-style: normal !important;
+  font-size: 20px;
+  letter-spacing: 0px;
+  text-align: center !important;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: capitalize;
+}
+.s1bunker {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-family: 'Helvetica Neue LT W01_65 Md' !important;
+    color: #fff;
+    font-size: 14px;
+}
+
+.fade-carousel .carousel-inner .item .hero,
+.fade-carousel .carousel-inner .item .hero-2 {
+  opacity: 0;
+  -webkit-transition: 2s all ease-in-out 0.1s;
+  -moz-transition: 2s all ease-in-out 0.1s;
+  -ms-transition: 2s all ease-in-out 0.1s;
+  -o-transition: 2s all ease-in-out 0.1s;
+  transition: 2s all ease-in-out 0.1s;
+}
+.fade-carousel .carousel-inner .item.active .hero,
+.fade-carousel .carousel-inner .item.active .hero-2 {
+  opacity: 1;
+  -webkit-transition: 2s all ease-in-out 0.1s;
+  -moz-transition: 2s all ease-in-out 0.1s;
+  -ms-transition: 2s all ease-in-out 0.1s;
+  -o-transition: 2s all ease-in-out 0.1s;
+  transition: 2s all ease-in-out 0.1s;
+}
+
+/********************************/
+/*            Overlay           */
+/********************************/
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #080d15;
+  opacity: 0.7;
+}
+
+/********************************/
+/*          Custom Buttons      */
+/********************************/
+.btn.btn-lg {
+  padding: 10px 40px;
+}
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+  color: #f5f5f5;
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  outline: none;
+  margin: 20px auto;
+}
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+.fade-carousel .slides .slide-1,
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3,
+.fade-carousel .slides .slide-1bunk,
+.fade-carousel .slides .slide-news-1,
+.fade-carousel .slides .slide-news-2,
+.fade-carousel .slides .slide-news-3,
+.fade-carousel .slides .slide-events-1,
+.fade-carousel .slides .slide-events-2,
+.fade-carousel .slides .slide-events-3,
+.fade-carousel .slides .slide-tl-1,
+.fade-carousel .slides .slide-tl-2,
+.fade-carousel .slides .slide-tl-3,
+.fade-carousel .slides .slide-1-m,
+.fade-carousel .slides .slide-2-m,
+.fade-carousel .slides .slide-3-m, 
+.slide-1bunk-m, .fade-carousel .slides .slide-gl-1 {
+  height: 500px;
+  /*  background-size: 100%;*/
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide-1-m,
+.slide-2-m,
+.slide-3-m,
+{
+  display: none;
+}
+.fade-carousel .slides .slide-1 {
+  background-image: url(../../images/am-globaltag-1.jpg);
+}
+.fade-carousel .slides .slide-1bunk {
+  background-image: url(../../images/banner-inthebunker.jpg);
+}
+.fade-carousel .slides .slide-2 {
+  background-image: url(../../images/am-globaltag-2.jpg);
+}
+.fade-carousel .slides .slide-3 {
+  background-image: url(../../images/am-globaltag-3.jpg);
+}
+
+.fade-carousel .slides .slide-news-1 {
+  background-image: url(http://www.am-tag.com/wp-content/uploads/2017/05/ThinkstockPhotos-490581671.jpg);
+}
+
+.fade-carousel .slides .slide-news-2 {
+  background-image: url(http://www.am-tag.com/wp-content/uploads/2017/04/1-lg.jpg);
+}
+
+.fade-carousel .slides .slide-news-3 {
+  background-image: url(http://www.am-tag.com/wp-content/uploads/2017/04/2-lg-1.jpg);
+}
+
+/*
+.fade-carousel .slides .slide-news-1 {
+  background-image: url(http://www.am-tag.com/wp-content/uploads/2017/05/ThinkstockPhotos-490581671.jpg);
+	
+}
+
+.fade-carousel .slides .slide-news-2 {
+  background-image: url(http://www.am-tag.com/wp-content/uploads/2017/04/1-lg.jpg);
+	
+}
+
+.fade-carousel .slides .slide-news-3 {
+ background-image: url(http://www.am-tag.com/wp-content/uploads/2017/04/2-lg-1.jpg);
+	
+}
+*/
+
+.fade-carousel .slides .slide-events-1 {
+  background-image: url(https://www.am-globaltag.com/wp-content/themes/bones/anniversary/images/pes-back.jpg);
+}
+
+.fade-carousel .slides .slide-events-2 {
+  background-image: url(https://www.am-globaltag.com/wp-content/uploads/2019/09/nd-header2.jpg);
+}
+
+.fade-carousel .slides .slide-events-3 {
+  background-image: url(https://www.am-globaltag.com/wp-content/uploads/2019/03/mumbai-back.jpg);
+}
+
+/*
+.fade-carousel .slides .slide-events-1 {
+  background-image: url(http://www.am-tag.com/wp-content/uploads/2017/02/reconnect2017-1.jpg);
+	
+}
+
+.fade-carousel .slides .slide-events-2 {
+  background-image: url(http://www.am-tag.com/wp-content/uploads/2017/02/reconnect2017-1.jpg);
+	
+}
+
+.fade-carousel .slides .slide-events-3 {
+  background-image: url(http://www.am-tag.com/wp-content/uploads/2017/01/153592932.jpg);
+	
+}
+*/
+
+.fade-carousel .slides .slide-tl-1 {
+  background-image: url(https://www.am-globaltag.com/wp-content/uploads/2019/02/03-large.jpg);
+}
+
+.fade-carousel .slides .slide-tl-2 {
+  background-image: url(https://www.am-globaltag.com/wp-content/uploads/2019/02/03-large.jpg);
+}
+
+.fade-carousel .slides .slide-tl-3 {
+  background-image: url(https://www.am-globaltag.com/wp-content/uploads/2019/02/03-large.jpg);
+}
+
+.fade-carousel .slides .slide-press-1 {
+  background-image: url(http://www.am-tag.com/wp-content/uploads/2017/01/ANTag_TL_ChinaHeader.jpg);
+}
+
+.fade-carousel .slides .slide-press-2 {
+  background-image: url(http://www.am-tag.com/wp-content/uploads/2017/02/fig-bg.jpg);
+}
+
+.fade-carousel .slides .slide-press-3 {
+  background-image: url(http://www.am-tag.com/wp-content/uploads/2017/02/healthcare_bg.jpg);
+}
+
+.fade-carousel .slides .slide-gl-1 {
+  background-image: url(../../images/amtag-gl-1.jpg);
+}
+
+.hero h1 {
+  font-size: 6em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin-left: 50%;
+  margin-right: 50%;
+  font-size: 20px;
+  width: 400px !important;
+}
+
+hgroup h4 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15%;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.amt-tag-1a {
+  width: 66%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.amt-tag-2a {
+  width: 40%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -90px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.amt-tag-3a {
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -105px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.amt-tag-4a {
+  width: 66%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -34px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.amt-tag-5a {
+  width: 10%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.carousel-indicators {
+  position: relative !important;
+  bottom: 10px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  padding-left: 0;
+  margin-left: -30%;
+  text-align: center;
+  list-style: none;
+  top: 450px;
+}
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px) {
+  /*    .hero { width: 980px; }    */
+  .hero {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .hero h1 {
+    font-size: 4em;
+  }
+}

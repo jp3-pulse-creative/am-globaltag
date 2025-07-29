@@ -1,0 +1,50 @@
+.our-locations {
+    .short-border {
+        margin-bottom: 60px;
+    }
+
+    &__wrapper {
+        background-color: rgba(0, 133, 202, .34);
+        padding: 2rem 3rem;
+        margin-right: -1rem;
+
+    }
+
+    &__heading {
+        font-family: $font-53-ex;
+        font-size: $normal-text;
+        letter-spacing: .261rem;
+        line-height: 137.5%;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+
+    &__list {
+
+        margin: 0;
+        padding: 0;
+        list-style: none; // Remove default list style
+        counter-reset: custom-counter; // Initialize custom counter
+    }
+
+    &__item {
+        font-family: $font-family;
+        font-size: $mn-text;
+        line-height: 135%;
+        text-transform: uppercase;
+        counter-increment: custom-counter; // Increment custom counter
+        position: relative;
+        margin: 0;
+        padding-left: 2rem; // Add space for the custom counter
+    }
+
+    &__item::before {
+        content: counter(custom-counter); // Display custom counter
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        font-weight: bold;
+    }
+}

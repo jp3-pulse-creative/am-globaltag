@@ -1,0 +1,167 @@
+.become {
+    @media (min-width: 1200px) {
+        .heading__description {
+            max-width: 290px;
+        }
+
+
+    }
+
+    &__team-card-col {
+        @media (min-width: 768px) {
+            aspect-ratio: 372/449;
+
+        }
+    }
+
+    &__member {
+        text-transform: capitalize;
+        font-family: $font-57-cd;
+        font-size: $post-card-title;
+        line-height: 39px;
+    }
+
+    &__card {
+        padding: 0;
+        position: relative;
+        background-blend-mode: multiply;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center 20%;
+        padding: 40px;
+
+
+        .blurb {
+
+            opacity: 0;
+            transition: all 0.3s ease;
+            letter-spacing: -.01rem;
+            color: white;
+            margin-top: auto;
+            top: 2rem;
+
+        }
+
+        @media (hover:hover) {
+            &:hover {
+
+                .blurb {
+                    opacity: 1.0;
+
+                    transition: all 0.3s ease;
+
+                }
+            }
+
+        }
+
+        @media (hover:none) {
+            .blurb {
+                display: none;
+            }
+        }
+
+        &.candidate {
+            &-1 {
+
+                background-image: url("../images/reboot/join-us/campus-recruiting-process.jpg");
+
+                * {
+                    z-index: 4;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 0;
+                    background-color: white;
+
+                    mix-blend-mode: color;
+                    z-index: 1;
+
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    mix-blend-mode: multiply;
+                    background-color: rgba($amblue, .78);
+                    z-index: 2;
+                    transition: all 0.3s ease;
+
+                }
+
+                @media (hover:hover) {
+                    &:hover {
+                        &::after {
+                            background-color: rgba($black, .45);
+
+                        }
+
+                    }
+
+                }
+
+                @media (min-width: 1200px) {
+                    background-position: center;
+                }
+
+            }
+
+            &-2 {
+
+                background-image: url("../images/reboot/join-us/experienced-hire-photo.jpg");
+
+                * {
+                    z-index: 4;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 0;
+                    background-color: white;
+                    mix-blend-mode: color;
+                    z-index: 1;
+
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    mix-blend-mode: multiply;
+                    background-color: rgba(#3884b6, .74);
+                    z-index: 2;
+
+                    transition: all 0.3s ease;
+
+                }
+
+                @media (hover:hover) {
+                    &:hover::after {
+                        background-color: rgba($black, .65);
+
+                    }
+
+                }
+
+            }
+        }
+    }
+}

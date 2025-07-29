@@ -1,0 +1,22 @@
+.cta-banner {
+    &__dig-download {
+        .cta-heading {
+            font-size: 35px;
+            line-height: 49px;
+            font-family: $font-med;
+
+        }
+
+    }
+
+    &__dig-learn-more {
+        .section-title {
+            font-size: 40px;
+            line-height: 40px;
+            font-family: $font-med;
+            text-transform: uppercase;
+
+        }
+
+    }
+}

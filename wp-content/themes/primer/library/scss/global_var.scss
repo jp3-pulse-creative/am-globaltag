@@ -1,0 +1,554 @@
+/* General variables */
+
+$hero-indicator-speed: 1s;
+$hero-indicator-delay: .5s;
+
+$hero-arrow-speed: 1s;
+$hero-arrow-delay: .5s;
+
+$hero-nav-speed: .75s;
+$hero-nav-delay: 0;
+
+//breakpoints - compatible with bootstrap
+//bootstrap actually prefers values to be slightly less than the breakpoint when using max-width instead of min-width
+$break-xxl: 1599.98px;
+$break-xl: 1199.98px;
+$break-lg: 991.98px;
+$break-md: 767.98px;
+$break-sm: 575.98px;
+$break-xs: 479.98px;
+//colors
+$main-color: #002549;
+
+$bg-color: #fff;
+$black: #000;
+$white: #fff;
+$offwhite: #F4F4F4;
+$amblue: $main-color;
+$otherblue: $main-color;
+$hoverblue: #5378A9;
+$amblue-overlay: rgba($main-color, .6);
+$amblue-overlay2: rgba($main-color, .5);
+$amblue-overlay3: rgba($main-color, .9);
+$lightblue-overlay: rgba(83, 120, 169, .89);
+$light-blue-2 : #9AB9D6;
+$light-blue-3 : #ABCDEB;
+$pblue: #7395BC;
+$dark-teal: #29658D;
+$lighter-grey: #f2f2f2;
+$light-grey: #727272;
+$dark-grey: #656363;
+$grey: #B9B9B9;
+$gold: #FBC40A;
+$orange: #D08000;
+$submenu-bg: #3884B6;
+$grey-overlay: rgba(109, 115, 123, .6);
+$midnight-blue : #004777;
+//colors from crg
+$brightblue: #0085ca;
+$tealblue : #4DA8D6;
+//$gold:#FBC40A; COLOR CHANGE
+$gold: #0084C7;
+$purple: #720480;
+$lighter-grey: #F4F4F4;
+$light-grey: #d9d9d9;
+$light-blue: #5795CA;
+$black: #000;
+$white: #fff;
+$otherblue: #00244A;
+$dark-grey: #525252;
+
+
+
+//redesign colors
+$underline-blue: #0084C7;
+
+$gradient-2: linear-gradient(to bottom, rgba($main-color, .56) 0%, rgba($main-color, .0)100%);
+$map_static : #5184B1;
+
+
+$map_hover : #acacac;
+
+//font stuff
+/*
+available fonts from fonts.com
+font-family:'Helvetica Neue LT W05_25 Ult Lt';
+font-family:'Helvetica Neue LT W05_55 Roman';
+font-family:'Helvetica Neue LT W05_65 Medium';
+font-family:'Helvetica Neue LT W05_85 Heavy';
+font-family:'Helvetica Neue LT W05_45 Light';
+font-family:'Helvetica Neue LT W05_46 Lt It';
+font-family:'Helvetica Neue LT W05_35 Thin';
+font-family:'Helvetica Neue LT W05_75 Bold';
+font-family:'Helvetica Neue LT W05_95 Black';
+font-family:'Helvetica Neue LT W05_26UltLtIt';
+font-family:'Helvetica Neue LT W05_36 Th It';
+font-family:'Helvetica Neue LT W05_56 Italic';
+font-family:'Helvetica Neue LT W05_66 Md It';
+font-family:'Helvetica Neue LT W05_76 Bd It';
+font-family:'Helvetica Neue LT W05_86 Hv It';
+font-family:'Helvetica Neue LT W05_96 Blk It';
+font-family:'Helvetica Neue LT W05_27UltLtC';
+font-family:'Helvetica NeueLTW0527UltLtCnOb';
+font-family:'Helvetica Neue LT W05_37 Th Cn';
+font-family:'Helvetica Neue LT W05_37ThCnOb';
+font-family:'Helvetica Neue LT W05_47 Lt Cn';
+font-family:'Helvetica Neue LT W05_47LtCnOb';
+font-family:'Helvetica Neue LT W05_57 Cond';
+font-family:'Helvetica Neue LT W05_57 Cn Obl';
+font-family:'Helvetica Neue LT W05_67 Md Cn';
+font-family:'Helvetica Neue LT W05_67MdCnObl';
+font-family:'Helvetica Neue LT W05_77 Bd Cn';
+font-family:'Helvetica Neue LT W05_77BdCnOb';
+font-family:'Helvetica Neue LT W05_87 Hv Cn';
+font-family:'Helvetica Neue LT W05_87HvCnObl';
+font-family:'Helvetica Neue LT W05_97 Blk C';
+font-family:'Helvetica Neue LT W0597BlkCnObl';
+font-family:'Helvetica Neue LT W05_107XBlkC';
+font-family:'Helvetica NeueLTW05107XBlkCnOb';
+
+*/
+$font-family: "Helvetica Neue LT W05_45 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-light-it: "Helvetica Neue LT W05_46 Lt It", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-light-cd: "Helvetica Neue LT W05_47 Lt Cn", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-light: "Helvetica Neue LT W05_35 Thin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-rom: "Helvetica Neue LT W05_55 Roman", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-rom-it: "Helvetica Neue LT W05_56 Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-med: "Helvetica Neue LT W05_65 Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-med-cd: "Helvetica Neue LT W05_67 Md Cn", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-bold: "Helvetica Neue LT W05_75 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-bold-cd: "Helvetica Neue LT W05_77 Bd Cn", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-67-cd: 'Helvetica Neue LT W05_67 Md Cn', "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$font-57-cd: 'Helvetica Neue LT W05_57 Cond', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-53-ex: 'Helvetica Neue LT 53 Extended', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$tiny-text: 8px;
+$small-text: 10px;
+$lesser-text: 12px;
+$normal-text: 15px;
+$new-normal-text: 16px;
+$mn-text: 20px;
+$tax-text-small: 22px;
+$med-text: 25px;
+$large-text: 30px;
+$header-text: 35px;
+$bigger-text: 50px;
+$mega-text: 70px;
+$post-card-title: 34px;
+
+
+
+//spacing
+$block-padding: 70px 0;
+$vert-pad-xl: 90px;
+$vert-pad-lg: 70px;
+
+@mixin vert-pad($num) {
+    padding-top: $num;
+    padding-bottom: $num;
+}
+
+@mixin horz-pad($num) {
+    padding-left: $num;
+    padding-right: $num;
+}
+
+/* Hover supported check */
+
+@mixin hover-supported {
+
+    /*
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/@media/pointer
+     * coarse: The primary input mechanism includes a pointing device of limited accuracy.
+     */
+    @media not all and (pointer: coarse) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+/* general CSS blocks */
+
+%absolute-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+%absolute-centerX {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+%absolute-centerY {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+%absolute-cancel {
+    top: initial;
+    bottom: initial;
+    left: initial;
+    right: initial;
+    position: relative;
+    transform: initial;
+}
+
+%full-bg {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+%text-box {}
+
+%box-shadow {
+    box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.4);
+}
+
+%box-shadow-soft {
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, .1);
+}
+
+%box-shadow-hard {
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 1);
+}
+
+%text-shadow {
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, .5);
+}
+
+%text-shadow-hard {
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 1);
+}
+
+%thumbnail-img {}
+
+%cta-btn-orig {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 1;
+    background: $amblue;
+    color: $white;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    @extend %box-shadow;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited:hover,
+    &:visited:focus,
+    &:visited:active {
+        background: $hoverblue;
+        color: $white;
+    }
+
+    &:visited {
+        color: $white;
+    }
+}
+
+%link-cond {
+    &:visited {
+        color: $white;
+    }
+
+    &:hover,
+    &:visited:hover,
+    &:visited:focus,
+    &:focus,
+    &:focus-within {
+        color: $hoverblue;
+        text-decoration: none;
+    }
+}
+
+//CRG STUFF
+
+%cta-btn {
+    cursor: pointer;
+    line-height: 1;
+    background: transparent;
+    color: $white;
+    text-transform: uppercase;
+    padding-right: 20px;
+    position: relative;
+    display: block;
+    min-height: 45px;
+    margin-bottom: 5px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        @media (min-width: 991px) {
+            width: 40px;
+
+        }
+
+        top: 0;
+        left: 0;
+        transition: all .3s ease-in-out;
+        background-color: $otherblue;
+    }
+
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited:hover,
+    &:visited:focus,
+    &:visited:active {
+        color: $white;
+    }
+
+    &:visited {
+        color: $white;
+    }
+
+    span {
+        color: $white;
+        z-index: 2;
+
+        &.arrow_carrot-right {
+            width: 30px;
+            font-size: 30px;
+            text-align: center;
+
+            @media (min-width: 991px) {
+                font-size: 45px;
+                width: 45px;
+            }
+
+
+            &::before {
+                background-color: $otherblue;
+            }
+
+        }
+
+        &.btn-label {
+            font-size: $new-normal-text;
+            margin-left: .5rem;
+
+            @media (min-width: 1024px) {
+                margin-left: 1rem;
+
+            }
+
+            position: relative;
+            font-family: $font-53-ex;
+            letter-spacing: .261em;
+
+            &.amblue {
+                color: $amblue;
+
+                @media (max-width: $break-lg) {
+                    color: $white;
+                }
+            }
+        }
+
+    }
+
+    @include hover-supported() {
+        &::before {
+            background-color: $otherblue;
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+
+        }
+
+        span {
+
+
+            &.btn-label {
+
+                &.amblue {
+                    color: $white;
+                }
+            }
+
+        }
+
+    }
+
+    &.cta-inner--inverted {
+        span {
+            color: $white;
+
+            @media (min-width: 991px) {
+                color: $otherblue;
+
+            }
+
+        }
+
+        &:hover {
+            span {
+                color: $white;
+
+            }
+        }
+
+    }
+
+    &.cta-inner--patricia {
+        span {
+            color: $amblue;
+
+            @media (min-width: 991px) {
+                color: $amblue;
+            }
+
+        }
+
+        &::before {
+            background-color: $white;
+        }
+
+        &:hover {
+            span {
+                color: $amblue;
+            }
+
+            &:before {
+                background-color: $white;
+
+            }
+        }
+
+        span.arrow_carrot-right {
+            color: $amblue;
+
+            &::before {
+                background-color: $white;
+            }
+        }
+
+        @include hover-supported() {
+            &::before {
+                background-color: $white;
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+
+            }
+
+        }
+    }
+
+    &.cta-inner--white {
+
+        &::before {
+            background-color: $white;
+            color: $otherblue;
+
+
+        }
+
+        span {
+            color: $otherblue;
+
+            @media (min-width: 991px) {
+                color: $white;
+
+            }
+
+        }
+
+        .arrow_carrot-right {
+            color: $otherblue;
+
+            &::before {
+                background-color: $white;
+
+            }
+        }
+
+        &:hover {
+            &::before {
+                background-color: $white;
+            }
+
+            span {
+                &.btn-label {
+                    color: $otherblue;
+
+
+                }
+
+            }
+
+
+        }
+
+    }
+
+    &.cta-inner--white-purple {
+
+        &::before {
+            background-color: $white;
+            color: $purple;
+
+
+        }
+
+        span {
+            color: $purple;
+
+            @media (min-width: 991px) {
+                color: $white;
+
+            }
+
+        }
+
+        .arrow_carrot-right {
+            color: $purple;
+
+            &::before {
+                background-color: $white;
+
+            }
+        }
+
+        &:hover {
+            &::before {
+                background-color: $white;
+            }
+
+            span {
+                &.btn-label {
+                    color: $purple;
+
+
+                }
+
+            }
+
+
+        }
+
+    }
+
+}

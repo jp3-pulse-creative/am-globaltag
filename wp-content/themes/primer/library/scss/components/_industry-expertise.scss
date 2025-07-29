@@ -1,0 +1,29 @@
+.industry-card {
+    &__content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 3rem;
+    }
+
+    &__title {
+
+        font-family: $font-53-ex;
+        font-size: $normal-text;
+        letter-spacing: .261rem;
+        line-height: 137.5%;
+        text-transform: uppercase;
+        text-align: center;
+        height: 43px;
+
+    }
+
+    .icon-wrap {
+        height: 104px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

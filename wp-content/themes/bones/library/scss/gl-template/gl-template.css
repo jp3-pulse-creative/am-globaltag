@@ -1,0 +1,330 @@
+/* General variables */
+/*
+available fonts from fonts.com
+font-family:'Helvetica Neue LT W05_25 Ult Lt';
+font-family:'Helvetica Neue LT W05_55 Roman';
+font-family:'Helvetica Neue LT W05_65 Medium';
+font-family:'Helvetica Neue LT W05_85 Heavy';
+font-family:'Helvetica Neue LT W05_45 Light';
+font-family:'Helvetica Neue LT W05_46 Lt It';
+font-family:'Helvetica Neue LT W05_35 Thin';
+font-family:'Helvetica Neue LT W05_75 Bold';
+font-family:'Helvetica Neue LT W05_95 Black';
+font-family:'Helvetica Neue LT W05_26UltLtIt';
+font-family:'Helvetica Neue LT W05_36 Th It';
+font-family:'Helvetica Neue LT W05_56 Italic';
+font-family:'Helvetica Neue LT W05_66 Md It';
+font-family:'Helvetica Neue LT W05_76 Bd It';
+font-family:'Helvetica Neue LT W05_86 Hv It';
+font-family:'Helvetica Neue LT W05_96 Blk It';
+font-family:'Helvetica Neue LT W05_27UltLtC';
+font-family:'Helvetica NeueLTW0527UltLtCnOb';
+font-family:'Helvetica Neue LT W05_37 Th Cn';
+font-family:'Helvetica Neue LT W05_37ThCnOb';
+font-family:'Helvetica Neue LT W05_47 Lt Cn';
+font-family:'Helvetica Neue LT W05_47LtCnOb';
+font-family:'Helvetica Neue LT W05_57 Cond';
+font-family:'Helvetica Neue LT W05_57 Cn Obl';
+font-family:'Helvetica Neue LT W05_67 Md Cn';
+font-family:'Helvetica Neue LT W05_67MdCnObl';
+font-family:'Helvetica Neue LT W05_77 Bd Cn';
+font-family:'Helvetica Neue LT W05_77BdCnOb';
+font-family:'Helvetica Neue LT W05_87 Hv Cn';
+font-family:'Helvetica Neue LT W05_87HvCnObl';
+font-family:'Helvetica Neue LT W05_97 Blk C';
+font-family:'Helvetica Neue LT W0597BlkCnObl';
+font-family:'Helvetica Neue LT W05_107XBlkC';
+font-family:'Helvetica NeueLTW05107XBlkCnOb';
+
+*/
+/* general CSS blocks */
+.glm-info-ctn .glm-info-slider .glm-info-slide, .serviceline .serviceline-img {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+/*
+actual styling
+most of it will be copy/pasted from glv3 to fit the appropriate class/element
+*/
+h1.bigger {
+  font-size: 40px; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+
+.page-template-page-global-leadership-template #section-glv6 {
+  margin-top: 30px; }
+
+.glm-info-ctn {
+  margin: 45px 0;
+  position: relative; }
+  .glm-info-ctn .glm-info-slider .slick-list {
+    padding: 0 !important; }
+  .glm-info-ctn .glm-info-slider .glm-info-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 15px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    min-height: 540px;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+    .glm-info-ctn .glm-info-slider .glm-info-slide .col-xs-12 h1, .glm-info-ctn .glm-info-slider .glm-info-slide .col-md-9 h1 {
+      -webkit-transition: opacity .50s ease-in-out;
+      -o-transition: opacity .50s ease-in-out;
+      transition: opacity .50s ease-in-out;
+      color: #fff;
+      font-family: 'Helvetica Neue LT W01_41488878';
+      font-size: 20px;
+      margin-bottom: 40px;
+      text-align: left; }
+    .glm-info-ctn .glm-info-slider .glm-info-slide .col-xs-12 h2, .glm-info-ctn .glm-info-slider .glm-info-slide .col-md-9 h2 {
+      color: #fff;
+      text-align: left; }
+    .glm-info-ctn .glm-info-slider .glm-info-slide .col-xs-12 p, .glm-info-ctn .glm-info-slider .glm-info-slide .col-md-9 p {
+      -webkit-transition: opacity 3.0s ease-in-out;
+      -o-transition: opacity 3.0s ease-in-out;
+      transition: opacity 3.0s ease-in-out;
+      color: #fff;
+      font-family: 'Helvetica Neue LT W01_41488878';
+      font-size: 14px;
+      text-align: left;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      -webkit-hyphens: none;
+      hyphens: none;
+      margin: 0px;
+      padding: 0px 0px 20px 0px; }
+    .glm-info-ctn .glm-info-slider .glm-info-slide .col-xs-12 .sglv4-btn, .glm-info-ctn .glm-info-slider .glm-info-slide .col-md-9 .sglv4-btn {
+      -webkit-transition: opacity 4.0s ease-in-out;
+      -o-transition: opacity 4.0s ease-in-out;
+      transition: opacity 4.0s ease-in-out;
+      color: #fff;
+      font-family: 'Helvetica Neue LT W01_41488878';
+      font-size: 12px;
+      text-align: center;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      -webkit-hyphens: none;
+      hyphens: none;
+      text-transform: uppercase;
+      padding: 5px 20px;
+      margin: 0px 20px 10px 0px;
+      border: solid 1px #fff;
+      width: auto;
+      position: relative;
+      display: block;
+      float: left;
+      background: transparent; }
+    .glm-info-ctn .glm-info-slider .glm-info-slide .col-md-3 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .glm-info-ctn .glm-info-slider .glm-info-slide .col-md-3 .sglv4-cta {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 20px;
+        border-bottom: solid 1px #fff;
+        -ms-flex-line-pack: center;
+        align-content: center; }
+        .glm-info-ctn .glm-info-slider .glm-info-slide .col-md-3 .sglv4-cta img {
+          width: 35px;
+          height: 41px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-item-align: center;
+          align-self: center; }
+        .glm-info-ctn .glm-info-slider .glm-info-slide .col-md-3 .sglv4-cta p {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-transition: none;
+          -o-transition: none;
+          transition: none;
+          color: #fff;
+          font-family: 'Helvetica Neue LT W01_41488878';
+          font-size: 14px;
+          line-height: 16px;
+          text-align: left;
+          margin-left: 15px;
+          padding: 0; }
+  .glm-info-ctn .glm-info-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 70px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+    .glm-info-ctn .glm-info-nav .glm-nav-btn {
+      position: relative;
+      text-indent: 0;
+      width: auto;
+      height: 28px;
+      background-color: transparent;
+      color: #4E8ABE;
+      text-transform: uppercase;
+      margin: 10px 30px 0 0;
+      padding: 0px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 0px;
+      border-bottom: solid 4px transparent;
+      -webkit-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      font-family: 'Helvetica Neue LT W01_65 Md'; }
+      .glm-info-ctn .glm-info-nav .glm-nav-btn.active {
+        color: #fff;
+        border-bottom: solid 4px #fff;
+        border-radius: 0px; }
+
+.glm-team-slider {
+  margin-bottom: 45px; }
+  .glm-team-slider .slick-list {
+    padding: 0 !important; }
+  .glm-team-slider .glm-team-slide .glm-team-head h1 {
+    -webkit-transition: opacity .50s ease-in-out;
+    -o-transition: opacity .50s ease-in-out;
+    transition: opacity .50s ease-in-out;
+    color: #002B49;
+    font-family: 'Helvetica Neue LT W01_41488878';
+    font-size: 20px;
+    text-align: left;
+    text-transform: uppercase; }
+  .glm-team-slider .glm-team-slide .glm-team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -5px; }
+    .glm-team-slider .glm-team-slide .glm-team-list .col-xs-6.col-sm-4.col-md-3 {
+      padding: 0 5px; }
+    .glm-team-slider .glm-team-slide .glm-team-list .glm-profile {
+      float: none;
+      margin-bottom: 10px; }
+      .glm-team-slider .glm-team-slide .glm-team-list .glm-profile .profile-ctn {
+        background: #F2F2F2; }
+        .glm-team-slider .glm-team-slide .glm-team-list .glm-profile .profile-ctn .profile-img {
+          width: 100%;
+          height: auto;
+          max-width: 100%; }
+        .glm-team-slider .glm-team-slide .glm-team-list .glm-profile .profile-ctn .profile-text {
+          padding: 10px 25px; }
+          .glm-team-slider .glm-team-slide .glm-team-list .glm-profile .profile-ctn .profile-text p {
+            color: #002B49;
+            text-align: left;
+            margin: 0px 0px 10px 0;
+            line-height: 18px;
+            height: 38px; }
+          .glm-team-slider .glm-team-slide .glm-team-list .glm-profile .profile-ctn .profile-text .profile-name {
+            font-size: 20px;
+            margin: 10px 0px 14px 0px; }
+          .glm-team-slider .glm-team-slide .glm-team-list .glm-profile .profile-ctn .profile-text .glv4l-btn {
+            margin: 20px 0 0;
+            float: initial; }
+
+#section-glv6 .sglv6-services, #section-glv6 .sglv6-s, #section-glv6 .bluer {
+  height: auto; }
+
+.page-template-page-global-leadership-europe #section-glv6 .sglv6-services, .page-template-page-global-leadership-europe #section-glv6 .sglv6-s, .page-template-page-global-leadership-europe #section-glv6 .bluer {
+  min-height: 350px; }
+  @media screen and (max-width: 767.98px) {
+    .page-template-page-global-leadership-europe #section-glv6 .sglv6-services, .page-template-page-global-leadership-europe #section-glv6 .sglv6-s, .page-template-page-global-leadership-europe #section-glv6 .bluer {
+      min-height: 440px; } }
+
+.serviceline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .serviceline .serviceline-img {
+    min-height: 260px; }
+  .serviceline .serviceline-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 30px 0; }
+    .serviceline .serviceline-content .serviceline-ctn {
+      max-width: 260px; }
+
+/* region specific code blocks */
+#india-codeblock {
+  margin-bottom: 45px; }
+  #india-codeblock h2 {
+    font-family: 'Helvetica Neue LT W01_65 Md';
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase; }
+  #india-codeblock .ie-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    #india-codeblock .ie-list a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 200px;
+      height: 78px;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 10px;
+      border: 1px solid #4E8ABE;
+      background: #4E8ABE;
+      color: #fff;
+      font-family: 'Helvetica Neue LT W01_65 Md';
+      font-size: 18px;
+      line-height: 20px;
+      text-align: center; }
+      #india-codeblock .ie-list a:hover {
+        color: #4E8ABE;
+        background: transparent; }

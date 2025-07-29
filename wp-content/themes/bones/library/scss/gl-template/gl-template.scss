@@ -1,0 +1,466 @@
+/* General variables */
+
+//breakpoints - compatible with bootstrap
+//bootstrap actually prefers values to be slightly less than the breakpoint when using max-width instead of min-width
+$break-xxl: 1599.98px;
+$break-xl: 1199.98px;
+$break-lg: 991.98px;
+$break-tag:768px;
+$break-md: 767.98px;
+$break-sm: 575.98px;
+$break-xs: 479.98px;
+//colors
+$bg-color:#fff;
+$black:#000;
+$main-color:#012A49;
+$white:#fff;
+$offwhite:#F4F4F4;
+$amblue:#012A49;
+$newblue:#002b49;
+$otherblue:#00244A;
+$hoverblue:#5378A9;
+$amblue-overlay:rgba(1,42,73,.6);
+$amblue-overlay2:rgba(1,42,73,.5);
+$amblue-overlay3:rgba(1,42,73,.9);
+$lightblue-overlay:rgba(83,120,169,.89);
+$pblue:#7395BC;
+$light-grey:#727272;
+$dark-grey:#656363;
+$grey:#B9B9B9;
+$gold:#FBC40A;
+$orange:#D08000;
+$submenu-bg:#3884B6;
+$grey-overlay:rgba(109,115,123,.6);
+//font stuff
+/*
+available fonts from fonts.com
+font-family:'Helvetica Neue LT W05_25 Ult Lt';
+font-family:'Helvetica Neue LT W05_55 Roman';
+font-family:'Helvetica Neue LT W05_65 Medium';
+font-family:'Helvetica Neue LT W05_85 Heavy';
+font-family:'Helvetica Neue LT W05_45 Light';
+font-family:'Helvetica Neue LT W05_46 Lt It';
+font-family:'Helvetica Neue LT W05_35 Thin';
+font-family:'Helvetica Neue LT W05_75 Bold';
+font-family:'Helvetica Neue LT W05_95 Black';
+font-family:'Helvetica Neue LT W05_26UltLtIt';
+font-family:'Helvetica Neue LT W05_36 Th It';
+font-family:'Helvetica Neue LT W05_56 Italic';
+font-family:'Helvetica Neue LT W05_66 Md It';
+font-family:'Helvetica Neue LT W05_76 Bd It';
+font-family:'Helvetica Neue LT W05_86 Hv It';
+font-family:'Helvetica Neue LT W05_96 Blk It';
+font-family:'Helvetica Neue LT W05_27UltLtC';
+font-family:'Helvetica NeueLTW0527UltLtCnOb';
+font-family:'Helvetica Neue LT W05_37 Th Cn';
+font-family:'Helvetica Neue LT W05_37ThCnOb';
+font-family:'Helvetica Neue LT W05_47 Lt Cn';
+font-family:'Helvetica Neue LT W05_47LtCnOb';
+font-family:'Helvetica Neue LT W05_57 Cond';
+font-family:'Helvetica Neue LT W05_57 Cn Obl';
+font-family:'Helvetica Neue LT W05_67 Md Cn';
+font-family:'Helvetica Neue LT W05_67MdCnObl';
+font-family:'Helvetica Neue LT W05_77 Bd Cn';
+font-family:'Helvetica Neue LT W05_77BdCnOb';
+font-family:'Helvetica Neue LT W05_87 Hv Cn';
+font-family:'Helvetica Neue LT W05_87HvCnObl';
+font-family:'Helvetica Neue LT W05_97 Blk C';
+font-family:'Helvetica Neue LT W0597BlkCnObl';
+font-family:'Helvetica Neue LT W05_107XBlkC';
+font-family:'Helvetica NeueLTW05107XBlkCnOb';
+
+*/
+$font-family: "Helvetica Neue LT W05_45 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-tag: 'Helvetica Neue LT W01_41488878', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+$font-light-it: "Helvetica Neue LT W05_46 Lt It", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-light-cd: "Helvetica Neue LT W05_47 Lt Cn", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-light: "Helvetica Neue LT W05_35 Thin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-rom: "Helvetica Neue LT W05_55 Roman", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-rom-it: "Helvetica Neue LT W05_56 Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-med: "Helvetica Neue LT W05_65 Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-med-cd: "Helvetica Neue LT W05_67 Md Cn", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-bold: "Helvetica Neue LT W05_75 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-bold-cd:"Helvetica Neue LT W05_77 Bd Cn", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$tiny-text:8px;
+$small-text:10px;
+$lesser-text:12px;
+$normal-text:15px;
+$mn-text: 20px;
+$med-text:25px;
+$large-text:30px;
+$header-text:35px;
+$bigger-text:50px;
+$mega-text:70px;
+//spacing
+$block-padding: 70px 0;
+$vert-pad-xl: 90px;
+$vert-pad-lg: 70px;
+
+@mixin vert-pad($num) {
+    padding-top:$num;
+    padding-bottom:$num;
+}
+@mixin horz-pad($num){
+    padding-left:$num;
+    padding-right:$num;
+}
+
+/* general CSS blocks */
+
+%absolute-center{
+    position:absolute;
+    left:50%;
+    top:50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+%absolute-centerX{
+    position:absolute;
+    left:50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+%absolute-centerY{
+    position:absolute;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+%absolute-cancel{
+    top:initial;
+    bottom:initial;
+    left:initial; 
+    right:initial;
+    position:relative;
+    transform:initial;
+}
+%full-bg{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center center;
+}
+%text-box{
+
+}
+%box-shadow{
+    box-shadow: 1px 3px 6px 0px rgba(0,0,0,0.4);
+}
+%box-shadow-hard{
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,1);
+}
+%text-shadow{
+    text-shadow: 0px 3px 6px rgba(0,0,0,.5);
+}
+%text-shadow-hard{
+    text-shadow: 1px 2px 6px rgba(0,0,0,1);
+}
+%thumbnail-img{
+
+}
+%cta-btn{
+    display:inline-block;
+    cursor:pointer;
+    line-height:1;
+    background:$amblue;
+    color:$white;
+    text-transform:uppercase;
+    padding:10px 25px;
+    @extend %box-shadow;
+    &:hover,&:active,&:focus, &:visited:hover, &:visited:focus, &:visited:active{
+        background:$hoverblue;
+        color:$white;
+    }
+    &:visited{
+        color:$white;
+    }
+}
+%link-cond{
+    &:visited {
+        color:$white;
+    }
+    &:hover,&:visited:hover, &:visited:focus, &:focus, &:focus-within{
+        color:$hoverblue;
+        text-decoration:none;
+    }
+}
+
+/*
+actual styling
+most of it will be copy/pasted from glv3 to fit the appropriate class/element
+*/
+
+h1.bigger{
+    font-size:40px;
+}
+.flex{
+    display:flex;
+}
+.flex-end{
+    display:flex;
+    align-items:flex-end;
+}
+.page-template-page-global-leadership-template{
+    #section-glv6{
+        margin-top:30px;
+    }
+}
+
+.glm-info-ctn{
+    margin:45px 0;
+    position:relative;
+    .glm-info-slider{
+        .slick-list{
+            padding:0 !important;
+        }
+        .glm-info-slide{
+            display:flex;
+            padding: 15px;
+            flex-wrap:wrap;
+            min-height:540px;
+            align-items:flex-end;
+            @extend %full-bg;
+            .col-xs-12, .col-md-9{
+                h1{
+                    transition: opacity .50s ease-in-out;
+                    color: #fff;
+                    font-family: 'Helvetica Neue LT W01_41488878';
+                    font-size: 20px;
+                    margin-bottom:40px;
+                    text-align: left;
+                }
+                h2{
+                    color:#fff;
+                    text-align:left;
+                }
+                p{
+                    transition: opacity 3.0s ease-in-out;
+                    color: #fff;
+                    font-family: 'Helvetica Neue LT W01_41488878';
+                    font-size: 14px;
+                    text-align: left;
+                    -moz-hyphens: none;
+                    -ms-hyphens: none;
+                    -webkit-hyphens: none;
+                    hyphens: none;
+                    margin: 0px;
+                    padding: 0px 0px 20px 0px;
+                }
+                a{
+
+                }
+                .sglv4-btn{
+                    transition: opacity 4.0s ease-in-out;
+                    color: #fff;
+                    font-family: 'Helvetica Neue LT W01_41488878';
+                    font-size: 12px;
+                    text-align: center;
+                    -moz-hyphens: none;
+                    -ms-hyphens: none;
+                    -webkit-hyphens: none;
+                    hyphens: none;
+                    text-transform: uppercase;
+                    padding: 5px 20px;
+                    margin: 0px 20px 10px 0px;
+                    border: solid 1px #fff;
+                    width: auto;
+                    position: relative;
+                    display: block;
+                    float: left;
+                    background: transparent;
+                }
+            }
+            .col-md-3{
+                display: flex;
+                align-content: center;
+                flex-wrap: wrap;
+                .sglv4-cta{
+                    display:flex;
+                    padding:20px;
+                    border-bottom: solid 1px #fff;
+                    align-content:center;
+                    img{
+                        width: 35px;
+                        height: 41px;
+                        display: flex;
+                        align-self: center;
+                    }
+                    p{
+                        display:flex;
+                        align-items:center;
+                        transition:none;
+                        color: #fff;
+                        font-family: 'Helvetica Neue LT W01_41488878';
+                        font-size: 14px;
+                        line-height: 16px;
+                        text-align: left;
+                        margin-left: 15px;
+                        padding:0;
+                    }
+                }
+            }
+        }
+    }
+    .glm-info-nav{
+        display:flex;
+        flex-wrap:wrap;
+        width:100%;
+        margin-top:70px;
+        align-items:center;
+        justify-content:flex-start;
+        .glm-nav-btn{
+            position: relative;
+            text-indent: 0;
+            width: auto;
+            height: 28px;
+            background-color: transparent;
+            color: #4E8ABE;
+            text-transform: uppercase;
+            margin: 10px 30px 0 0;
+            padding: 0px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 0px;
+            border-bottom: solid 4px transparent;
+            transition: all 0.4s ease;
+            font-family: 'Helvetica Neue LT W01_65 Md';
+            &.active{
+                color: #fff;
+                border-bottom: solid 4px #fff;
+                border-radius: 0px;
+            }   
+        }
+    }
+}
+
+.glm-team-slider{
+    margin-bottom:45px;
+    .slick-list{
+        padding: 0 !important;
+    }
+    .glm-team-slide{
+        .glm-team-head{
+            h1{
+                transition: opacity .50s ease-in-out;
+                color: #002B49;
+                font-family: 'Helvetica Neue LT W01_41488878';
+                font-size: 20px;
+                text-align: left;
+                text-transform: uppercase;
+            }
+        }
+        .glm-team-list{
+            display:flex;
+            flex-wrap:wrap;
+            margin:0 -5px;
+            .col-xs-6.col-sm-4.col-md-3{
+                padding:0 5px;
+            }
+            .glm-profile{
+                float:none;
+                margin-bottom:10px;
+                .profile-ctn{
+                    background:#F2F2F2;
+                    .profile-img{
+                        width:100%;
+                        height:auto;
+                        max-width:100%;
+                    }
+                    .profile-text{
+                        padding:10px 25px;   
+                        p{
+                            color: #002B49;
+                            text-align: left;
+                            margin: 0px 0px 10px 0;
+                            line-height: 18px;
+                            height:38px;
+                        }
+                        .profile-name{
+                            font-size: 20px;
+                            margin: 10px 0px 14px 0px;
+                        }
+                        .profile-title{
+
+                        }
+                        .glv4l-btn{
+                            margin:20px 0 0;
+                            float:initial;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#section-glv6 .sglv6-services, #section-glv6 .sglv6-s, #section-glv6 .bluer{
+    height:auto;
+}
+
+.page-template-page-global-leadership-europe #section-glv6{
+    .sglv6-services, .sglv6-s, .bluer{
+        min-height:350px;
+        @media screen and (max-width:$break-md){
+            min-height:440px;
+        }
+    }
+}
+
+.serviceline{
+    display:flex;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+    .serviceline-img{
+        @extend %full-bg;
+        min-height:260px;
+    }
+    .serviceline-content{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding:30px 0;
+        .serviceline-ctn{
+            max-width:260px;
+        }
+    }
+}
+
+
+/* region specific code blocks */
+
+#india-codeblock{
+    margin-bottom:45px;
+    h2{
+        font-family: 'Helvetica Neue LT W01_65 Md';
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .ie-list{
+        display:flex;
+        justify-content:space-between;
+        flex-wrap:wrap;
+        a{
+            display:flex;
+            width:200px;
+            height:78px;
+            justify-content:center;
+            align-items:center;
+            margin-bottom:10px;
+
+            border:1px solid #4E8ABE;
+            background:#4E8ABE;
+            color:#fff;
+            font-family: 'Helvetica Neue LT W01_65 Md';
+            font-size: 18px;
+            line-height:20px;
+            text-align: center;
+            &:hover{
+                color:#4E8ABE;
+                background:transparent;
+            }
+        }
+    }
+}

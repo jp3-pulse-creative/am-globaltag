@@ -1,0 +1,66 @@
+/*
+Error: File to import not found or unreadable: partials/normalize.
+       Load paths:
+         /Users/monicaalvarez-mitchell/Documents/=sitesPrimary=/am-globaltag
+         /Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/compass-core-1.0.3/stylesheets
+         Compass::SpriteImporter
+        on line 20 of /Users/monicaalvarez-mitchell/Documents/=sitesPrimary=/am-globaltag/wp-content/themes/bones/library/scss/editor-style.scss
+
+15: /* Wrap the entire post style inside the TinyMCE selector, as suggested
+16: here http://codex.wordpress.org/Function_Reference/add_editor_style *\/
+17: body#tinymce.wp-editor {
+18: 
+19: 	// normalize: http://necolas.github.io/normalize.css/
+20: 	@import "partials/normalize";
+21: 
+22: 	// Sass variables
+23: 	@import "partials/variables";
+24: 
+25: 	// typography
+
+Backtrace:
+/Users/monicaalvarez-mitchell/Documents/=sitesPrimary=/am-globaltag/wp-content/themes/bones/library/scss/editor-style.scss:20
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/import_node.rb:44:in `import'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/check_nesting.rb:108:in `rescue in invalid_import_parent?'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/check_nesting.rb:101:in `invalid_import_parent?'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/check_nesting.rb:171:in `try_send'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/check_nesting.rb:14:in `visit'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/check_nesting.rb:51:in `visit_children'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:38:in `visit'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/check_nesting.rb:17:in `visit'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/check_nesting.rb:51:in `visit_children'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/check_nesting.rb:59:in `visit_root'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/check_nesting.rb:17:in `visit'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:24:in `visit'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/root_node.rb:35:in `css_tree'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/tree/root_node.rb:20:in `render'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/bin/compass:37:in `load'
+/Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/bin/compass:37:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: partials/normalize.\A        Load paths:\A          /Users/monicaalvarez-mitchell/Documents/=sitesPrimary=/am-globaltag\A          /Applications/Adobe Dreamweaver CC 2019/Adobe Dreamweaver CC 2019.app/Contents/Resources/gems/rubygems/gems/compass-core-1.0.3/stylesheets\A          Compass::SpriteImporter\A         on line 20 of /Users/monicaalvarez-mitchell/Documents/=sitesPrimary=/am-globaltag/wp-content/themes/bones/library/scss/editor-style.scss\A \A 15: /* Wrap the entire post style inside the TinyMCE selector, as suggested\A 16: here http://codex.wordpress.org/Function_Reference/add_editor_style */\A 17: body#tinymce.wp-editor {\A 18: \A 19: 	// normalize: http://necolas.github.io/normalize.css/\A 20: 	@import \"partials/normalize\";\A 21: \A 22: 	// Sass variables\A 23: 	@import \"partials/variables\";\A 24: \A 25: 	// typography"; }

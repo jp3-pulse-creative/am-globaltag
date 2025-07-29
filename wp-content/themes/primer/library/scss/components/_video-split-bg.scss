@@ -1,0 +1,49 @@
+.bg__split-bottom {
+    p:only-child {
+        margin-bottom: 0;
+    }
+
+    .hero-row.p--normal {
+        padding-bottom: 0;
+
+        @media (min-width: 992px) {
+            padding-bottom: 100px;
+
+        }
+    }
+
+    .container-lg {
+        max-width: 100%;
+        width: 100%;
+
+    }
+
+    @media (min-width: 1200px) {
+        .container-lg {
+            max-width: 1140px;
+            width: 87.5%;
+        }
+
+
+
+    }
+
+    &.bottom-image {
+        &::before {
+            @media not all and (pointer: coarse) {
+                background-attachment: fixed;
+
+            }
+
+        }
+    }
+
+    .play-button {
+        left: 0;
+        bottom: 0;
+    }
+
+    .video-bg-cover:hover .play-button #Polygon_1 {
+        fill: $brightblue;
+    }
+}

@@ -1,0 +1,440 @@
+  .service-tabs {
+      .tab {
+          flex: 0 0 auto;
+          width: 100%;
+
+          max-height: 90px;
+          height: 90px;
+          padding: 1.5rem .5rem 1rem;
+          color: white;
+          margin-top: 0;
+          margin-bottom: 0;
+          font-size: 21px;
+          letter-spacing: .43px;
+          transition: all .4s ease;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+
+          &.fade-blue {
+              background-color: $otherblue !important;
+              color: #1A4879 !important;
+
+              svg path {
+                  fill: #1A4879 !important;
+              }
+          }
+
+          @media (min-width: 768px) {
+              width: 33.333333%;
+              max-width: 376.13px;
+
+          }
+
+          &__lighter-gray {
+              background-color: $lighter-grey;
+
+              @media (hover:hover) {
+                  &:hover {
+                      background-color: white;
+                      color: $amblue;
+                  }
+
+              }
+
+              &.fade-blue {
+                  svg path {
+                      fill: #1A4879 !important;
+                  }
+              }
+          }
+
+          &__bright-blue {
+              background-color: $brightblue;
+
+              @media (hover:hover) {
+                  &:hover {
+                      background-color: white;
+                      color: $amblue;
+                  }
+
+              }
+          }
+
+          &__midnight-blue {
+              background-color: $midnight-blue;
+
+              @media (hover:hover) {
+                  &:hover {
+                      background-color: white;
+                      color: $amblue;
+                  }
+
+              }
+          }
+
+          &__purple {
+              background-color: $purple;
+
+              @media (hover:hover) {
+                  &:hover {
+                      background-color: white;
+                      color: $amblue;
+                  }
+
+              }
+          }
+
+          .caret-down {
+              width: 19.716px;
+              height: 12.049px;
+
+              //   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19.716' height='12.049' viewBox='0 0 19.716 12.049'%3E%3Cpath id='Path_48041' data-name='Path 48041' d='M21.128,24.106l7.666-7.666,2.192,2.192-9.858,9.858L11.27,18.632l2.192-2.192Z' transform='translate(-11.27 -16.44)' fill='%23fff'/%3E%3C/svg%3E%0A");
+              //   background-repeat: no-repeat;
+              //   background-size: contain;
+              svg {
+                  display: block;
+              }
+
+              svg * {
+                  transition: all .4s ease;
+              }
+
+
+          }
+
+          @media (hover:hover) {
+              &:hover .caret-down {
+                  //   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19.716' height='12.049' viewBox='0 0 19.716 12.049'%3E%3Cpath id='Path_48038' data-name='Path 48038' d='M21.128,24.106l7.666-7.666,2.192,2.192-9.858,9.858L11.27,18.632l2.192-2.192Z' transform='translate(-11.27 -16.44)' fill='%2300244a'/%3E%3C/svg%3E%0A");
+
+                  //   svg path {
+                  //       fill: $amblue;
+                  //   }
+              }
+
+          }
+
+
+      }
+
+      .tab-panel {
+          height: 0;
+          transition: all .4s ease;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &.open {
+              height: 580px;
+
+              @media (min-width: 768px) {
+                  height: 345px;
+              }
+
+
+          }
+
+          ul {
+              li {
+                  color: white;
+                  font-size: $mn-text;
+
+                  &:not(:last-child) {
+                      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                      padding-bottom: 1rem;
+                      margin-bottom: 1rem;
+                  }
+
+
+
+              }
+          }
+
+          .left {
+              ul {
+                  li {
+
+                      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                      padding-bottom: 1rem;
+                      margin-bottom: 1rem;
+
+                      @media (min-width: 768px) {
+                          &:last-child {
+                              border-bottom: none;
+
+                          }
+
+                      }
+
+                  }
+              }
+
+          }
+
+          &#buy-side .left ul li:first-child {
+              @media (min-width: 768px) {
+                  padding-bottom: 2.6rem;
+
+              }
+          }
+
+          &.bg-lighter-gray {
+              ul li:not(:last-child) {
+                  border-color: rgba($amblue, .2)
+              }
+          }
+
+
+      }
+
+      &--4 {
+          @media (min-width: 768px) {
+              &#ctg__service-tabs {
+                  margin-top: -304px;
+              }
+          }
+
+          @media (min-width: 837px) {
+              &#ctg__service-tabs {
+                  margin-top: -239px;
+              }
+
+          }
+
+          .tab {
+              font-size: 14px;
+              line-height: 18px;
+
+              @media (min-width: 992px) {
+                  font-size: 18px;
+                  line-height: 20px;
+              }
+
+              letter-spacing: .4px;
+              padding-top: 1rem;
+
+              @media (min-width: 768px) {
+                  width: 25%;
+                  max-width: 210.62px;
+
+              }
+
+              @media (min-width: 1200px) {
+                  max-width: 280.62px;
+
+              }
+
+              .caret-down {
+                  margin-top: .5rem;
+              }
+
+              &__lighter-gray {
+                  background-color: $lighter-grey;
+                  color: $amblue;
+
+                  svg path {
+                      fill: $amblue;
+                  }
+
+                  @media (hover:hover) {
+                      &:hover {
+                          background-color: $lighter-grey;
+                          color: $amblue;
+                      }
+
+                  }
+              }
+
+              &__bright-blue {
+                  background-color: $brightblue;
+
+                  @media (hover:hover) {
+                      &:hover {
+                          background-color: $brightblue;
+                          color: white;
+                      }
+
+                  }
+              }
+
+              &__midnight-blue {
+                  background-color: $midnight-blue;
+
+                  @media (hover:hover) {
+                      &:hover {
+                          background-color: $midnight-blue;
+                          color: white;
+                      }
+
+                  }
+              }
+
+              &__purple {
+                  background-color: $purple;
+
+                  @media (hover:hover) {
+                      &:hover {
+                          background-color: $purple;
+                          color: white;
+                      }
+
+                  }
+              }
+          }
+
+          .tab-panel.bg-lighter-gray {
+
+
+              ul {
+                  li {
+                      color: $amblue;
+
+
+
+
+                  }
+              }
+
+              .left {
+                  ul {
+                      li {
+
+                          border-bottom: 1px solid rgba($amblue, 0.2);
+                          padding-bottom: 1rem;
+                          margin-bottom: 1rem;
+
+                          @media (min-width: 768px) {
+                              &:last-child {
+                                  border-bottom: none;
+
+                              }
+
+                          }
+
+                      }
+                  }
+
+              }
+
+
+
+
+
+
+          }
+
+          .tab-panel.bg-lighter-gray {
+
+
+              ul {
+                  li {
+                      color: $amblue;
+
+
+
+
+                  }
+              }
+
+
+
+
+
+
+          }
+
+          #m-a-strategy {
+              &.open {
+                  height: 480px;
+
+                  @media (min-width: 768px) {
+                      height: 380px;
+                  }
+
+                  @media (min-width: 992px) {
+                      height: 332px;
+                  }
+
+              }
+
+          }
+
+          #pre-deal {
+              &.open {
+                  height: 540px;
+
+                  @media (min-width: 768px) {
+                      height: 360px;
+                  }
+
+                  @media (min-width: 992px) {
+                      height: 310px;
+                  }
+
+
+              }
+          }
+
+          #t-planning {
+              &.open {
+                  height: 650px;
+
+                  @media (min-width: 768px) {
+                      height: 412px;
+                  }
+
+                  @media (min-width: 992px) {
+                      height: 364px;
+                  }
+
+
+              }
+          }
+
+          #value {
+              &.open {
+                  height: 362px;
+
+                  @media (min-width: 768px) {
+                      height: 322px;
+                  }
+
+                  @media (min-width: 992px) {
+                      height: 250px;
+                  }
+
+              }
+          }
+
+          .tab-panel.bg-lighter-gray {
+
+
+              ul {
+                  li {
+                      color: $amblue;
+
+
+
+
+                  }
+              }
+
+              &.open {
+                  height: 480px;
+
+                  @media (min-width: 768px) {
+                      height: 345px;
+                  }
+
+
+              }
+
+
+
+
+          }
+      }
+  }

@@ -1,0 +1,22 @@
+.two-col-content-slider {
+    .slide-content-left {
+        &__heading {
+            font-size: 30px;
+            line-height: 44px;
+            font-family: $font-57-cd;
+            letter-spacing: .022rem;
+            color: $brightblue;
+            text-transform: uppercase;
+        }
+    }
+
+    .slide-content-right {
+        &__heading {
+            font-size: 20px;
+            line-height: 26px;
+            font-family: $font-bold;
+            color: $amblue;
+            text-transform: none;
+        }
+    }
+}
