@@ -397,6 +397,32 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
 </script>
+
+<?php $uri = $_SERVER['REQUEST_URI'];
+
+$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+
+$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+if (strpos($url, 'pulsecreative-clients.com') !== false) { ?>
+<!-- put userback here -->
+<script>
+  window.Userback = window.Userback || {};
+  Userback.access_token = "P-zIIzZiz63lYYZwb1lTLqzcKcE";
+  // identify your logged-in users (optional)
+  Userback.user_data = {
+    id: "123456", // example data
+    info: {
+      name: "someone", // example data
+      email: "someone@example.com" // example data
+    }
+  };
+  (function(d) {
+    var s = d.createElement('script');s.async = true;s.src = 'https://static.userback.io/widget/v1.js';(d.head || d.body).appendChild(s);
+  })(document);
+</script>
+
+<?php } ?>
 </body>
 
 </html> <!-- close that html tag -->
