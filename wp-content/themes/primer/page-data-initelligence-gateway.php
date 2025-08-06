@@ -37,7 +37,6 @@ get_header(); ?>
                 <div class="col-12 px-0">
                     <div class="videoWrap">
                         <?php echo get_field('video_url'); ?>
-
                     </div>
                 </div>
 
