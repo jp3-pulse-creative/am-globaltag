@@ -3,7 +3,7 @@
 
 */
 get_header(); ?>
-<div id="digital-intelligence-gateway" class="wrapper">
+<div id="digital-intelligence-gateway">
 
     <div class="hero-row">
         <div class="row">
@@ -419,7 +419,7 @@ get_header(); ?>
 
     </div>
 
-    <div id="dig-team" class="dig-team pepi-row mb-0">
+    <?php /* <div id="dig-team" class="dig-team pepi-row mb-0">
         <div class="container">
             <div class="row">
                 <div class="col-12 px-0 col-lg-6 d-flex align-items-start align-items-md-end order-2 order-lg-1">
@@ -464,8 +464,50 @@ get_header(); ?>
 
             </div>
         </div>
+    </div> */ ?>
 
-    </div>
+
+    <div id="ets-about" class="pepi-row ets-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 px-0 d-flex px-md-0 mb-4 mb-md-0">
+                    
+                    <?php if (have_rows('dig_team_members')): while (have_rows('dig_team_members')): the_row();
+                    $headshot = get_sub_field('headshot');
+                    $name = get_sub_field('name');
+                    $title = get_sub_field('position'); ?>
+                    <div class="col-4 pl-0">
+                        <a class="corporate-esg__team-link" href="<?php echo get_field('external_link', 4907) ?>" target="_blank">
+                            <div class="mem-img mb-3">
+                                    <?php if (!empty($headshot)) {
+                                        echo '<img style="object-position: top !important;"  class="mem-img" src="' . esc_url($headshot['url']) . '" alt="' . esc_attr($headshot['alt']) . '">';
+                                    } ?>
+                            </div>
+                            <figcaption>
+                                <h3 class="corporate-esg__aversano-name">
+                                    <?php echo $name; ?>
+                                </h3>
+                                <div class="title-gl-area d-block">
+                                    <?php echo $title; ?>
+                                </div>
+                            </figcaption>
+                        </a>
+                    </div>
+                    <?php endwhile;
+                    endif; ?>
+                </div>
+                <div class="col-md-4 px-0 pl-md-5">
+
+                    <?php /*<h2 class="section-title small">Environmental, Social & Governance <br>Transaction Advisory</h2>
+                    <div class="short-border"></div> */ ?>
+                    <p class="mt-0"><?php echo get_field('dig_team_text'); ?></p>
+                </div>
+            </div>
+        </div>
+    </div>                
+
+
+
     <?php include(TEMPLATEPATH . '/includes/general/cta-banner-dig-download.php'); ?>
 
 
