@@ -672,15 +672,49 @@ get_header(); ?>
               <img src="<?php echo get_template_directory_uri(); ?>/library/images/reboot/icons/icon-map-marker.svg"
                 alt=""></i> <span>View in Map</span></a>
         </address>
+      </div>
+      <div class="col-md-7 px-0 px-md-0"></div>
 
+      <div class="col-12 px-0 pr-md-0 mt-5">
+        <h3 class="gl-location gl-location__country">Japan</h3>
+      </div>
 
+      <div class="col-md-5 px-0">
+        <address>
+              <h4 class="gl-location gl-location__city">Osaka</h4>
+              15th Floor, Osaka Umeda Twin Towers South<br>
+              13-1, Umeda 1-chome<br>
+              Kita-ku, Osaka 530-0001, Japan <br>
+              <a class="gl-location gl-location__link"
+                href="https://www.google.com/maps/search/15th+Floor,+Osaka+Umeda+Twin+Towers+South+13-1,+Umeda+1-chome+Kita-ku,+Osaka+530-0001,+Japan/@34.7016333,135.4956581,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank">
+                <i class="icon-map-marker">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/images/reboot/icons/icon-map-marker.svg"
+                    alt="">
+                  </i> 
+                  <span>View in Map</span>
+                </a>
+            </address>
       </div>
       <div class="col-md-7 px-0 px-md-0">
-
+        <div class="row no-gutters">
+          <div class="col-md-7 px-0">
+            <address>
+              <h4 class="gl-location gl-location__city">Tokyo</h4>
+              28th Floor, Marunouchi Building<br>
+              4-1, Marunouchi 2-chome<br>
+              Chiyoda-ku, Tokyo 100-6328, Japan<br>
+              <a class="gl-location gl-location__link"
+                href="https://www.google.com/maps/search/28th+Floor,+Marunouchi+Building+4-1,+Marunouchi+2-chome+Chiyoda-ku,+Tokyo+100-6328,+Japan/@35.6809284,139.7611119,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D">
+                <i class="icon-map-marker">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/images/reboot/icons/icon-map-marker.svg"
+                    alt=""></i> <span>View in Map</span></a>
+            </address>
+          </div>
+          <div class="col-md-5 px-0"></div>
+        </div>
       </div>
-
     </div>
-
   </div>
 </div>
 </div>
