@@ -70,21 +70,21 @@ get_header(); ?>
                                                     </td>
                                                 </tr>
 
-                                                <tr>
+                                                <tr id="phone-one">
                                                     <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
                                                             <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Direct (HK): </span>
                                                             <a id="signature-phone-one-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
                                                     </td>
                                                 </tr>
 
-                                                <tr>
+                                                <tr id="phone-two">
                                                     <td style="padding: 0; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
                                                         <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile (HK): </span>
                                                         <a id="signature-phone-two-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-two" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
                                                     </td>
                                                 </tr>
 
-                                                <tr>
+                                                <tr id="phone-three">
                                                     <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
                                                         <span style="font-family:  Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile (PRC): </span>
                                                         <a id="signature-phone-three-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-three" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
@@ -173,9 +173,9 @@ get_header(); ?>
         let firstNameElement = document.getElementById('input_1_1_3'); // First Name
         let lastNameElement = document.getElementById('input_1_1_6'); // Last Name
         let titleElement = document.getElementById('input_1_3'); // Title
-        let phoneOneElement = document.getElementById('input_1_5'); // Phone
-        let phoneTwoElement = document.getElementById('input_1_6'); // Phone
-        let phoneThreeElement = document.getElementById('input_1_7'); // Phone
+        let phoneOneElement = document.getElementById('input_1_5'); // Phone 1
+        let phoneTwoElement = document.getElementById('input_1_6'); // Phone 2
+        let phoneThreeElement = document.getElementById('input_1_7'); // Phone 3
         let emailElement = document.getElementById('input_1_8'); // Email
 
         if (!firstNameElement || !lastNameElement || !titleElement || !phoneOneElement || !phoneTwoElement || !phoneThreeElement || !emailElement) {
@@ -204,12 +204,94 @@ get_header(); ?>
 
         document.getElementById('signature-name').textContent = name;
         document.getElementById('signature-title').textContent = title;
-        document.getElementById('signature-phone-one').textContent = phoneOne;
-        document.getElementById('signature-phone-one-link').href = `tel:${phoneOne}`;
-        document.getElementById('signature-phone-two').textContent = phoneTwo;
-        document.getElementById('signature-phone-two-link').href = `tel:${phoneTwo}`;
-        document.getElementById('signature-phone-three').textContent = phoneThree;
-        document.getElementById('signature-phone-three-link').href = `tel:${phoneThree}`;
+        
+        // Get the table body to insert rows
+        const tableBody = document.querySelector('#signature tbody table tbody');
+        
+        // Handle phone one
+        if (phoneOne && phoneOne.trim() !== '') {
+            let phoneOneRow = document.getElementById('phone-one');
+            if (!phoneOneRow) {
+                // Create the row if it doesn't exist
+                phoneOneRow = document.createElement('tr');
+                phoneOneRow.id = 'phone-one';
+                phoneOneRow.innerHTML = `
+                    <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                        <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Direct (HK): </span>
+                        <a id="signature-phone-one-link" href="tel:${phoneOne}" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">${phoneOne}</span></a>
+                    </td>
+                `;
+                // Insert after the Transaction Advisory row (3rd row)
+                const transactionRow = tableBody.children[2];
+                tableBody.insertBefore(phoneOneRow, transactionRow.nextSibling);
+            } else {
+                document.getElementById('signature-phone-one').textContent = phoneOne;
+                document.getElementById('signature-phone-one-link').href = `tel:${phoneOne}`;
+            }
+        } else {
+            const phoneOneRow = document.getElementById('phone-one');
+            if (phoneOneRow) {
+                phoneOneRow.remove();
+            }
+        }
+        
+        // Handle phone two
+        if (phoneTwo && phoneTwo.trim() !== '') {
+            let phoneTwoRow = document.getElementById('phone-two');
+            if (!phoneTwoRow) {
+                // Create the row if it doesn't exist
+                phoneTwoRow = document.createElement('tr');
+                phoneTwoRow.id = 'phone-two';
+                phoneTwoRow.innerHTML = `
+                    <td style="padding: 0; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                        <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile (HK): </span>
+                        <a id="signature-phone-two-link" href="tel:${phoneTwo}" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-two" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">${phoneTwo}</span></a>
+                    </td>
+                `;
+                // Insert after phone-one if it exists, otherwise after Transaction Advisory row
+                const phoneOneRow = document.getElementById('phone-one');
+                const insertAfter = phoneOneRow || tableBody.children[2];
+                tableBody.insertBefore(phoneTwoRow, insertAfter.nextSibling);
+            } else {
+                document.getElementById('signature-phone-two').textContent = phoneTwo;
+                document.getElementById('signature-phone-two-link').href = `tel:${phoneTwo}`;
+            }
+        } else {
+            const phoneTwoRow = document.getElementById('phone-two');
+            if (phoneTwoRow) {
+                phoneTwoRow.remove();
+            }
+        }
+        
+        // Handle phone three
+        if (phoneThree && phoneThree.trim() !== '') {
+            let phoneThreeRow = document.getElementById('phone-three');
+            if (!phoneThreeRow) {
+                // Create the row if it doesn't exist
+                phoneThreeRow = document.createElement('tr');
+                phoneThreeRow.id = 'phone-three';
+                phoneThreeRow.innerHTML = `
+                    <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                        <span style="font-family:  Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile (PRC): </span>
+                        <a id="signature-phone-three-link" href="tel:${phoneThree}" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-three" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">${phoneThree}</span></a>
+                    </td>
+                `;
+                // Insert after phone-two if it exists, otherwise after phone-one, otherwise after Transaction Advisory row
+                const phoneTwoRow = document.getElementById('phone-two');
+                const phoneOneRow = document.getElementById('phone-one');
+                const insertAfter = phoneTwoRow || phoneOneRow || tableBody.children[2];
+                tableBody.insertBefore(phoneThreeRow, insertAfter.nextSibling);
+            } else {
+                document.getElementById('signature-phone-three').textContent = phoneThree;
+                document.getElementById('signature-phone-three-link').href = `tel:${phoneThree}`;
+            }
+        } else {
+            const phoneThreeRow = document.getElementById('phone-three');
+            if (phoneThreeRow) {
+                phoneThreeRow.remove();
+            }
+        }
+        
         document.getElementById('signature-email').textContent = email;
         document.getElementById('signature-email-link').href = `mailto:${email}`;
     }
