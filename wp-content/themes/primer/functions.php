@@ -683,3 +683,6 @@ function toKebabCase($string)
 	$string = preg_replace('/\s+/', '-', $string); // Replace spaces with hyphens
 	return $string;
 }
+
+// Remove "Protected:" from protected post titles
+add_filter('protected_title_format', fn() => '%s');

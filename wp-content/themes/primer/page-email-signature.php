@@ -6,15 +6,21 @@
  */
 get_header(); ?>
 <div class="w-100 d-flex justify-content-center align-items-center text-white mb-5" style="background: #00244A; padding: 150px 0; color: #ffffff;"><h1 class="text-white"><?php the_title(); ?></h1></div>
+
 <div class="wrapper">
     <section class="content-module email-signature py-5 mb-5">
         <div class="container">
             <div class="row">
+
+            <?php if (post_password_required()) { ?>
+                <div class="col-12 password-input"><?php echo get_the_password_form(); ?></div>
+            <?php } else { ?>
                 <div class="col-12">
                     <p class="text-black">Add your Name, Position, Phone numbers and Email.
                         <br>To avoid inconsistencies, capitalization must be entered correctly.
                         <br>Name and Title should be first letter capitalized.
                         <br>Email should be all lowercase.
+                        <br>
                         <br>You can continue to make edits and click the "Update Signature" button to see the changes.
                         <br>Once the signature looks correct use the "Copy Signature" button to paste into your Outlook signature panel.
                         <br>You may need to adjust any link colors or underlines before you send within the signature panel.
@@ -119,7 +125,7 @@ get_header(); ?>
 
                     <button class="copy-button" onclick="copySignature()">Copy Signature</button>  
                 </div>
-                    
+            <?php } ?>     
             </div> <!-- /.row -->
         </div>
     </section>
@@ -171,7 +177,6 @@ get_header(); ?>
         let phoneTwoElement = document.getElementById('input_1_6'); // Phone
         let phoneThreeElement = document.getElementById('input_1_7'); // Phone
         let emailElement = document.getElementById('input_1_8'); // Email
-        // let linkedinElement = document.getElementById('input_3_5'); // LinkedIn
 
         if (!firstNameElement || !lastNameElement || !titleElement || !phoneOneElement || !phoneTwoElement || !phoneThreeElement || !emailElement) {
             alert('One or more form fields are missing.');
@@ -194,14 +199,6 @@ get_header(); ?>
             alert('Invalid email address');
             return;
         }
-
-        // if (isValidURL(linkedin)) {
-        //     linkedin = stripURLParameters(linkedin);
-        //     document.getElementById('signature-linkedin-url').href = linkedin;
-        // } else {
-        //     alert('Invalid LinkedIn URL');
-        //     return;
-        // }
 
         email = stripEmailParameters(email);
 
