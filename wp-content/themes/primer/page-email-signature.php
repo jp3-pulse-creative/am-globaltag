@@ -36,14 +36,14 @@ get_header(); ?>
 
                 <div class="col-12 col-md-6 pl-md-5 mt-5 mb-0 align-self-end table">
                     <div>
-                        <table id="signature" border="0" cellspacing="0" cellpadding="0" style="font-family: Arial, sans-serif; color: #000000; font-size: 9pt; line-height: 12px; border-collapse: collapse; border-spacing: 0; width: 700px;" width="700">
+                        <table id="signature" border="0" cellspacing="0" cellpadding="0" style="font-family: Arial, sans-serif; color: #000000; font-size: 9pt; line-height: 12px; border-collapse: collapse; border-spacing: 0; width: 500px;" width="500">
                             <tbody>
                                 <tr>
                                     <td style="padding: 0 20px 0 0; vertical-align: middle; border-collapse: collapse; border-spacing: 0; border-top: none; border-right: 2px solid #0084C7; border-bottom: none; border-left: none; width: 200px;" width="200" align="left">
-                                        <img width="179" height="173" src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/email-signature/am-tag-20thanniversary.png" alt="LSS Strategic Partners">
+                                        <img width="179" height="173" src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/email-signature/am-tag-20thanniversary.png" alt="A&M Tag Logo" style="display: block; border: none; outline: none; text-decoration: none; max-width: 179px; height: auto;">
                                     </td>
 
-                                    <td style="padding: 0 0 0 20px; border: none;">
+                                    <td style="padding: 0 0 0 20px; border: none; width: 300px;" width="300" align="left">
                                         <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0; width: 280px;" width="280">
                                             <tbody>
                                                 <tr>
@@ -67,28 +67,28 @@ get_header(); ?>
                                                 <tr>
                                                     <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
                                                             <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Direct (HK): </span>
-                                                            <span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration:none !important; color: #000000 !important;">XXX-XXX-XXXX</span>
+                                                            <a id="signature-phone-one-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
                                                     </td>
                                                 </tr>
 
                                                 <tr>
                                                     <td style="padding: 0; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
                                                         <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile (HK): </span>
-                                                        <span id="signature-phone-two" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration:none !important; color: #000000 !important;">XXX-XXX-XXXX</span>
+                                                        <a id="signature-phone-two-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-two" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
                                                     </td>
                                                 </tr>
 
                                                 <tr>
                                                     <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
                                                         <span style="font-family:  Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile (PRC): </span>
-                                                        <span id="signature-phone-three" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration:none !important; color: #000000 !important;">XXX-XXX-XXXX</span>
+                                                        <a id="signature-phone-three-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-three" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
                                                     </td>
                                                 </tr>
 
                                                 <tr>
                                                     <td style="padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
                                                         <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">email: </span> 
-                                                        <a id="signature-email-link" href="mailto:psacripanti@lss-strategicpartners.com" style="text-decoration:none !important; color: #000000 !important;"><span id="signature-email" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration:none !important; color: #000000 !important;">person@domain.com</span></a>
+                                                        <a id="signature-email-link" href="mailto:person@domain.com.com" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-email" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">person@domain.com</span></a>
                                                     </td>
                                                 </tr>
 
@@ -207,8 +207,11 @@ get_header(); ?>
         document.getElementById('signature-name').textContent = name;
         document.getElementById('signature-title').textContent = title;
         document.getElementById('signature-phone-one').textContent = phoneOne;
+        document.getElementById('signature-phone-one-link').href = `tel:${phoneOne}`;
         document.getElementById('signature-phone-two').textContent = phoneTwo;
+        document.getElementById('signature-phone-two-link').href = `tel:${phoneTwo}`;
         document.getElementById('signature-phone-three').textContent = phoneThree;
+        document.getElementById('signature-phone-three-link').href = `tel:${phoneThree}`;
         document.getElementById('signature-email').textContent = email;
         document.getElementById('signature-email-link').href = `mailto:${email}`;
     }
