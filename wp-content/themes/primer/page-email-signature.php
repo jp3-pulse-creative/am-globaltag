@@ -94,7 +94,8 @@ get_header(); ?>
 
                                                 <tr>
                                                     <td style="padding: 20px 0 0; font-family:  Arial, sans-serif; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
-                                                        <span style="font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 700; color: #00244A;">Alvarez & Marsal</span> <br>
+                                                        <span style="font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 700; color: #00244A;">Alvarez & Marsal</span>
+                                                        <br>
                                                         <address style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 400; font-style: normal !important; color: #000000;">
                                                             14/F, St. George's Building <br>
                                                             2 Ice House Street <br>
