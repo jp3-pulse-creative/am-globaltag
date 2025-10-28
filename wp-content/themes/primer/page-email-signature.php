@@ -11,15 +11,14 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p class="text-black">Add your Name, Position, Phone, Email and LinkedIn.
+                    <p class="text-black">Add your Name, Position, Phone numbers and Email.
                         <br>To avoid inconsistencies, capitalization must be entered correctly.
                         <br>Name and Title should be first letter capitalized.
                         <br>Email should be all lowercase.
                         <br>You can continue to make edits and click the "Update Signature" button to see the changes.
                         <br>Once the signature looks correct use the "Copy Signature" button to paste into your Outlook signature panel.
+                        <br>You may need to adjust any link colors or underlines before you send within the signature panel.
                         <br>
-                        <br>you may need to adjust any link colors or underlines before you send within the signature panel.
-
                         <br>FOR MOBILE: on iPhone, after copy/paste shake your phone to "Undo change attributes", this will restore the coded formatting. You may have to delete space/line right below the address as well.
                     </p>
                 </div>
@@ -35,7 +34,7 @@ get_header(); ?>
                     </div> -->
                 </div>
 
-                <div class="col-12 col-md-6 pl-md-5 mt-5 align-self-end table">
+                <div class="col-12 col-md-6 pl-md-5 mt-5 mb-0 align-self-end table">
                     <div>
                         <table id="signature" border="0" cellspacing="0" cellpadding="0" style="font-family: Arial, sans-serif; color: #000000; font-size: 9pt; line-height: 12px; border-collapse: collapse; border-spacing: 0; width: 700px;" width="700">
                             <tbody>
