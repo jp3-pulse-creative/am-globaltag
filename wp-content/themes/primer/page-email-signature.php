@@ -72,21 +72,21 @@ get_header(); ?>
 
                                                 <tr id="phone-one">
                                                     <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
-                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Direct (HK): </span>
+                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Direct: </span>
                                                             <a id="signature-phone-one-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
                                                     </td>
                                                 </tr>
 
                                                 <tr id="phone-two">
                                                     <td style="padding: 0; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
-                                                        <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile (HK): </span>
+                                                        <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile: </span>
                                                         <a id="signature-phone-two-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-two" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
                                                     </td>
                                                 </tr>
 
                                                 <tr id="phone-three">
                                                     <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
-                                                        <span style="font-family:  Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile (PRC): </span>
+                                                        <span style="font-family:  Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile: </span>
                                                         <a id="signature-phone-three-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-three" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
                                                     </td>
                                                 </tr>
