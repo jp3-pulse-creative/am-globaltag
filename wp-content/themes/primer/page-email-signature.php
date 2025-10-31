@@ -12,9 +12,9 @@ get_header(); ?>
         <div class="container">
             <div class="row">
 
-            <?php if (post_password_required()) { ?>
+            <?php /* if (post_password_required()) { ?>
                 <div class="col-12 password-input"><?php echo get_the_password_form(); ?></div>
-            <?php } else { ?>
+            <?php } else { */ ?>
                 <div class="col-12">
                     <p class="text-black">Add your Name, Position, Phone numbers and Email.
                         <br>To avoid inconsistencies, capitalization must be entered correctly.
@@ -103,9 +103,9 @@ get_header(); ?>
                                                         <span style="font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 700; color: #00244A;">Alvarez & Marsal</span>
                                                         <br>
                                                         <address style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 400; font-style: normal !important; color: #000000;">
-                                                            14/F, St. George's Building <br>
-                                                            2 Ice House Street <br>
-                                                            Central, Hong Kong 
+                                                            <span id="signature-address-line-one" style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 400; font-style: normal !important; color: #000000;">14/F, St. George's Building</span> <br>
+                                                            <span id="signature-address-line-two" style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 400; font-style: normal !important; color: #000000;">2 Ice House Street</span> <br>
+                                                            <span id="signature-address-line-three" style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 400; font-style: normal !important; color: #000000;">Central, Hong Kong</span>
                                                         </address>
                                                     </td>
                                                 </tr>
@@ -125,11 +125,108 @@ get_header(); ?>
 
                     <button class="copy-button" onclick="copySignature()">Copy Signature</button>  
                 </div>
-            <?php } ?>     
+            <?php /* } */ ?>     
             </div> <!-- /.row -->
         </div>
     </section>
 </div>
+
+<!-- Password Protection Overlay (no loader) -->
+<div class="pw-protect-overlay position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center text-white" id="pw-protect-overlay" style="z-index:99999;background-color: rgba(0, 0, 0, 0.9);">
+    <form id="pw-form" class="text-center bg-transparent position-relative z-3">
+        <p class="text-white mb-4">Please present the password for entry:</p>
+        <input type="password" id="pw-input" style="color: #000000;padding:0.5rem;font-size:1.2rem;border-radius:0px;border:none;" placeholder="password" autocomplete="off" />
+        <br>
+        <button type="submit" class="btn btn-xl mt-4 rounded-0 text-lightest">Submit</button>
+        <div id="pw-error" class="mt-3 d-none text-12" style="color: red !important;">Incorrect password. Try again.</div>
+    </form>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var pwOverlay = document.getElementById('pw-protect-overlay');
+        var pwForm = document.getElementById('pw-form');
+        var validated = false;
+
+        document.body.classList.add('overflow-hidden');
+
+        // Password validation (3 days)
+        var timeoutHours = 72;
+        var now = Date.now();
+        var validTimestamp = localStorage.getItem('amglobaltag_pw_valid_time');
+        var isValid = localStorage.getItem('amglobaltag_pw_valid') === '1' && validTimestamp && (now - parseInt(validTimestamp, 10)) < timeoutHours * 60 * 60 * 1000;
+
+        if (isValid) {
+            pwOverlay.classList.add('hide');
+            document.body.classList.remove('overflow-hidden');
+            return;
+        } else {
+            localStorage.removeItem('amglobaltag_pw_valid');
+            localStorage.removeItem('amglobaltag_pw_valid_time');
+        }
+
+        if (pwForm) {
+            pwForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var pwInput = document.getElementById('pw-input');
+                var pwError = document.getElementById('pw-error');
+                var password = pwInput.value.trim();
+                if (password === 'pulsepowered') {
+                    pwOverlay.classList.add('hide');
+                    if (!validated) {
+                        validated = true;
+                        localStorage.setItem('amglobaltag_pw_valid', '1');
+                        localStorage.setItem('amglobaltag_pw_valid_time', Date.now().toString());
+                        document.body.classList.remove('overflow-hidden');
+                    }
+                } else {
+                    pwError.classList.remove('d-none');
+                    pwInput.value = '';
+                    pwInput.focus();
+                }
+            });
+        }
+    });
+</script>
+
+<style>
+    .pw-protect-overlay {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto;
+        transition: none !important;
+        top:0;
+    }
+    .pw-protect-overlay.hide {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none;
+    }
+
+    .pw-protect-overlay button {
+        text-align: center;
+	    margin-top: 30px;
+		font-size: 17px;
+		font-weight: 900;
+		text-transform: uppercase;
+		transition: .15s linear;
+        color: white;
+        background: #002549;
+        padding: 5px 19px;
+        border: 1px solid #002549;
+
+    }
+
+    .pw-protect-overlay button:hover {
+        opacity: 0.8;
+        color: #ffffff;
+    }
+    .pw-protect-overlay input::placeholder {
+        color: #000000;
+    }
+</style>
+
+
 <?php get_footer(); ?>
 
 
@@ -177,8 +274,11 @@ get_header(); ?>
         let phoneTwoElement = document.getElementById('input_1_6'); // Phone 2
         let phoneThreeElement = document.getElementById('input_1_7'); // Phone 3
         let emailElement = document.getElementById('input_1_8'); // Email
+        let addressLineOneElement = document.getElementById('input_1_10'); // Address
+        let addressLineTwoElement = document.getElementById('input_1_11'); // Address Line 2
+        let addressLineThreeElement = document.getElementById('input_1_12'); // Address Line 3
 
-        if (!firstNameElement || !lastNameElement || !titleElement || !phoneOneElement || !phoneTwoElement || !phoneThreeElement || !emailElement) {
+        if (!firstNameElement || !lastNameElement || !titleElement || !phoneOneElement || !phoneTwoElement || !phoneThreeElement || !emailElement || !addressLineOneElement || !addressLineTwoElement || !addressLineThreeElement) {
             alert('One or more form fields are missing.');
             return;
         }
@@ -191,6 +291,9 @@ get_header(); ?>
         let phoneTwo = phoneTwoElement.value;
         let phoneThree = phoneThreeElement.value;
         let email = emailElement.value;
+        let addressLineOne = addressLineOneElement.value;
+        let addressLineTwo = addressLineTwoElement.value;
+        let addressLineThree = addressLineThreeElement.value;
 
         name = sanitizeInput(name, namePattern);
         title = sanitizeInput(title, titlePattern);
@@ -294,6 +397,9 @@ get_header(); ?>
         
         document.getElementById('signature-email').textContent = email;
         document.getElementById('signature-email-link').href = `mailto:${email}`;
+        document.getElementById('signature-address-line-one').textContent = addressLineOne;
+        document.getElementById('signature-address-line-two').textContent = addressLineTwo;
+        document.getElementById('signature-address-line-three').textContent = addressLineThree;
     }
 
     document.addEventListener('DOMContentLoaded', function() {
