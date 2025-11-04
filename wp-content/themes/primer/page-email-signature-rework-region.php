@@ -361,7 +361,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
         const tableBody = document.querySelector('#signature tbody table tbody');
 
         // Handle phone one with region
-        let phoneOneRegionElement = document.getElementById('input_3_13'); // Phone 1 Region
+        let phoneOneRegionElement = document.getElementById('input_<?php echo $form_id; ?>_13'); // Phone 1 Region
         let phoneOneRegion = phoneOneRegionElement ? phoneOneRegionElement.value : '';
         if (phoneOne && phoneOne.trim() !== '') {
             let phoneOneRow = document.getElementById('phone-one');
@@ -379,9 +379,13 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
                         <a id="signature-phone-one-link" href="tel:${phoneOne}" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">${phoneOne}</span></a>
                     </td>
                 `;
-                // Insert after the Transaction Advisory row (3rd row)
-                const transactionRow = tableBody.children[2];
-                tableBody.insertBefore(phoneOneRow, transactionRow.nextSibling);
+                // Insert after the title row (row 1)
+                const titleRow = tableBody.children[1];
+                if (titleRow && titleRow.nextSibling) {
+                    tableBody.insertBefore(phoneOneRow, titleRow.nextSibling);
+                } else {
+                    tableBody.appendChild(phoneOneRow);
+                }
             } else {
                 document.getElementById('signature-phone-one').textContent = phoneOne;
                 document.getElementById('signature-phone-one-link').href = `tel:${phoneOne}`;
@@ -396,7 +400,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
         }
 
         // Handle phone two with region
-        let phoneTwoRegionElement = document.getElementById('input_3_14'); // Phone 2 Region
+        let phoneTwoRegionElement = document.getElementById('input_<?php echo $form_id; ?>_14'); // Phone 2 Region
         let phoneTwoRegion = phoneTwoRegionElement ? phoneTwoRegionElement.value : '';
         if (phoneTwo && phoneTwo.trim() !== '') {
             let phoneTwoRow = document.getElementById('phone-two');
@@ -414,10 +418,14 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
                         <a id="signature-phone-two-link" href="tel:${phoneTwo}" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-two" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">${phoneTwo}</span></a>
                     </td>
                 `;
-                // Insert after phone-one if it exists, otherwise after Transaction Advisory row
+                // Insert after phone-one if it exists, otherwise after title row
                 const phoneOneRow = document.getElementById('phone-one');
-                const insertAfter = phoneOneRow || tableBody.children[2];
-                tableBody.insertBefore(phoneTwoRow, insertAfter.nextSibling);
+                const insertAfter = phoneOneRow || tableBody.children[1];
+                if (insertAfter && insertAfter.nextSibling) {
+                    tableBody.insertBefore(phoneTwoRow, insertAfter.nextSibling);
+                } else {
+                    tableBody.appendChild(phoneTwoRow);
+                }
             } else {
                 document.getElementById('signature-phone-two').textContent = phoneTwo;
                 document.getElementById('signature-phone-two-link').href = `tel:${phoneTwo}`;
@@ -432,7 +440,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
         }
 
         // Handle phone three with region
-        let phoneThreeRegionElement = document.getElementById('input_3_15'); // Phone 3 Region
+        let phoneThreeRegionElement = document.getElementById('input_<?php echo $form_id; ?>_15'); // Phone 3 Region
         let phoneThreeRegion = phoneThreeRegionElement ? phoneThreeRegionElement.value : '';
         if (phoneThree && phoneThree.trim() !== '') {
             let phoneThreeRow = document.getElementById('phone-three');
@@ -450,11 +458,15 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
                         <a id="signature-phone-three-link" href="tel:${phoneThree}" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-three" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">${phoneThree}</span></a>
                     </td>
                 `;
-                // Insert after phone-two if it exists, otherwise after phone-one, otherwise after Transaction Advisory row
+                // Insert after phone-two if it exists, otherwise after phone-one, otherwise after title row
                 const phoneTwoRow = document.getElementById('phone-two');
                 const phoneOneRow = document.getElementById('phone-one');
-                const insertAfter = phoneTwoRow || phoneOneRow || tableBody.children[2];
-                tableBody.insertBefore(phoneThreeRow, insertAfter.nextSibling);
+                const insertAfter = phoneTwoRow || phoneOneRow || tableBody.children[1];
+                if (insertAfter && insertAfter.nextSibling) {
+                    tableBody.insertBefore(phoneThreeRow, insertAfter.nextSibling);
+                } else {
+                    tableBody.appendChild(phoneThreeRow);
+                }
             } else {
                 document.getElementById('signature-phone-three').textContent = phoneThree;
                 document.getElementById('signature-phone-three-link').href = `tel:${phoneThree}`;

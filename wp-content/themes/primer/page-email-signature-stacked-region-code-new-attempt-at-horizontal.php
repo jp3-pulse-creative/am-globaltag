@@ -339,7 +339,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
         const tableBody = document.querySelector('#signature tbody table tbody');
 
         // Handle phone one with region
-        let phoneOneRegionElement = document.getElementById('input_3_13'); // Phone 1 Region
+        let phoneOneRegionElement = document.getElementById('input_<?php echo $form_id; ?>_13'); // Phone 1 Region
         let phoneOneRegion = phoneOneRegionElement ? phoneOneRegionElement.value : '';
         if (phoneOne && phoneOne.trim() !== '') {
             let phoneOneRow = document.getElementById('phone-one');
@@ -374,7 +374,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
         }
 
         // Handle phone two with region
-        let phoneTwoRegionElement = document.getElementById('input_3_14'); // Phone 2 Region
+        let phoneTwoRegionElement = document.getElementById('input_<?php echo $form_id; ?>_14'); // Phone 2 Region
         let phoneTwoRegion = phoneTwoRegionElement ? phoneTwoRegionElement.value : '';
         if (phoneTwo && phoneTwo.trim() !== '') {
             let phoneTwoRow = document.getElementById('phone-two');
@@ -410,7 +410,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
         }
 
         // Handle phone three with region
-        let phoneThreeRegionElement = document.getElementById('input_3_15'); // Phone 3 Region
+        let phoneThreeRegionElement = document.getElementById('input_<?php echo $form_id; ?>_15'); // Phone 3 Region
         let phoneThreeRegion = phoneThreeRegionElement ? phoneThreeRegionElement.value : '';
         if (phoneThree && phoneThree.trim() !== '') {
             let phoneThreeRow = document.getElementById('phone-three');
