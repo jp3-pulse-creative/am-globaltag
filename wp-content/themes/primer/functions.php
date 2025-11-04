@@ -686,3 +686,30 @@ function toKebabCase($string)
 
 // Remove "Protected:" from protected post titles
 add_filter('protected_title_format', fn() => '%s');
+
+
+// Add Clear Cache link to admin header
+// add conditional -- only if url does not include /staging/ 
+// add conditional -- only if url does not include .local
+
+
+
+
+add_action('admin_bar_menu', function ($wp_admin_bar) {
+	if (
+		current_user_can('manage_options') &&
+		strpos($_SERVER['REQUEST_URI'], '/staging/') === false &&
+		strpos($_SERVER['HTTP_HOST'], '.local') === false
+	) {
+		$wp_admin_bar->add_node([
+			'id' => 'sucuri-clear-cache',
+			'title' => 'Clear Firewall Cache',
+			'href' => 'https://waf.sucuri.net/api?k=e61268df0b43c73b3c293e3f8a98ca13&s=6f36fe7d550b24ee73f09a30570c7e31&a=clearcache',
+			'meta' => [
+				'title' => 'Clear Sucuri Cache',
+				'target' => '_blank',
+				'class' => 'sucuri-clear-cache-link'
+			]
+		]);
+	}
+}, 100);

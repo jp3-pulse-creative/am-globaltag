@@ -35,7 +35,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
                         <br>Once the signature looks correct use the "Copy Signature" button to paste into your Outlook signature panel.
                         <br>You may need to adjust any link colors or underlines before you send within the signature panel.
                         <br>
-                        <br>FOR MOBILE: <br><strong>on iOS Mail app,</strong> after copy/paste shake your phone to "Undo change attributes", this will restore the coded formatting. You may have to delete space/line right below the address as well.
+                        <br>FOR MOBILE: <br>Copy/Paste with device in Landscape orientation to maintain formatting/sizing consistency<br><strong>on iOS Mail app,</strong> after copy/paste shake your phone to "Undo change attributes", this will restore the coded formatting. You may have to delete space/line right below the address as well.
                         <br><strong>on Android,</strong> long press to get the paste command
 
                     </p>
@@ -82,17 +82,17 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
                                             <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0;">
                                                 <tbody>
                                                     <tr>
-                                                        <td style="padding: 0 0 0 20px; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 700; line-height: 12px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                                                        <td style="padding: 0 0 0 20px; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 700; line-height: 12px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: auto;" width="auto" align="left">
                                                             <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0;">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td style="padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 700; line-height: 12px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                                                                        <td style="padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 700; line-height: 12px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: auto;" width="auto" align="left">
                                                                             <span style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 700; line-height: 12px; color: #00244A;" id="signature-name">Firstname Lastname</span>
                                                                         </td>
                                                                     </tr>
 
                                                                     <tr>
-                                                                        <td style="padding: 5px 0 0; font-family:  Arial, sans-serif; font-size: 9pt; line-height: 12px; font-weight: 700; color:#00244A; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                                                                        <td style="padding: 5px 0 5px; font-family:  Arial, sans-serif; font-size: 9pt; line-height: 12px; font-weight: 700; color:#00244A; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: auto;" width="auto" align="left">
                                                                             <span style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 12px; font-weight: 700; color:#00244A;" id="signature-title">Position/Title</span>
                                                                         </td>
                                                                     </tr>
@@ -100,41 +100,41 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
 
 
                                                                     <tr id="phone-one">
-                                                                        <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                                                                        <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: auto;" width="auto" align="left">
                                                                             <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Direct: </span>
                                                                             <a id="signature-phone-one-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
                                                                         </td>
                                                                     </tr>
 
                                                                     <tr id="phone-two">
-                                                                        <td style="padding: 0; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                                                                        <td style="padding: 0; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: auto;" width="auto" align="left">
                                                                             <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile: </span>
                                                                             <a id="signature-phone-two-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-two" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
                                                                         </td>
                                                                     </tr>
 
                                                                     <tr id="phone-three">
-                                                                        <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                                                                        <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: auto;" width="auto" align="left">
                                                                             <span style="font-family:  Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile: </span>
                                                                             <a id="signature-phone-three-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-three" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
                                                                         </td>
                                                                     </tr>
 
                                                                     <tr>
-                                                                        <td style="padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                                                                        <td style="padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: auto;" width="auto" align="left">
                                                                             <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">email: </span>
                                                                             <a id="signature-email-link" href="mailto:person@domain.com.com" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-email" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">person@domain.com</span></a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td style="padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                                                                        <td style="padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: auto;" width="auto" align="left">
                                                                             <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">website: </span>
                                                                             <a id="signature-website-link" href="http://am-globaltag.com" target="_blank" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-website" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">am-globaltag.com</span></a>
                                                                         </td>
                                                                     </tr>
 
                                                                     <tr>
-                                                                        <td style="padding: 20px 0 0; font-family:  Arial, sans-serif; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                                                                        <td style="padding: 20px 0 0; font-family:  Arial, sans-serif; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: auto;" width="auto" align="left">
                                                                             <span style="font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 700; color: #00244A;">Alvarez & Marsal</span>
                                                                             <address style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 400; font-style: normal !important; color: #000000;">
                                                                                 <span id="signature-address-line-one" style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 400; font-style: normal !important; color: #000000;">14/F, St. George's Building</span> <br>
@@ -145,7 +145,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
                                                                     </tr>
 
                                                                     <tr>
-                                                                        <td style="padding: 0; font-family:  Arial, sans-serif; font-size: 11pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                                                                        <td style="padding: 0; font-family:  Arial, sans-serif; font-size: 11pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: auto;" width="auto" align="left">
                                                                             <span style="margin: 0; font-family:  Arial, sans-serif; font-size: 11pt; line-height: 16px; "><a style="text-decoration: underline !important; color: #0084C7; !important;" href="https://alvarezandmarsal.com/" target="_blank" rel="noopener"><span style="font-family:  Arial, sans-serif; font-size: 11pt; line-height: 16px; color: #0084C7 !important;">www.alvarezandmarsal.com</span></a></span>
                                                                         </td>
                                                                     </tr>
@@ -374,7 +374,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
                 phoneOneRow = document.createElement('tr');
                 phoneOneRow.id = 'phone-one';
                 phoneOneRow.innerHTML = `
-                    <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                    <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: auto;" width="auto" align="left">
                         <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">${label}: </span>
                         <a id="signature-phone-one-link" href="tel:${phoneOne}" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">${phoneOne}</span></a>
                     </td>
@@ -409,7 +409,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
                 phoneTwoRow = document.createElement('tr');
                 phoneTwoRow.id = 'phone-two';
                 phoneTwoRow.innerHTML = `
-                    <td style="padding: 0; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                    <td style="padding: 0; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: auto;" width="auto" align="left">
                         <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">${label}: </span>
                         <a id="signature-phone-two-link" href="tel:${phoneTwo}" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-two" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">${phoneTwo}</span></a>
                     </td>
@@ -445,7 +445,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
                 phoneThreeRow = document.createElement('tr');
                 phoneThreeRow.id = 'phone-three';
                 phoneThreeRow.innerHTML = `
-                    <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                    <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: auto;" width="auto" align="left">
                         <span style="font-family:  Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">${label}: </span>
                         <a id="signature-phone-three-link" href="tel:${phoneThree}" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-three" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">${phoneThree}</span></a>
                     </td>
@@ -481,6 +481,10 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
     });
 
     function copySignature() {
+        if (window.innerWidth < 700 && window.matchMedia && window.matchMedia("(orientation: portrait)").matches) {
+            alert('Please turn your phone to landscape before copying the signature. Copying is disabled in portrait mode.');
+            return;
+        }
         const signature = document.getElementById('signature');
         const range = document.createRange();
         range.selectNode(signature);
