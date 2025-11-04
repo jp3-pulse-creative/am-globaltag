@@ -4,7 +4,15 @@
 /*
  * default page
  */
-get_header(); ?>
+get_header();
+
+//if url includes /staging/ id = 3 else id = 2
+if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
+    $form_id = 3;
+} else {
+    $form_id = 2;
+}
+?>
 <div class="w-100 d-flex justify-content-center align-items-center text-white mb-5" style="background: #00244A; padding: 150px 0; color: #ffffff;">
     <h1 class="text-white"><?php the_title(); ?></h1>
 </div>
@@ -38,7 +46,12 @@ get_header(); ?>
                 <div class="col-12 col-md-6 mt-5">
                     <!-- <div class="row align-items-center mt-5">
                         <div class="col-12 col-md-5 me-md-auto"> -->
-                    <?php echo do_shortcode('[gravityform id="3" title="false"]') ?>
+                    <?php
+
+
+                    echo do_shortcode('[gravityform id="' . $form_id . '" title="false"]')
+
+                    ?>
                     <button id="update-signature-button" class="submit">Update Signature</button>
                     <!-- </div>
                     </div> -->
@@ -66,11 +79,7 @@ get_header(); ?>
                                                     </td>
                                                 </tr>
 
-                                                <tr>
-                                                    <td style="padding: 20px 0 0; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
-                                                        <span style="margin: 0; font-family:  Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 700; color: #00244A;">Transaction Advisory</span>
-                                                    </td>
-                                                </tr>
+
 
                                                 <tr id="phone-one">
                                                     <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
@@ -99,11 +108,16 @@ get_header(); ?>
                                                         <a id="signature-email-link" href="mailto:person@domain.com.com" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-email" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">person@domain.com</span></a>
                                                     </td>
                                                 </tr>
+                                                <tr>
+                                                    <td style="padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
+                                                        <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">website: </span>
+                                                        <a id="signature-website-link" href="http://am-globaltag.com" target="_blank" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-website" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">am-globaltag.com</span></a>
+                                                    </td>
+                                                </tr>
 
                                                 <tr>
                                                     <td style="padding: 20px 0 0; font-family:  Arial, sans-serif; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
                                                         <span style="font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 700; color: #00244A;">Alvarez & Marsal</span>
-                                                        <br>
                                                         <address style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 400; font-style: normal !important; color: #000000;">
                                                             <span id="signature-address-line-one" style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 400; font-style: normal !important; color: #000000;">14/F, St. George's Building</span> <br>
                                                             <span id="signature-address-line-two" style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 400; font-style: normal !important; color: #000000;">2 Ice House Street</span> <br>
@@ -278,16 +292,20 @@ get_header(); ?>
         const titlePattern = /[^a-zA-Z\s,'&-]/g;
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        let firstNameElement = document.getElementById('input_3_1_3'); // First Name
-        let lastNameElement = document.getElementById('input_3_1_6'); // Last Name
-        let titleElement = document.getElementById('input_3_3'); // Title
-        let phoneOneElement = document.getElementById('input_3_5'); // Phone 1
-        let phoneTwoElement = document.getElementById('input_3_6'); // Phone 2
-        let phoneThreeElement = document.getElementById('input_3_7'); // Phone 3
-        let emailElement = document.getElementById('input_3_8'); // Email
-        let addressLineOneElement = document.getElementById('input_3_10'); // Address
-        let addressLineTwoElement = document.getElementById('input_3_11'); // Address Line 2
-        let addressLineThreeElement = document.getElementById('input_3_12'); // Address Line 3
+        // need to adjust per form field IDs
+
+
+
+        let firstNameElement = document.getElementById('input_<?php echo $form_id; ?>_1_3'); // First Name
+        let lastNameElement = document.getElementById('input_<?php echo $form_id; ?>_1_6'); // Last Name
+        let titleElement = document.getElementById('input_<?php echo $form_id; ?>_3'); // Title
+        let phoneOneElement = document.getElementById('input_<?php echo $form_id; ?>_5'); // Phone 1
+        let phoneTwoElement = document.getElementById('input_<?php echo $form_id; ?>_6'); // Phone 2
+        let phoneThreeElement = document.getElementById('input_<?php echo $form_id; ?>_7'); // Phone 3
+        let emailElement = document.getElementById('input_<?php echo $form_id; ?>_8'); // Email
+        let addressLineOneElement = document.getElementById('input_<?php echo $form_id; ?>_10'); // Address
+        let addressLineTwoElement = document.getElementById('input_<?php echo $form_id; ?>_11'); // Address Line 2
+        let addressLineThreeElement = document.getElementById('input_<?php echo $form_id; ?>_12'); // Address Line 3
 
         if (!firstNameElement || !lastNameElement || !titleElement || !phoneOneElement || !emailElement || !addressLineOneElement || !addressLineTwoElement || !addressLineThreeElement) {
             alert('One or more form fields are missing.');
