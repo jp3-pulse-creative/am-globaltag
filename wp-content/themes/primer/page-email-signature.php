@@ -5,14 +5,16 @@
  * default page
  */
 get_header(); ?>
-<div class="w-100 d-flex justify-content-center align-items-center text-white mb-5" style="background: #00244A; padding: 150px 0; color: #ffffff;"><h1 class="text-white"><?php the_title(); ?></h1></div>
+<div class="w-100 d-flex justify-content-center align-items-center text-white mb-5" style="background: #00244A; padding: 150px 0; color: #ffffff;">
+    <h1 class="text-white"><?php the_title(); ?></h1>
+</div>
 
 <div class="wrapper">
     <section class="content-module email-signature py-5 mb-5">
         <div class="container">
             <div class="row">
 
-            <?php /* if (post_password_required()) { ?>
+                <?php /* if (post_password_required()) { ?>
                 <div class="col-12 password-input"><?php echo get_the_password_form(); ?></div>
             <?php } else { */ ?>
                 <div class="col-12">
@@ -29,14 +31,14 @@ get_header(); ?>
                     </p>
                 </div>
 
-                        <!-- <div class="lower"> -->
-                            
+                <!-- <div class="lower"> -->
+
                 <div class="col-12 col-md-6 mt-5">
                     <!-- <div class="row align-items-center mt-5">
                         <div class="col-12 col-md-5 me-md-auto"> -->
-                            <?php echo do_shortcode('[gravityform id="1" title="false"]') ?>
-                            <button id="update-signature-button" class="submit">Update Signature</button>
-                        <!-- </div>
+                    <?php echo do_shortcode('[gravityform id="1" title="false"]') ?>
+                    <button id="update-signature-button" class="submit">Update Signature</button>
+                    <!-- </div>
                     </div> -->
                 </div>
 
@@ -64,7 +66,7 @@ get_header(); ?>
                                                     </td>
                                                 </tr>
 
-                                               <tr>
+                                                <tr>
                                                     <td style="padding: 20px 0 0; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
                                                         <span style="margin: 0; font-family:  Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 700; color: #00244A;">Transaction Advisory</span>
                                                     </td>
@@ -72,8 +74,8 @@ get_header(); ?>
 
                                                 <tr id="phone-one">
                                                     <td style="padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
-                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Direct: </span>
-                                                            <a id="signature-phone-one-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
+                                                        <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Direct: </span>
+                                                        <a id="signature-phone-one-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
                                                     </td>
                                                 </tr>
 
@@ -93,7 +95,7 @@ get_header(); ?>
 
                                                 <tr>
                                                     <td style="padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0; height: auto; width: 280px;" width="280" align="left">
-                                                        <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">email: </span> 
+                                                        <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">email: </span>
                                                         <a id="signature-email-link" href="mailto:person@domain.com.com" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-email" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">person@domain.com</span></a>
                                                     </td>
                                                 </tr>
@@ -123,9 +125,9 @@ get_header(); ?>
                         </table>
                     </div>
 
-                    <button class="copy-button" onclick="copySignature()">Copy Signature</button>  
+                    <button class="copy-button" onclick="copySignature()">Copy Signature</button>
                 </div>
-            <?php /* } */ ?>     
+                <?php /* } */ ?>
             </div> <!-- /.row -->
         </div>
     </section>
@@ -195,8 +197,9 @@ get_header(); ?>
         visibility: visible !important;
         pointer-events: auto;
         transition: none !important;
-        top:0;
+        top: 0;
     }
+
     .pw-protect-overlay.hide {
         opacity: 0 !important;
         visibility: hidden !important;
@@ -205,11 +208,11 @@ get_header(); ?>
 
     .pw-protect-overlay button {
         text-align: center;
-	    margin-top: 30px;
-		font-size: 17px;
-		font-weight: 900;
-		text-transform: uppercase;
-		transition: .15s linear;
+        margin-top: 30px;
+        font-size: 17px;
+        font-weight: 900;
+        text-transform: uppercase;
+        transition: .15s linear;
         color: white;
         background: #002549;
         padding: 5px 19px;
@@ -221,13 +224,13 @@ get_header(); ?>
         opacity: 0.8;
         color: #ffffff;
     }
+
     .pw-protect-overlay input::placeholder {
         color: #000000;
     }
 </style>
 
 
-<?php get_footer(); ?>
 
 
 <script>
@@ -307,10 +310,10 @@ get_header(); ?>
 
         document.getElementById('signature-name').textContent = name;
         document.getElementById('signature-title').textContent = title;
-        
+
         // Get the table body to insert rows
         const tableBody = document.querySelector('#signature tbody table tbody');
-        
+
         // Handle phone one
         if (phoneOne && phoneOne.trim() !== '') {
             let phoneOneRow = document.getElementById('phone-one');
@@ -337,7 +340,7 @@ get_header(); ?>
                 phoneOneRow.remove();
             }
         }
-        
+
         // Handle phone two
         if (phoneTwo && phoneTwo.trim() !== '') {
             let phoneTwoRow = document.getElementById('phone-two');
@@ -365,7 +368,7 @@ get_header(); ?>
                 phoneTwoRow.remove();
             }
         }
-        
+
         // Handle phone three
         if (phoneThree && phoneThree.trim() !== '') {
             let phoneThreeRow = document.getElementById('phone-three');
@@ -394,7 +397,7 @@ get_header(); ?>
                 phoneThreeRow.remove();
             }
         }
-        
+
         document.getElementById('signature-email').textContent = email;
         document.getElementById('signature-email-link').href = `mailto:${email}`;
         document.getElementById('signature-address-line-one').textContent = addressLineOne;

@@ -250,7 +250,6 @@ if (strpos($_SERVER['REQUEST_URI'], '/staging/') !== false) {
 </style>
 
 
-<?php get_footer(); ?>
 
 
 <script>
