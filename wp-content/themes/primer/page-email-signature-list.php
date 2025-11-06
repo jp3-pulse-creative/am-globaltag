@@ -113,7 +113,25 @@ header("Expires: 0");
                                                                         </td>
                                                                     </tr> -->
 
-                                                                    <!-- Dynamic additional phone rows will be injected after Direct phone -->
+                                                                    <!-- Example phone rows (placeholders) will be shown initially; real rows will replace them on Update -->
+                                                                    <tr class="phone-placeholder">
+                                                                        <td style="width: 100%; padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile (UK): </span>
+                                                                            <a href="tel:+442079460958" style="text-decoration: underline !important; color: #0084C7 !important;"><span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">+44 20 7946 0958</span></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="phone-placeholder">
+                                                                        <td style="width: 100%; padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Office (HK): </span>
+                                                                            <a href="tel:+85212345678" style="text-decoration: underline !important; color: #0084C7 !important;"><span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">+852 1234 5678</span></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="phone-placeholder">
+                                                                        <td style="width: 100%; padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">eFax (US): </span>
+                                                                            <a href="tel:+12125551234" style="text-decoration: underline !important; color: #0084C7 !important;"><span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">+1 212-555-1234</span></a>
+                                                                        </td>
+                                                                    </tr>
 
                                                                     <tr>
                                                                         <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
@@ -443,6 +461,8 @@ header("Expires: 0");
 
         // Render additional phones from list
         if (additionalPhones.length) {
+            // Remove placeholder rows when we have actual data
+            Array.from(tableBody.querySelectorAll('tr.phone-placeholder')).forEach(r => r.remove());
             const titleRow = tableBody.children[1];
             let anchor = titleRow;
             additionalPhones.forEach((p, idx) => {
