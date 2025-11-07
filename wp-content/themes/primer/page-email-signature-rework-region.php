@@ -70,15 +70,15 @@ header("Expires: 0");
                 <div class="col-12 col-md-6 pl-md-5 mt-5 mb-0 align-self-end table">
                     <div>
                         <span>
-                            <table id="signature" border="0" cellspacing="0" cellpadding="0" style="font-family: Arial, sans-serif; color: #000000; font-size: 9pt; line-height: 12px; border-collapse: collapse; border-spacing: 0; width: 768px;">
+                            <table id="signature" border="0" cellspacing="0" cellpadding="0" style="font-family: Arial, sans-serif; color: #000000; font-size: 9pt; line-height: 12px; border-collapse: collapse; border-spacing: 0; width: 100%; max-width: 700px;">
                                 <tbody>
                                     <tr>
-                                        <td style="padding: 0; vertical-align: middle; border-collapse: collapse; border-spacing: 0; border-top: none; border-right: 2px solid #0084C7; border-bottom: none; border-left: none; width: 190px;">
+                                        <td style="padding: 0; vertical-align: middle; border-collapse: collapse; border-spacing: 0; border-top: none; border-right: 2px solid #0084C7; border-bottom: none; border-left: none; width: 40%;">
                                             <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0;">
                                                 <tbody>
                                                     <tr>
-                                                        <td style="padding: 0;  border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                            <img width="168" height="auto" src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/email-signature/am-tag-20thanniversary.png" alt="A&M Tag Logo" style="display: block; border: none; outline: none; text-decoration: none; width: 168px; max-width: 168px; height: auto;">
+                                                        <td style="padding: 0 20px 0 0;  border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                            <img width="168" height="auto" src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/email-signature/am-tag-20thanniversary.png" alt="A&M Tag Logo" style="display: block; border: none; outline: none; text-decoration: none; width: 100%; max-width: 100%; height: auto;">
                                                         </td>
                                                     </tr>
 
@@ -88,7 +88,7 @@ header("Expires: 0");
                                         </td>
 
 
-                                        <td style="vertical-align: middle;padding: 0; border: none; width: 576px;" align="left">
+                                        <td style="vertical-align: middle;padding: 0; border: none; width: 60%;" align="left">
                                             <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                 <tbody>
                                                     <tr>
@@ -112,33 +112,33 @@ header("Expires: 0");
                                                                     <tr id="phone-one">
                                                                         <td style="width: 100%; padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
                                                                             <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Direct: </span>
-                                                                            <a id="signature-phone-one-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">000-000-0000</span></a>
+                                                                            <a id="signature-phone-one-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
                                                                         </td>
                                                                     </tr>
 
                                                                     <tr id="phone-two">
                                                                         <td style="width: 100%; padding: 0; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
                                                                             <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile: </span>
-                                                                            <a id="signature-phone-two-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-phone-two" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">000-000-0000</span></a>
+                                                                            <a id="signature-phone-two-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-two" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
                                                                         </td>
                                                                     </tr>
 
                                                                     <tr id="phone-three">
                                                                         <td style="width: 100%; padding: 0; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
                                                                             <span style="font-family:  Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile: </span>
-                                                                            <a id="signature-phone-three-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-phone-three" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">000-000-0000</span></a>
+                                                                            <a id="signature-phone-three-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-three" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">000-000-0000</span></a>
                                                                         </td>
                                                                     </tr>
 
                                                                     <tr>
                                                                         <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Email: </span>
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">email: </span>
                                                                             <a id="signature-email-link" href="mailto:person@domain.com.com" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-email" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">person@domain.com</span></a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Website: </span>
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">website: </span>
                                                                             <a id="signature-website-link" href="http://am-globaltag.com" target="_blank" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-website" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">am-globaltag.com</span></a>
                                                                         </td>
                                                                     </tr>
@@ -312,13 +312,10 @@ header("Expires: 0");
 
         let firstNameElement = document.getElementById('input_<?php echo $form_id; ?>_1_3'); // First Name
         let lastNameElement = document.getElementById('input_<?php echo $form_id; ?>_1_6'); // Last Name
-        // let titleElement = document.getElementById('input_<?php echo $form_id; ?>_3'); // Title - Text Input
-        let titleElement = document.getElementById('input_<?php echo $form_id; ?>_19'); // Title - Textarea
-
-        let phoneOneElement = document.getElementById('input_<?php echo $form_id; ?>_5'); // Phone 1 (primary)
-        // List field (Gravity Forms) for additional phones: columns = Label, Region, Number
-        // Adjust field ID below to match GF List field ID
-        let phoneListElement = document.getElementById('input_<?php echo $form_id; ?>_20'); // List field raw textarea value (JSON-like or line based)
+        let titleElement = document.getElementById('input_<?php echo $form_id; ?>_3'); // Title
+        let phoneOneElement = document.getElementById('input_<?php echo $form_id; ?>_5'); // Phone 1
+        let phoneTwoElement = document.getElementById('input_<?php echo $form_id; ?>_6'); // Phone 2
+        let phoneThreeElement = document.getElementById('input_<?php echo $form_id; ?>_7'); // Phone 3
         let emailElement = document.getElementById('input_<?php echo $form_id; ?>_8'); // Email
         let addressLineOneElement = document.getElementById('input_<?php echo $form_id; ?>_10'); // Address
         let addressLineTwoElement = document.getElementById('input_<?php echo $form_id; ?>_11'); // Address Line 2
@@ -334,28 +331,8 @@ header("Expires: 0");
         let name = `${firstName} ${lastName}`;
         let title = titleElement.value;
         let phoneOne = phoneOneElement.value;
-        // Parse additional phone rows from List field if present
-        let phoneListRaw = phoneListElement ? phoneListElement.value : '';
-        // Expect Gravity Forms List field to produce rows separated by newlines and columns by tabs or pipe
-        // Example line: Mobile|EMEA|+1-555-222-3333
-        const additionalPhones = [];
-        if (phoneListRaw.trim() !== '') {
-            phoneListRaw.split(/\n/).forEach(line => {
-                const parts = line.split(/\t|\|/); // support tab or pipe
-                if (parts.length >= 3) {
-                    const label = parts[0].trim();
-                    const region = parts[1].trim();
-                    const number = parts[2].trim();
-                    if (number) {
-                        additionalPhones.push({
-                            label,
-                            region,
-                            number
-                        });
-                    }
-                }
-            });
-        }
+        let phoneTwo = phoneTwoElement.value;
+        let phoneThree = phoneThreeElement.value;
         let email = emailElement.value;
         let addressLineOne = addressLineOneElement.value;
         let addressLineTwo = addressLineTwoElement.value;
@@ -386,13 +363,7 @@ header("Expires: 0");
         email = stripEmailParameters(email);
 
         document.getElementById('signature-name').textContent = name;
-        // Allow multiline title from textarea: escape then convert newlines to <br>
-        const titleSpan = document.getElementById('signature-title');
-        if (titleSpan) {
-            const escapedTitle = title.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-            const htmlTitle = escapedTitle.replace(/\r?\n/g, '<br>');
-            titleSpan.innerHTML = htmlTitle;
-        }
+        document.getElementById('signature-title').textContent = title;
 
         // Update email and address (these should always exist)
         const signatureEmailElement = document.getElementById('signature-email');
@@ -428,7 +399,7 @@ header("Expires: 0");
                 phoneOneRow.innerHTML = `
                     <td style="width: 100%; padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
                         <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">${label}: </span>
-                        <a id="signature-phone-one-link" href="tel:${phoneOne}" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">${phoneOne}</span></a>
+                        <a id="signature-phone-one-link" href="tel:${phoneOne}" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">${phoneOne}</span></a>
                     </td>
                 `;
                 // Insert after the title row (row 1)
@@ -455,33 +426,94 @@ header("Expires: 0");
             }
         }
 
-        // Remove any existing additional phone rows before re-render
-        Array.from(tableBody.querySelectorAll('tr[data-phone-index]')).forEach(r => r.remove());
-
-        // Render additional phones from list
-        if (additionalPhones.length) {
-            // Find insertion anchor (after last existing phone-one row or title row)
-            const phoneOneRow = document.getElementById('phone-one');
-            let anchor = phoneOneRow || tableBody.children[1];
-            additionalPhones.forEach((p, idx) => {
-                const row = document.createElement('tr');
-                row.setAttribute('data-phone-index', idx);
-                const labelFull = p.region ? `${p.label} (${p.region})` : p.label;
-                // Basic phone normalization for tel link (strip spaces and parentheses)
-                const telValue = p.number.replace(/[^+\d]/g, '');
-                row.innerHTML = `
-                    <td style="width: 100%; padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                        <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">${labelFull}: </span>
-                        <a href="tel:${telValue}" style="text-decoration: underline !important; color: #0084C7 !important;"><span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">${p.number}</span></a>
-                    </td>`;
-                if (anchor && anchor.nextSibling && tableBody.contains(anchor.nextSibling)) {
-                    tableBody.insertBefore(row, anchor.nextSibling);
-                    anchor = row; // move anchor forward
+        // Handle phone two with region
+        let phoneTwoRegionElement = document.getElementById('input_<?php echo $form_id; ?>_14'); // Phone 2 Region
+        let phoneTwoRegion = phoneTwoRegionElement ? phoneTwoRegionElement.value : '';
+        console.log('Phone Two:', phoneTwo, 'Region:', phoneTwoRegion);
+        if (phoneTwo && phoneTwo.trim() !== '') {
+            let phoneTwoRow = document.getElementById('phone-two');
+            let label = 'Mobile';
+            if (phoneTwoRegion && phoneTwoRegion.trim() !== '') {
+                label += ` (${phoneTwoRegion})`;
+            }
+            if (!phoneTwoRow) {
+                // Create the row if it doesn't exist
+                phoneTwoRow = document.createElement('tr');
+                phoneTwoRow.id = 'phone-two';
+                phoneTwoRow.innerHTML = `
+                    <td style="width: 100%; padding: 0; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                        <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">${label}: </span>
+                        <a id="signature-phone-two-link" href="tel:${phoneTwo}" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-two" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">${phoneTwo}</span></a>
+                    </td>
+                `;
+                // Insert after phone-one if it exists, otherwise after title row
+                const phoneOneRow = document.getElementById('phone-one');
+                const insertAfter = phoneOneRow || tableBody.children[1];
+                if (insertAfter && insertAfter.nextSibling && tableBody.contains(insertAfter.nextSibling)) {
+                    tableBody.insertBefore(phoneTwoRow, insertAfter.nextSibling);
                 } else {
-                    tableBody.appendChild(row);
-                    anchor = row;
+                    tableBody.appendChild(phoneTwoRow);
                 }
-            });
+            } else {
+                // Update existing row
+                const phoneElement = document.getElementById('signature-phone-two');
+                const phoneLinkElement = document.getElementById('signature-phone-two-link');
+                const labelElement = phoneTwoRow.querySelector('span');
+
+                if (phoneElement) phoneElement.textContent = phoneTwo;
+                if (phoneLinkElement) phoneLinkElement.href = `tel:${phoneTwo}`;
+                if (labelElement) labelElement.textContent = `${label}: `;
+            }
+        } else {
+            const phoneTwoRow = document.getElementById('phone-two');
+            if (phoneTwoRow) {
+                phoneTwoRow.remove();
+            }
+        }
+
+        // Handle phone three with region
+        let phoneThreeRegionElement = document.getElementById('input_<?php echo $form_id; ?>_15'); // Phone 3 Region
+        let phoneThreeRegion = phoneThreeRegionElement ? phoneThreeRegionElement.value : '';
+        if (phoneThree && phoneThree.trim() !== '') {
+            let phoneThreeRow = document.getElementById('phone-three');
+            let label = 'Mobile';
+            if (phoneThreeRegion && phoneThreeRegion.trim() !== '') {
+                label += ` (${phoneThreeRegion})`;
+            }
+            if (!phoneThreeRow) {
+                // Create the row if it doesn't exist
+                phoneThreeRow = document.createElement('tr');
+                phoneThreeRow.id = 'phone-three';
+                phoneThreeRow.innerHTML = `
+                    <td style="width: 100%;padding: 0; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                        <span style="font-family:  Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">${label}: </span>
+                        <a id="signature-phone-three-link" href="tel:${phoneThree}" style="text-decoration: underline !important; color: #558290 !important;"><span id="signature-phone-three" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #558290 !important;">${phoneThree}</span></a>
+                    </td>
+                `;
+                // Insert after phone-two or phone-one if they exist, otherwise after title row
+                const phoneTwoRow = document.getElementById('phone-two');
+                const phoneOneRow = document.getElementById('phone-one');
+                const insertAfter = phoneTwoRow || phoneOneRow || tableBody.children[1];
+                if (insertAfter && insertAfter.nextSibling && tableBody.contains(insertAfter.nextSibling)) {
+                    tableBody.insertBefore(phoneThreeRow, insertAfter.nextSibling);
+                } else {
+                    tableBody.appendChild(phoneThreeRow);
+                }
+            } else {
+                // Update existing row
+                const phoneElement = document.getElementById('signature-phone-three');
+                const phoneLinkElement = document.getElementById('signature-phone-three-link');
+                const labelElement = phoneThreeRow.querySelector('span');
+
+                if (phoneElement) phoneElement.textContent = phoneThree;
+                if (phoneLinkElement) phoneLinkElement.href = `tel:${phoneThree}`;
+                if (labelElement) labelElement.textContent = `${label}: `;
+            }
+        } else {
+            const phoneThreeRow = document.getElementById('phone-three');
+            if (phoneThreeRow) {
+                phoneThreeRow.remove();
+            }
         }
     }
 
@@ -501,26 +533,23 @@ header("Expires: 0");
         }
     });
 
-    // Copy only in landscape on small screens; allow always on larger screens
     function copySignature() {
-        const signature = document.getElementById('signature');
-        if (!signature) {
-            alert('Signature element not found.');
+        if (window.innerWidth < 700 && window.matchMedia && window.matchMedia("(orientation: portrait)").matches) {
+            alert('Please turn your phone to landscape before copying the signature. Copying is disabled in portrait mode.');
             return;
         }
+        const signature = document.getElementById('signature');
         const range = document.createRange();
         range.selectNode(signature);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-        let success = false;
+        window.getSelection().removeAllRanges(); // Clear any existing selections
+        window.getSelection().addRange(range);
         try {
-            success = document.execCommand('copy');
-        } catch (e) {
-            success = false;
+            document.execCommand('copy');
+            alert('Signature copied to clipboard!');
+        } catch (err) {
+            alert('Failed to copy signature. Please try again.');
         }
-        selection.removeAllRanges();
-        alert(success ? 'Signature copied to clipboard!' : 'Copy failed. Please try again.');
+        window.getSelection().removeAllRanges(); // Clear the selection
     }
 </script>
 <?php get_footer(); ?>
