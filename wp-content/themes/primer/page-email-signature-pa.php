@@ -57,7 +57,7 @@ header("Expires: 0");
                                 <tbody>
                                     <tr>
                                         <!-- Added class logo-cell for reliable width control across email clients -->
-                                        <td class="logo-cell" style="padding: 0; vertical-align: middle; border-collapse: collapse; border-spacing: 0; border-top: none; border-right: 2px solid #0084C7; border-bottom: none; border-left: none; width: 190px;">
+                                        <td class="logo-cell" style="padding: 0; vertical-align: middle; border-collapse: collapse; border-spacing: 0; border-top: none; border-bottom: none; border-left: none; width: 190px;">
                                             <table border="0" cellspacing="0" cellpadding="0" width="168" style="border-collapse: collapse; border-spacing: 0; width:168px;">
                                                 <tbody>
                                                     <tr>
@@ -70,7 +70,8 @@ header("Expires: 0");
                                             </table>
 
                                         </td>
-
+                                        <!-- Reliable divider cell instead of border (fixes Outlook Classic using black) -->
+                                        <td style="padding: 0; border: none; width: 2px; background-color: #0084C7; font-size: 0; line-height: 0;">&nbsp;</td>
 
                                         <td style="vertical-align: middle;padding: 0; border: none; width: 576px;" align="left">
                                             <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -97,7 +98,7 @@ header("Expires: 0");
                                                                         <td style="width: 100%;padding: 0;font-size: 12px;font-weight: 400;line-height: 14px;border: none !important;border-collapse: collapse;border-spacing: 0;" align="left">
                                                                             <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; color: #000000 !important;">Direct: </span>
                                                                             <a href="tel:+12123288709" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">+1-212-328-8709</a> |
-                                                                            <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; color: #000000 !important;">Mobile: </span>
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; color: #000000 !important; display: inline-block; vertical-align: baseline;">Mobile&#8203;: </span>
                                                                             <a href="tel:+19178861107" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">+1-917-886-1107</a>
                                                                             |
                                                                             <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; color: #000000 !important;">eFax: </span>
@@ -107,9 +108,7 @@ header("Expires: 0");
                                                                     <tr>
                                                                         <td style="width: 100%;padding: 0;font-family:  Arial, sans-serif;font-size: 12px;line-height: 14px;border: none !important;border-collapse: collapse;border-spacing: 0;" align="left">
                                                                             <span style="margin: 0; font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; font-weight: 400; font-style: normal !important; color: #000000;">
-                                                                                <span id="signature-address-line-one" style="margin: 0; font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; font-weight: 400; font-style: normal !important; color: #000000;">600 Madison Avenue, New York, NY 10022</span> <br>
-
-
+                                                                                <span id="signature-address-line-one" style="margin: 0; font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; font-weight: 400; font-style: normal !important; color: #000000; display: block;">600 Madison Avenue, New York, NY 10022</span>
                                                                             </span>
                                                                         </td>
                                                                     </tr>
@@ -126,16 +125,16 @@ header("Expires: 0");
 
                                                                     <tr>
                                                                         <td style="width:100%;padding:0 0 16px;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#00244A;border:none !important;border-collapse:collapse;border-spacing:0;" align="left">
-                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:700;line-height:14px;color:#00244A;display:block;">Chief of Staff: Kate Lowry</span>
-                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important;">Mobile:</span> <a href="tel:+12012736250" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">+1-201-273-6250</a> |
-                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important;">Email:</span> <a href="mailto:kate.lowry@alvarezandmarsal.com" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">kate.lowry@alvarezandmarsal.com</a>
+                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:700;line-height:14px;color:#00244A;display:block;">Chief of Staff: Kate Lowry<br></span>
+                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important; display:inline-block; vertical-align:baseline;">Mobile&#8203;:</span> <a href="tel:+12012736250" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">+1-201-273-6250</a> |
+                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important; display:inline-block; vertical-align:baseline;">Email:</span> <a href="mailto:kate.lowry@alvarezandmarsal.com" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">kate.lowry@alvarezandmarsal.com</a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td style="width:100%;padding:0 0 0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#00244A;border:none !important;border-collapse:collapse;border-spacing:0;" align="left">
-                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:700;line-height:14px;color:#00244A;display:block;">Executive Assistant: LaCanas Tucker</span>
-                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important;">Mobile:</span> <a href="tel:+19175324174" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">+1-917-532-4174</a> |
-                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important;">Email:</span> <a href="mailto:lacanas.tucker@alvarezandmarsal.com" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">lacanas.tucker@alvarezandmarsal.com</a>
+                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:700;line-height:14px;color:#00244A;display:block;">Executive Assistant: LaCanas Tucker<br></span>
+                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important; display:inline-block; vertical-align:baseline;">Mobile&#8203;:</span> <a href="tel:+19175324174" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">+1-917-532-4174</a> |
+                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important; display:inline-block; vertical-align:baseline;">Email:</span> <a href="mailto:lacanas.tucker@alvarezandmarsal.com" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">lacanas.tucker@alvarezandmarsal.com</a>
                                                                         </td>
                                                                     </tr>
 
