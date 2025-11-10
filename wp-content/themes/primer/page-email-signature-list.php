@@ -85,10 +85,12 @@ header("Expires: 0");
 
                                         </td>
                                         <td style="vertical-align: middle;padding: 0; border: none; width: 578px;" align="left">
-                                            <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0; width: 100%; border-left:2px solid #0084C7;">
+                                            <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                 <tbody>
                                                     <tr>
-                                                        <td style="width: 100%; padding: 0 0 0 20px; font-family: Arial, sans-serif; font-size: 12px; font-weight: 700; line-height: 14px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                        <!-- Divider column using background color to ensure correct color in Outlook Classic and full height -->
+                                                        <td style="padding: 0; border: none; width: 2px; background-color: #0084C7; font-size: 0; line-height: 0;">&nbsp;</td>
+                                                        <td style="padding: 0; border: none;" align="left">
                                                             <table border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-collapse: collapse; border-spacing: 0;">
                                                                 <tbody>
                                                                     <tr>
