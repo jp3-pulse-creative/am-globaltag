@@ -53,7 +53,7 @@ header("Expires: 0");
                 <div class="col-12 mt-5 mb-0 align-self-end table">
                     <div>
                         <span>
-                            <table id="signature" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed; font-family: Arial, sans-serif; color: #000000; font-size: 9pt; line-height: 14px; border-collapse: collapse; border-spacing: 0; width: 768px;">
+                            <table id="signature" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed; font-family: Arial, sans-serif; color: #000000; font-size: 12px; line-height: 14px; border-collapse: collapse; border-spacing: 0; width: 768px;">
                                 <tbody>
                                     <tr>
                                         <!-- Added class logo-cell for reliable width control across email clients -->
@@ -76,66 +76,66 @@ header("Expires: 0");
                                             <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                 <tbody>
                                                     <tr>
-                                                        <td style="width: 100%; padding: 0 0 0 20px; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 700; line-height: 14px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                        <td style="width: 100%; padding: 0 0 0 20px; font-family: Arial, sans-serif; font-size: 12px; font-weight: 700; line-height: 14px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
                                                             <table border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-collapse: collapse; border-spacing: 0;">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 700; line-height: 14px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 700; line-height: 14px; color: #00244A;" id="signature-name">Paul Aversano</span>
+                                                                        <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 12px; font-weight: 700; line-height: 14px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="margin: 0; font-family: Arial, sans-serif; font-size: 12px; font-weight: 700; line-height: 14px; color: #00244A;">Paul Aversano</span>
                                                                         </td>
                                                                     </tr>
 
                                                                     <tr>
-                                                                        <td style="width: 100%;padding: 0 0 6px;font-family:  Arial, sans-serif;font-size: 9pt;line-height: 14px;font-weight: 700;color:#00244A;border: none !important;border-collapse: collapse;border-spacing: 0;" align="left">
-                                                                            <span style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 14px; font-weight: 700; color:#00244A;" id="signature-title">Managing Director and Global Practice Leader<br>Global Transaction Advisory Group &amp; Corporate Transactions Group</span>
+                                                                        <td style="width: 100%;padding: 0 0 16px;font-family:  Arial, sans-serif;font-size: 12px;line-height: 14px;font-weight: 700;color:#00244A;border: none !important;border-collapse: collapse;border-spacing: 0;" align="left">
+                                                                            <span style="margin: 0; font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; font-weight: 700; color:#00244A;">Managing Director and Global Practice Leader<br>Global Transaction Advisory Group &amp; Corporate Transactions Group</span>
                                                                         </td>
                                                                     </tr>
 
 
 
                                                                     <tr>
-                                                                        <td style="width: 100%;padding: 0 0 6px;font-size: 9pt;font-weight: 400;line-height: 14px;border: none !important;border-collapse: collapse;border-spacing: 0;" align="left">
-                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 14px; color: #000000 !important;">Direct: </span>
-                                                                            <a href="tel:+12123288709" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">+1-212-328-8709</span></a> |
-                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 14px; color: #000000 !important;">Mobile: </span>
-                                                                            <a href="tel:+19178861107" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">+1-917-886-1107</span></a>
+                                                                        <td style="width: 100%;padding: 0;font-size: 12px;font-weight: 400;line-height: 14px;border: none !important;border-collapse: collapse;border-spacing: 0;" align="left">
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; color: #000000 !important;">Direct: </span>
+                                                                            <a href="tel:+12123288709" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">+1-212-328-8709</a> |
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; color: #000000 !important;">Mobile: </span>
+                                                                            <a href="tel:+19178861107" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">+1-917-886-1107</a>
                                                                             |
-                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 14px; color: #000000 !important;">eFax: </span>
-                                                                            <a href="tel:+16465142792" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">+1-646-514-2792</span></a>
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; color: #000000 !important;">eFax: </span>
+                                                                            <a href="tel:+16465142792" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">+1-646-514-2792</a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td style="width: 100%;padding: 0 0 6px;font-family:  Arial, sans-serif;font-size: 9pt;line-height: 14px;border: none !important;border-collapse: collapse;border-spacing: 0;" align="left">
-                                                                            <address style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 14px; font-weight: 400; font-style: normal !important; color: #000000;">
-                                                                                <span id="signature-address-line-one" style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 14px; font-weight: 400; font-style: normal !important; color: #000000;">600 Madison Avenue, New York, NY 10022</span> <br>
+                                                                        <td style="width: 100%;padding: 0;font-family:  Arial, sans-serif;font-size: 12px;line-height: 14px;border: none !important;border-collapse: collapse;border-spacing: 0;" align="left">
+                                                                            <span style="margin: 0; font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; font-weight: 400; font-style: normal !important; color: #000000;">
+                                                                                <span id="signature-address-line-one" style="margin: 0; font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; font-weight: 400; font-style: normal !important; color: #000000;">600 Madison Avenue, New York, NY 10022</span> <br>
 
 
-                                                                            </address>
+                                                                            </span>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td style="width: 100%;padding: 0 0 6px;font-family: Arial, sans-serif;font-size: 9pt;font-weight: 400;line-height: 14px;border: none !important;border-collapse: collapse;border-spacing: 0;" align="left">
-                                                                            <a href="https://www.alvarezandmarsal.com/" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">www.alvarezandmarsal.com</span></a> |
-                                                                            <a href="https://www.am-globaltag.com/" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">www.am-globaltag.com</span></a>
+                                                                        <td style="width: 100%;padding: 0 0 16px;font-family: Arial, sans-serif;font-size: 12px;font-weight: 400;line-height: 14px;border: none !important;border-collapse: collapse;border-spacing: 0;" align="left">
+                                                                            <a href="https://www.alvarezandmarsal.com/" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">www.alvarezandmarsal.com</a> |
+                                                                            <a href="https://www.am-globaltag.com/" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">www.am-globaltag.com</a>
                                                                             |
-                                                                            <a href="https://www.paulaversano.com/" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">www.paulaversano.comf</span></a>
+                                                                            <a href="https://www.paulaversano.com/" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">www.paulaversano.com</a>
                                                                         </td>
                                                                     </tr>
 
 
 
                                                                     <tr>
-                                                                        <td style="width: 100%;padding: 0 0 6px;font-family: Arial, sans-serif;font-size: 9pt;font-weight: 700;line-height: 14px;color: #00244A;border: none !important;border-collapse: collapse;border-spacing: 0;" align="left">
-                                                                            <span style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 700; line-height: 14px; color: #00244A;" id="signature-name">Chief of Staff: Kate Lowry<br></span>
-                                                                            Mobile: <a href="tel:+12012736250" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">+1-201-273-6250</span></a> |
-                                                                            Email: <a href="mailto:kate.lowry@alvarezandmarsal.com" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">kate.lowry@alvarezandmarsal.com</span></a>
+                                                                        <td style="width:100%;padding:0 0 16px;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#00244A;border:none !important;border-collapse:collapse;border-spacing:0;" align="left">
+                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:700;line-height:14px;color:#00244A;display:block;">Chief of Staff: Kate Lowry</span>
+                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important;">Mobile:</span> <a href="tel:+12012736250" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">+1-201-273-6250</a> |
+                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important;">Email:</span> <a href="mailto:kate.lowry@alvarezandmarsal.com" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">kate.lowry@alvarezandmarsal.com</a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 700; line-height: 14px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 700; line-height: 14px; color: #00244A;" id="signature-name">Executive Assistant: LaCanas Tucker<br></span>
-                                                                            Mobile: <a href="tel:+19175324174" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">+1-917-532-4174</span></a> |
-                                                                            Email: <a href="mailto:lacanas.tucker@alvarezandmarsal.com" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">lacanas.tucker@alvarezandmarsal.com</span></a>
+                                                                        <td style="width:100%;padding:0 0 0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#00244A;border:none !important;border-collapse:collapse;border-spacing:0;" align="left">
+                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:700;line-height:14px;color:#00244A;display:block;">Executive Assistant: LaCanas Tucker</span>
+                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important;">Mobile:</span> <a href="tel:+19175324174" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">+1-917-532-4174</a> |
+                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important;">Email:</span> <a href="mailto:lacanas.tucker@alvarezandmarsal.com" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">lacanas.tucker@alvarezandmarsal.com</a>
                                                                         </td>
                                                                     </tr>
 
