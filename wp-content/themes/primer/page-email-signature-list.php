@@ -67,15 +67,16 @@ header("Expires: 0");
                 <div class="col-12 col-md-6 pl-md-5 mt-5 mb-0 align-self-end table">
                     <div>
                         <span>
-                            <table id="signature" border="0" cellspacing="0" cellpadding="0" style="font-family: Arial, sans-serif; color: #000000; font-size: 9pt; line-height: 16px; border-collapse: collapse; border-spacing: 0; width: 768px;">
+                            <table id="signature" border="0" cellspacing="0" cellpadding="0" style="font-family: Arial, sans-serif; color: #000000; font-size: 12px; line-height: 14px; border-collapse: collapse; border-spacing: 0; width: 768px;">
                                 <tbody>
                                     <tr>
-                                        <td style="padding: 0; vertical-align: middle; border-collapse: collapse; border-spacing: 0; border-top: none; border-right: 2px solid #0084C7; border-bottom: none; border-left: none; width: 190px;">
-                                            <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0;">
+                                        <!-- Added class logo-cell for reliable width control across email clients -->
+                                        <td class="logo-cell" style="padding: 0; vertical-align: middle; border-collapse: collapse; border-spacing: 0; border-top: none; border-bottom: none; border-left: none; width: 190px;">
+                                            <table border="0" cellspacing="0" cellpadding="0" width="168" style="border-collapse: collapse; border-spacing: 0; width:168px;">
                                                 <tbody>
                                                     <tr>
                                                         <td style="padding: 0;  border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                            <img width="168" height="auto" src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/email-signature/am-tag-20thanniversary.png" alt="A&M Tag Logo" style="display: block; border: none; outline: none; text-decoration: none; width: 168px; max-width: 168px; height: auto;">
+                                                            <img width="168" height="auto" src="https://pulsecreative-clients.com/staging/amglobaltag/wp-content/themes/primer/library/images/email-signature/am-tag-20thanniversary.png" alt="A&amp;M Tag Logo" style="display:block; border:none; outline:none; text-decoration:none; width:168px; height:auto;">
                                                         </td>
                                                     </tr>
 
@@ -83,81 +84,73 @@ header("Expires: 0");
                                             </table>
 
                                         </td>
-
-
-                                        <td style="vertical-align: middle;padding: 0; border: none; width: 576px;" align="left">
-                                            <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <td style="vertical-align: middle;padding: 0; border: none; width: 578px;" align="left">
+                                            <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0; width: 100%; border-left:2px solid #0084C7;">
                                                 <tbody>
                                                     <tr>
-                                                        <td style="width: 100%; padding: 0 0 0 20px; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 700; line-height: 16px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                        <td style="width: 100%; padding: 0 0 0 20px; font-family: Arial, sans-serif; font-size: 12px; font-weight: 700; line-height: 14px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
                                                             <table border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-collapse: collapse; border-spacing: 0;">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 700; line-height: 16px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 700; line-height: 16px; color: #00244A;" id="signature-name">John Jacob Jingleheimer Schmidt<br>你好</span>
+                                                                        <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 12px; font-weight: 700; line-height: 14px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="margin: 0; font-family: Arial, sans-serif; font-size: 12px; font-weight: 700; line-height: 14px; color: #00244A;" id="signature-name">John Jacob Jingleheimer Schmidt<br>你好</span>
                                                                         </td>
                                                                     </tr>
 
                                                                     <tr>
-                                                                        <td style="width: 100%; padding: 5px 0 5px; font-family:  Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 700; color:#00244A; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 700; color:#00244A;" id="signature-title">Managing Director and Global Head of Web Operations</span>
+                                                                        <td style="width: 100%; padding: 0 0 16px; font-family:  Arial, sans-serif; font-size: 12px; line-height: 14px; font-weight: 700; color:#00244A; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="margin: 0; font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; font-weight: 700; color:#00244A;" id="signature-title">Managing Director and Global Head of Web Operations</span>
                                                                         </td>
                                                                     </tr>
 
-                                                                    <!-- 
 
-                                                                    <tr id="phone-one">
-                                                                        <td style="width: 100%; padding: 0; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Direct: </span>
-                                                                            <a id="signature-phone-one-link" href="tel:000-000-0000" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-phone-one" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">000-000-0000</span></a>
-                                                                        </td>
-                                                                    </tr> -->
+
 
                                                                     <!-- Example phone rows (placeholders) will be shown initially; real rows will replace them on Update -->
                                                                     <tr class="phone-placeholder">
-                                                                        <td style="width: 100%; padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Mobile (UK): </span>
-                                                                            <a href="tel:+442079460958" style="text-decoration: underline !important; color: #0084C7 !important;"><span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">+44 20 7946 0958</span></a>
+                                                                        <td style="width: 100%; padding: 0; font-size: 12px; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; color: #000000 !important;">Mobile (UK): </span>
+                                                                            <a href="tel:+442079460958" style="text-decoration: underline !important; color: #0084C7 !important;"><span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">+44 20 7946 0958</span></a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="phone-placeholder">
-                                                                        <td style="width: 100%; padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Office (HK): </span>
-                                                                            <a href="tel:+85212345678" style="text-decoration: underline !important; color: #0084C7 !important;"><span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">+852 1234 5678</span></a>
+                                                                        <td style="width: 100%; padding: 0; font-size: 12px; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; color: #000000 !important;">Office (HK): </span>
+                                                                            <a href="tel:+85212345678" style="text-decoration: underline !important; color: #0084C7 !important;"><span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">+852 1234 5678</span></a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="phone-placeholder">
-                                                                        <td style="width: 100%; padding: 0; font-size: 9pt; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">eFax (US): </span>
-                                                                            <a href="tel:+12125551234" style="text-decoration: underline !important; color: #0084C7 !important;"><span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">+1 212-555-1234</span></a>
+                                                                        <td style="width: 100%; padding: 0; font-size: 12px; font-weight: 400; line-height: 12px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; color: #000000 !important;">eFax (US): </span>
+                                                                            <a href="tel:+12125551234" style="text-decoration: underline !important; color: #0084C7 !important;"><span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">+1 212-555-1234</span></a>
                                                                         </td>
                                                                     </tr>
 
                                                                     <tr>
-                                                                        <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Email: </span>
-                                                                            <a id="signature-email-link" href="mailto:person@domain.com.com" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-email" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">person@domain.com</span></a>
+                                                                        <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; color: #000000 !important;">Email: </span>
+                                                                            <a id="signature-email-link" href="mailto:person@domain.com.com" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-email" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">person@domain.com</span></a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">Website: </span>
-                                                                            <a id="signature-website-link" href="http://am-globaltag.com" target="_blank" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-website" style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">am-globaltag.com</span></a>
+                                                                        <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; color: #000000 !important;">Website: </span>
+                                                                            <a id="signature-website-link" href="http://am-globaltag.com" target="_blank" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-website" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">am-globaltag.com</span></a>
                                                                         </td>
                                                                     </tr>
 
                                                                     <tr>
-                                                                        <td style="width: 100%; padding: 20px 0 0; font-family:  Arial, sans-serif; font-size: 9pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 700; color: #00244A;">Alvarez & Marsal</span>
-                                                                            <address id="signature-address-container" style="margin: 0; font-family: Arial, sans-serif; font-size: 9pt; line-height: 16px; font-weight: 400; font-style: normal !important; color: #000000;">
-                                                                                <span id="signature-address-block" style="margin:0; font-family: Arial, sans-serif; font-size:9pt; line-height:16px; font-weight:400; font-style:normal !important; color:#000000;">14/F, St. George's Building<br>2 Ice House Street<br>Central, Hong Kong</span>
+                                                                        <td style="width: 100%; padding: 20px 0 0; font-family:  Arial, sans-serif; font-size: 12px; line-height: 14px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; font-weight: 700; color: #00244A;">Alvarez & Marsal</span>
+                                                                            <address id="signature-address-container" style="margin: 0; font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; font-weight: 400; font-style: normal !important; color: #000000;">
+                                                                                <span id="signature-address-block" style="margin:0; font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; font-weight:400; font-style:normal !important; color:#000000;">14/F, St. George's Building<br>2 Ice House Street<br>Central, Hong Kong</span>
                                                                             </address>
                                                                         </td>
                                                                     </tr>
 
                                                                     <tr>
-                                                                        <td style="width: 100%; padding: 0; font-family:  Arial, sans-serif; font-size: 11pt; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="margin: 0; font-family:  Arial, sans-serif; font-size: 11pt; line-height: 16px; "><a style="text-decoration: underline !important; color: #0084C7 !important;" href="https://alvarezandmarsal.com/" target="_blank" rel="noopener"><span style="font-family:  Arial, sans-serif; font-size: 11pt; line-height: 16px; color: #0084C7 !important;">www.alvarezandmarsal.com</span></a></span>
+                                                                        <td style="width: 100%; padding: 0; font-family:  Arial, sans-serif; font-size: 11pt; line-height: 14px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="margin: 0; font-family:  Arial, sans-serif; font-size: 11pt; line-height: 14px; "><a style="text-decoration: underline !important; color: #0084C7 !important;" href="https://alvarezandmarsal.com/" target="_blank" rel="noopener"><span style="font-family:  Arial, sans-serif; font-size: 11pt; line-height: 14px; color: #0084C7 !important;">www.alvarezandmarsal.com</span></a></span>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -471,9 +464,9 @@ header("Expires: 0");
                 const labelFull = p.region ? `${p.label} (${p.region})` : p.label;
                 const telValue = normalizePhoneForTel(p.number);
                 row.innerHTML = `
-                    <td style="width: 100%; padding: 0; font-size: 9pt; font-weight: 400; line-height: 16px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                        <span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; color: #000000 !important;">${labelFull}: </span>
-                        <a href="tel:${telValue}" style="text-decoration: underline !important; color: #0084C7 !important;"><span style="font-family: Arial, sans-serif; font-size: 9pt; font-weight: 400; line-height: 16px; text-decoration: underline !important; color: #0084C7 !important;">${p.number}</span></a>
+                    <td style="width: 100%; padding: 0; font-size: 12px; font-weight: 400; line-height: 14px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                        <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; color: #000000 !important;">${labelFull}: </span>
+                        <a href="tel:${telValue}" style="text-decoration: underline !important; color: #0084C7 !important;"><span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">${p.number}</span></a>
                     </td>`;
                 if (anchor && anchor.nextSibling && tableBody.contains(anchor.nextSibling)) {
                     tableBody.insertBefore(row, anchor.nextSibling);
