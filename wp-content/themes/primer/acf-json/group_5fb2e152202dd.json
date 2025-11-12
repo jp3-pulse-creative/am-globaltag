@@ -178,7 +178,7 @@
             "name": "team_query_hide",
             "aria-label": "",
             "type": "true_false",
-            "instructions": "If checked, this team member will be listed first, alphabetically, on their Global Markets regional leadership slide.",
+            "instructions": "If checked, this team member will be hidden from the Our Team page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -188,6 +188,7 @@
             },
             "message": "",
             "default_value": 0,
+            "allow_in_bindings": 1,
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
@@ -280,7 +281,9 @@
             "allow_null": 0,
             "ui": 1,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "allow_backendsearch": false,
@@ -305,6 +308,7 @@
             },
             "choices": {
                 "Australia": "Australia",
+                "Belgium": "Belgium",
                 "Brazil": "Brazil",
                 "Canada": "Canada",
                 "China": "China",
@@ -313,6 +317,7 @@
                 "Hong Kong": "Hong Kong",
                 "India": "India",
                 "Italy": "Italy",
+                "Japan": "Japan",
                 "Mexico": "Mexico",
                 "Netherlands": "Netherlands",
                 "Singapore": "Singapore",
@@ -327,9 +332,12 @@
             "return_format": "value",
             "multiple": 1,
             "allow_null": 0,
+            "allow_in_bindings": 1,
             "ui": 1,
             "ajax": 0,
-            "placeholder": ""
+            "create_options": 0,
+            "placeholder": "",
+            "save_options": 0
         },
         {
             "allow_backendsearch": false,
@@ -357,6 +365,8 @@
                 "Atlanta": "Atlanta",
                 "Birmingham": "Birmingham",
                 "Boston": "Boston",
+                "Brisbane": "Brisbane",
+                "Brussels": "Brussels",
                 "Chicago": "Chicago",
                 "Dallas": "Dallas",
                 "Dubai": "Dubai",
@@ -387,6 +397,7 @@
                 "Stockholm": "Stockholm",
                 "Sydney": "Sydney",
                 "Tampa": "Tampa",
+                "Tokyo": "Tokyo",
                 "Toronto": "Toronto",
                 "Zurich": "Zurich"
             },
@@ -394,9 +405,12 @@
             "return_format": "value",
             "multiple": 1,
             "allow_null": 0,
+            "allow_in_bindings": 1,
             "ui": 1,
             "ajax": 0,
-            "placeholder": ""
+            "create_options": 0,
+            "placeholder": "",
+            "save_options": 0
         },
         {
             "allow_backendsearch": false,
@@ -495,7 +509,9 @@
             "ui": 1,
             "ajax": 0,
             "return_format": "value",
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         }
     ],
     "location": [
@@ -517,5 +533,5 @@
     "description": "",
     "show_in_rest": 0,
     "qef_simple_location_rules": 0,
-    "modified": 1736968854
+    "modified": 1760996592
 }

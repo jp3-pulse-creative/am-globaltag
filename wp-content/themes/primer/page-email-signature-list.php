@@ -33,16 +33,19 @@ header("Expires: 0");
                 <div class="col-12 password-input"><?php echo get_the_password_form(); ?></div>
             <?php } else { */ ?>
                 <div class="col-12">
-                    <p class="text-black">Add your Name, Position, Phone numbers and Email.
+                    <p class="text-black">Add your Name, Position, Phone numbers, Email and Office Address.
                         <br>To avoid inconsistencies, capitalization must be entered correctly.
                         <br>Name and Title should be first letter capitalized.
                         <br>Email should be all lowercase.
                         <br>
                         <br>You can continue to make edits and click the "Update Signature" button to see the changes.
-                        <br>Once the signature looks correct use the "Copy Signature" button to paste into your Outlook signature panel.
-                        <br>You may need to adjust any link colors or underlines before you send within the signature panel.
+                        <br>Once the signature looks correct use the "Copy Signature" button to bring the signature into your clipboard.
+                        <br>Go to Outlook and create a New signature, then Paste the signature into your Outlook signature panel.
+                        <br>You may need to adjust any link colors or underlines.
+                        <br>* Final step: create a new email, add the new signature and send to yourself to verify everything appears correctly.
                         <br>
-                        <br>FOR MOBILE: <br>Copy/Paste with device in <strong>Landscape orientation</strong> to maintain formatting/sizing consistency<br><strong>on iOS Mail app,</strong> after copy/paste shake your phone to "Undo change attributes", this will restore the coded formatting. You may have to delete space/line right below the address as well.
+                        <br>
+                        <br>FOR MOBILE: <br><strong>on iOS Mail app,</strong> after copy/paste, you may need to shake your phone to "Undo change attributes", this will restore the coded formatting.
                         <br><strong>on Android,</strong> long press to get the paste command
 
                     </p>
@@ -76,7 +79,7 @@ header("Expires: 0");
                                                 <tbody>
                                                     <tr>
                                                         <td style="padding: 0;  border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                            <img width="168" height="auto" src="https://pulsecreative-clients.com/staging/amglobaltag/wp-content/themes/primer/library/images/email-signature/am-tag-20thanniversary.png" alt="A&amp;M Tag Logo" style="display:block; border:none; outline:none; text-decoration:none; width:168px; height:auto;">
+                                                            <img width="168" height="auto" src="<?php echo esc_url(get_template_directory_uri()); ?>/library/images/email-signature/am-tag-20thanniversary.png" alt="A&amp;M Tag Logo" style="display:block; border:none; outline:none; text-decoration:none; width:168px; height:auto;">
                                                         </td>
                                                     </tr>
 
@@ -90,6 +93,8 @@ header("Expires: 0");
                                                     <tr>
                                                         <!-- Divider column using background color to ensure correct color in Outlook Classic and full height -->
                                                         <td style="padding: 0; border: none; width: 2px; background-color: #0084C7; font-size: 0; line-height: 0;">&nbsp;</td>
+                                                        <td style="padding: 0; border: none; width: 15px; background-color: transparent; font-size: 0; line-height: 0;">&nbsp;</td>
+
                                                         <td style="padding: 0; border: none;" align="left">
                                                             <table border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-collapse: collapse; border-spacing: 0;">
                                                                 <tbody>
@@ -136,7 +141,6 @@ header("Expires: 0");
                                                                     </tr>
                                                                     <tr>
                                                                         <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; color: #000000 !important;">Website: </span>
                                                                             <a id="signature-website-link" href="http://am-globaltag.com" target="_blank" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-website" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">am-globaltag.com</span></a>
                                                                         </td>
                                                                     </tr>

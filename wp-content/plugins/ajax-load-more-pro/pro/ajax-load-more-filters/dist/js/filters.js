@@ -10230,7 +10230,7 @@ var almFiltersInit = function almFiltersInit(filter) {
 		});
 	}
 
-	// Textfield Button Event listeners
+	// Textfield Button Event listeners.
 	var almFiltertextButtons = filter.querySelectorAll('.alm-filter--text-wrap.has-button button');
 	if (almFiltertextButtons) {
 		[].concat(_toConsumableArray(almFiltertextButtons)).forEach(function (button) {
@@ -10238,7 +10238,7 @@ var almFiltersInit = function almFiltersInit(filter) {
 		});
 	}
 
-	// Change Event (Select)
+	// Change Event (Select).
 	if (style === 'change') {
 		// Loop all items and add the event listener
 		var almFilterItems = filter.querySelectorAll('.alm-filter--item');
@@ -10249,7 +10249,7 @@ var almFiltersInit = function almFiltersInit(filter) {
 		}
 	}
 
-	// Button
+	// Button.
 	if (style === 'button') {
 		var almFilterButton = filter.querySelector('.alm-filters--button');
 		if (almFilterButton) {
@@ -10257,7 +10257,7 @@ var almFiltersInit = function almFiltersInit(filter) {
 		}
 	}
 
-	// Reset Button
+	// Reset Button.
 	var resetButton = filter.querySelector(_Variables2.default.reset_btn_classname);
 	if (resetButton) {
 		resetButton.addEventListener('click', function () {
@@ -10265,7 +10265,7 @@ var almFiltersInit = function almFiltersInit(filter) {
 		});
 	}
 
-	// Attach enter click listener for textfields
+	// Event listeners for input textfields.
 	var almFilterTextfields = filter.querySelectorAll('.alm-filter--textfield');
 	if (almFilterTextfields) {
 		[].concat(_toConsumableArray(almFilterTextfields)).forEach(function (item) {
@@ -10273,9 +10273,17 @@ var almFiltersInit = function almFiltersInit(filter) {
 				var keyCode = event.keyCode;
 
 				if (keyCode === 13) {
-					// Enter/return click
-					almFiltersClick();
+					almFiltersClick(); // Enter/return click
 				}
+			});
+			// Focus + Focusout for Textfields.
+			item.addEventListener('focus', function (event) {
+				var parent = event.target.parentNode;
+				parent.classList.add('has-focus');
+			});
+			item.addEventListener('focusout', function (event) {
+				var parent = event.target.parentNode;
+				parent.classList.remove('has-focus');
 			});
 		});
 	}
@@ -10330,9 +10338,9 @@ window.almFiltersResetStatus = function (obj) {
 
 	[].concat(_toConsumableArray(resetButtons)).forEach(function (button) {
 		if (obj === '') {
-			button.classList.add('hidden');
+			button.style.display = 'none';
 		} else {
-			button.classList.remove('hidden');
+			button.style.display = 'block';
 		}
 	});
 };
@@ -10500,12 +10508,12 @@ window.addEventListener('popstate', function (event) {
 	if (!url || querystring === '') {
 		window.almFiltersClear(false);
 		if (resetButton) {
-			resetButton.classList.add('hidden');
+			resetButton.style.display = 'none';
 		}
 	} else {
 		(0, _SetSelectedElements2.default)((0, _ParseQuerystring2.default)(url));
 		if (resetButton) {
-			resetButton.classList.remove('hidden');
+			resetButton.style.display = 'block';
 		}
 	}
 });
@@ -11004,7 +11012,10 @@ var buildURL = function buildURL(filter, currentURL) {
 				break; // exit if empty
 			}
 
-			url += textfield.value === '' ? '' : title + '=' + textfield.value;
+			var inputValue = textfield.value;
+
+			// If inputValue is empty or whitespace, return empty string.
+			url += inputValue === '' || inputValue.trim().length === 0 ? '' : title + '=' + inputValue;
 
 			break;
 
@@ -11113,17 +11124,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
-var _ParseQuerystring = __webpack_require__(/*! ./ParseQuerystring */ "./src/js/frontend/modules/ParseQuerystring.js");
+var _Variables = __webpack_require__(/*! ../global/Variables */ "./src/js/frontend/global/Variables.js");
 
-var _ParseQuerystring2 = _interopRequireDefault(_ParseQuerystring);
+var _Variables2 = _interopRequireDefault(_Variables);
 
 var _getKeyValue = __webpack_require__(/*! ../modules/currentFilters/getKeyValue */ "./src/js/frontend/modules/currentFilters/getKeyValue.js");
 
 var _getKeyValue2 = _interopRequireDefault(_getKeyValue);
 
-var _Variables = __webpack_require__(/*! ../global/Variables */ "./src/js/frontend/global/Variables.js");
+var _ParseQuerystring = __webpack_require__(/*! ./ParseQuerystring */ "./src/js/frontend/modules/ParseQuerystring.js");
 
-var _Variables2 = _interopRequireDefault(_Variables);
+var _ParseQuerystring2 = _interopRequireDefault(_ParseQuerystring);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11135,7 +11146,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  */
 var setCurrentFilters = function setCurrentFilters(url) {
 	var selected_filters_wrap = document.getElementById('alm-selected-filters');
-
 	var almInstances = _Variables2.default.alm_core;
 
 	// Exit if not exist or multiple AL core instances.
@@ -11144,19 +11154,15 @@ var setCurrentFilters = function setCurrentFilters(url) {
 	}
 
 	if (url && url.indexOf('?') !== -1) {
-		// Confirm URL contains a querystring
-		var selected_filters = currentFilters(url);
+		var selected_filters = currentFilters(url); // Confirm URL contains a querystring
 
 		if (selected_filters) {
-			// Set selected filters
-			selected_filters_wrap.innerHTML = selected_filters;
+			selected_filters_wrap.innerHTML = selected_filters; // Set selected filters.
 		} else {
-			// Clear filters
-			selected_filters_wrap.innerHTML = '';
+			selected_filters_wrap.innerHTML = ''; // Clear filters.
 		}
 	} else {
-		// Clear filters
-		selected_filters_wrap.innerHTML = '';
+		selected_filters_wrap.innerHTML = ''; // Default, clear filters.
 	}
 
 	// Append total filters as a data attribute.
@@ -11165,7 +11171,6 @@ var setCurrentFilters = function setCurrentFilters(url) {
 	/**
   * Selected Filters Callback function
   * Dispatched when a filter change event is triggered.
-  *
   */
 	if (typeof window.almFiltersSelected === 'function') {
 		window.almFiltersSelected(selected_filters_wrap);
@@ -11232,9 +11237,9 @@ function buildSelections(obj) {
 					}
 
 					// Strip all remaining HTML tags -> https://stackoverflow.com/a/5002161/921927.
-					_value = _value.replace(/<\/?[^>]+(>|$)/g, '');
+					_value = _value.replace('<', '&lt;').replace('>', '&gt;'); // Escape < and >.
 					items += '<li>';
-					items += '<div onclick="window.removeSelectedFilter(this);" onkeyup="window.removeSelectedFilterEnter(event);" data-key="' + key + '" data-value="' + values[n] + '" tabindex="0" aria-label="' + window.alm_filters_localize.remove_active_filter + '' + values[n] + '">';
+					items += '<div role="button" onclick="window.removeSelectedFilter(this);" onkeyup="window.removeSelectedFilterEnter(event);" data-key="' + key + '" data-value="' + values[n] + '" tabindex="0" aria-label="' + window.alm_filters_localize.remove_active_filter + '' + values[n] + '">';
 					items += _value;
 					items += '</a>';
 					items += '</li>';
@@ -11825,17 +11830,15 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
  */
 var getTerms = function getTerms(filter, data) {
 	var count = 0;
-	var returnVal = "";
-	var value = "";
-	var key = filter.dataset.key;
+	var returnVal = '';
+	var value = '';
 	var fieldtype = filter.dataset.fieldtype;
-	var defaultValue = filter.dataset.defaultValue;
 
 	switch (fieldtype) {
-		case "select_multiple":
-			var mSelect = filter.querySelector("select");
+		case 'select_multiple':
+			var mSelect = filter.querySelector('select');
 			var options = mSelect && mSelect.options;
-			var mSelectVal = "";
+			var mSelectVal = '';
 			var mSelectCount = 0;
 
 			if (!mSelect) {
@@ -11845,8 +11848,8 @@ var getTerms = function getTerms(filter, data) {
 			// Loop all <option/> elements to build URL
 			[].concat(_toConsumableArray(options)).forEach(function (option, e) {
 				if (option.selected) {
-					mSelectVal += mSelectCount > 0 ? "," : "";
-					if (option.value !== "") {
+					mSelectVal += mSelectCount > 0 ? ',' : '';
+					if (option.value !== '') {
 						// Confirm option has a value
 						mSelectVal += option.value;
 						mSelectCount++;
@@ -11855,57 +11858,58 @@ var getTerms = function getTerms(filter, data) {
 			});
 
 			// Replace + with comma
-			value = mSelectVal.replace("+", ",");
-			returnVal += value === "#" ? "" : value;
+			value = mSelectVal.replace('+', ',');
+			returnVal += value === '#' ? '' : value;
 
 			break;
 
-		case "select":
-			var select = filter.querySelector("select");
+		case 'select':
+			var select = filter.querySelector('select');
 			if (!select) {
 				break; // exit if empty
 			}
 
-			value = select.value.replace("+", ","); // Replace + with comma
-			returnVal += value === "#" ? "" : value;
+			value = select.value.replace('+', ','); // Replace + with comma
+			returnVal += value === '#' ? '' : value;
 
 			break;
 
-		case "text":
-		case "range_slider":
-			var text = filter.querySelector("input");
-			if (!text) {
+		case 'text':
+		case 'range_slider':
+			var textfield = filter.querySelector('input');
+			if (!textfield) {
 				break; // exit if empty
 			}
 
-			returnVal += text.value === "" ? "" : text.value;
+			var inputValue = textfield.value;
+			returnVal += inputValue === '' || inputValue.trim().length === 0 ? '' : inputValue; // If inputValue is empty or whitespace, return empty string.
 
 			break;
 
-		case "date_picker":
-			var datepicker = filter.querySelector(".flatpickr-input");
+		case 'date_picker':
+			var datepicker = filter.querySelector('.flatpickr-input');
 			if (!datepicker) {
 				break; // exit if empty
 			}
 
-			returnVal += datepicker.value === "" ? "" : datepicker.value.split(" | ");
+			returnVal += datepicker.value === '' ? '' : datepicker.value.split(' | ');
 
 			break;
 
 		default:
-			var items = filter.querySelectorAll(".alm-filter--link"); // Get all link fields
+			var items = filter.querySelectorAll('.alm-filter--link'); // Get all link fields
 			if (!items.length) {
 				break; // exit if empty
 			}
 
 			[].concat(_toConsumableArray(items)).forEach(function (item, e) {
-				if (item.classList.contains("active") && item.dataset.value !== "") {
+				if (item.classList.contains('active') && item.dataset.value !== '') {
 					// Replace + with comma
-					value = item.dataset.value.replace("+", ",");
+					value = item.dataset.value.replace('+', ',');
 
 					// If items have multiple selections split with comma
 					if (count > 0) {
-						returnVal += ",";
+						returnVal += ',';
 					}
 					returnVal += value;
 					count++;

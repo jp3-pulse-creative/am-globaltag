@@ -204,6 +204,7 @@ if ( ! class_exists( 'ALM_SHORTCODE' ) ) :
 						'day'                          => '',
 						'author'                       => '',
 						'search'                       => '',
+						'engine'                       => '',
 						'custom_args'                  => '',
 						'post_status'                  => '',
 						'order'                        => 'DESC',
@@ -232,10 +233,8 @@ if ( ! class_exists( 'ALM_SHORTCODE' ) ) :
 						'progress_bar_color'           => 'ed7070',
 						'images_loaded'                => 'false',
 						'button_label'                 => AjaxLoadMore::alm_default_button_label(),
-						'button_loading_label'         => '',
 						'button_done_label'            => '',
 						'prev_button_label'            => AjaxLoadMore::alm_default_prev_button_label(),
-						'prev_button_loading_label'    => '',
 						'prev_button_done_label'       => '',
 						'wrapper_classes'              => '',
 						'css_classes'                  => '',
@@ -843,12 +842,14 @@ if ( ! class_exists( 'ALM_SHORTCODE' ) ) :
 				'post__in'                  => $post__in,
 				'post__not_in'              => $post__not_in,
 				'search'                    => $search,
+				'engine'                    => $engine,
 				'custom_args'               => $custom_args,
 				'post_status'               => $post_status,
 				'order'                     => $order,
 				'orderby'                   => $orderby,
 				'exclude'                   => $exclude,
 				'offset'                    => $offset,
+				'original_offset'           => $offset,
 				'posts_per_page'            => $posts_per_page,
 				'lang'                      => $lang,
 				'css_classes'               => $css_classes,
@@ -1065,6 +1066,7 @@ if ( ! class_exists( 'ALM_SHORTCODE' ) ) :
 					$offset = 1;
 					$pause  = 'true';
 				}
+
 				// Build Shortcode.
 				$single_post_return = apply_filters(
 					'alm_single_post_shortcode',
@@ -1137,6 +1139,13 @@ if ( ! class_exists( 'ALM_SHORTCODE' ) ) :
 
 			$ajaxloadmore .= ' data-container-type="' . esc_attr( $container_element ) . '"';
 			$ajaxloadmore .= ' data-loading-style="' . esc_attr( ltrim( $alm_loading_style ) ) . '"';
+
+			// Set pause_override true if loading style is infinite.
+			$loading_styles = explode( ' ', $alm_loading_style );
+			if ( in_array( 'infinite', $loading_styles, true ) ) {
+				$pause_override = 'true';
+				$scroll         = 'true';
+			}
 
 			// Archive.
 			$ajaxloadmore .= $archive ? ' data-archive="true"' : '';
@@ -1211,6 +1220,7 @@ if ( ! class_exists( 'ALM_SHORTCODE' ) ) :
 
 			// Search.
 			$ajaxloadmore .= $search ? ' data-search="' . esc_attr( $search ) . '"' : '';
+			$ajaxloadmore .= $engine ? ' data-engine="' . esc_attr( $engine ) . '"' : '';
 
 			// Custom Args.
 			$ajaxloadmore .= $custom_args ? ' data-custom-args="' . esc_attr( $custom_args ) . '"' : '';
@@ -1247,10 +1257,8 @@ if ( ! class_exists( 'ALM_SHORTCODE' ) ) :
 
 			// Button labels.
 			$ajaxloadmore .= ' data-button-label="' . self::alm_strip_tags( $button_label ) . '"';
-			$ajaxloadmore .= $button_loading_label ? ' data-button-loading-label="' . self::alm_strip_tags( $button_loading_label ) . '"' : '';
 			$ajaxloadmore .= $button_done_label ? ' data-button-done-label="' . self::alm_strip_tags( $button_done_label ) . '"' : '';
 			$ajaxloadmore .= ' data-prev-button-label="' . self::alm_strip_tags( $prev_button_label ) . '"';
-			$ajaxloadmore .= $prev_button_loading_label ? ' data-prev-button-loading-label="' . self::alm_strip_tags( $prev_button_loading_label ) . '"' : '';
 			$ajaxloadmore .= $prev_button_done_label ? ' data-prev-button-done-label="' . self::alm_strip_tags( $prev_button_done_label ) . '"' : '';
 
 			// Destroy After.
@@ -1312,13 +1320,8 @@ if ( ! class_exists( 'ALM_SHORTCODE' ) ) :
 				// Get previous post include, build output from the next post filter.
 				$single_post_output = '<div class="alm-single-post post-' . $single_post_id . '" data-url="' . $single_post_permanlink . '" data-title="' . wp_strip_all_tags( get_the_title( $single_post_id ) ) . '" data-id="' . $single_post_id . '" data-page="0">';
 
-				/**
-				 * Single Post Add-on hook
-				 *
-				 * @return $args;
-				 */
-				// Only render include if offset is zero.
-				$single_post_output .= $offset < 1 ? apply_filters( 'alm_single_post_inc', $repeater, $repeater_type, $theme_repeater, $single_post_id, $post_type ) : '';
+				// Single Post Add-on content hook.
+				$single_post_output .= $offset < 1 ? apply_filters( 'alm_single_post_inc', $repeater, $repeater_type, $theme_repeater ) : ''; // Only render include if offset is zero.
 
 				$single_post_output .= '</div>';
 				$ajaxloadmore       .= $single_post_output; // Append $single_post_output data to $ajaxloadmore.
@@ -1468,34 +1471,24 @@ if ( ! class_exists( 'ALM_SHORTCODE' ) ) :
 		/**
 		 * Render the load more button.
 		 *
-		 * @param  string                                          $paging         Is this for the Paging add-on.
-		 * @param  string                                          $classname      Custom classnames.
-		 * @param  string label           The label for the button.
-		 * @param  string                                          $id             ALM div ID.
-		 * @return string                 The button html and wrapper.
+		 * @param  string $paging    Is this for the Paging add-on.
+		 * @param  string $classname Custom classnames.
+		 * @param  string $label     The label for the button.
+		 * @param  string $id        ALM div ID.
+		 * @return string            The button html and wrapper.
 		 * @since  3.3.2
 		 */
 		public static function alm_render_button( $paging, $classname, $label, $id ) {
 			$classes = has_filter( 'alm_button_wrap_classes' ) ? ' ' . apply_filters( 'alm_button_wrap_classes', '' ) : '';
 			$html    = '<div class="alm-btn-wrap' . $classes . '" style="visibility: hidden;" data-rel="' . esc_attr( $id ) . '">';
-
 			if ( $paging !== 'true' ) {
-				$html .= '<button class="alm-load-more-btn more' . esc_attr( $classname ) . '" rel="next" type="button">' . self::alm_strip_tags( $label ) . '</button>';
+				$html .= '<button class="alm-load-more-btn' . esc_attr( $classname ) . '" rel="next" type="button">';
+				$html .= self::alm_strip_tags( $label );
+				$html .= '</button>';
 			}
-
 			$html .= '</div>';
-			return wp_kses_post( $html );
-		}
 
-		/**
-		 * Strip tags from param.
-		 *
-		 * @param string $str String to sanitize.
-		 * @return string    Stripped string.
-		 */
-		public static function alm_strip_tags( $str ) {
-			$str = str_replace( [ '&lt;', '&gt;', '&#60;', '&#62;' ], '', $str ); // Remove < & > entity tags.
-			return esc_html( strip_tags( $str, '<span><i><b><strong>' ) );
+			return wp_kses_post( $html );
 		}
 
 		/**
@@ -1514,6 +1507,17 @@ if ( ! class_exists( 'ALM_SHORTCODE' ) ) :
 					return wp_kses_post( $html );
 				}
 			}
+		}
+
+		/**
+		 * Strip tags from param.
+		 *
+		 * @param string $str String to sanitize.
+		 * @return string
+		 */
+		public static function alm_strip_tags( $str ) {
+			$str = str_replace( [ '&lt;', '&gt;', '&#60;', '&#62;' ], '', $str ); // Remove < & > entity tags.
+			return esc_html( strip_tags( $str, '<span><i><b><strong>' ) );
 		}
 	}
 
