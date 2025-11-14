@@ -14,134 +14,7 @@
 ?>
 
 <?php get_header(); ?>
-<style>
-	#amtx-section-6a {
-		width: 100%;
-		height: 400px;
-		overflow: hidden;
-		box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.80);
-		position: relative;
-		display: block;
-		background: url("../../images/amtag-logo-sm9.jpg");
-		background-position: center top;
-		background-repeat: no-repeat !important;
-	}
 
-	#amtx-section-6a iframe {
-		width: 100%;
-		height: 400px;
-	}
-
-	#amtx-section-6e {
-		position: relative;
-		display: inline-block;
-		width: 100%;
-		padding: 100px 0px 100px 0px;
-	}
-
-	.wwa-left {
-		background-image: url("<?php echo get_template_directory_uri(); ?>/library/images/reboot/who-we-are/who-we-are-global-leadership-bg.jpg");
-		background-color: rgba(0, 36, 74, .6);
-		background-blend-mode: multiply;
-		background-position: center center;
-		background-size: cover;
-		border: solid 0px #f2f2f2;
-		height: 300px;
-		width: 100%;
-		-webkit-transition: all 0.4s ease;
-		transition: all 0.4s ease;
-		margin: 0px;
-		position: relative;
-		display: inline-block;
-	}
-
-	.wwa-right {
-		background-image: url("<?php echo get_template_directory_uri(); ?>/library/images/reboot/who-we-are/who-we-are-global-team-bg.jpg");
-		background-color: rgba(0, 36, 74, .6);
-		background-blend-mode: multiply;
-		background-position: center center;
-		background-size: cover;
-		border: solid 0px #f2f2f2;
-		height: 300px;
-		width: 100%;
-		-webkit-transition: all 0.4s ease;
-		transition: all 0.4s ease;
-		margin: 0px;
-		position: relative;
-		display: inline-block;
-	}
-
-	.wwa-left:hover,
-	.wwa-right:hover {
-		/* border: solid 10px #f2f2f2;
-		opacity: .9; */
-		transform: scale(95%);
-	}
-
-	.amtx-s6h {
-
-		width: 204px;
-		height: 167px;
-		background: #fff;
-		color: #6892ba;
-		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.20);
-		border-bottom-right-radius: 0px;
-		border-bottom-left-radius: 0px;
-		border-top-right-radius: 0px;
-		border-top-left-radius: 0px;
-		margin: 0;
-		padding: .5rem 0;
-		-webkit-transition: all 0.4s ease;
-		transition: all 0.4s ease;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		align-items: center;
-	}
-
-
-	.amtx-s6h:hover {
-		background: #b9bdbd;
-		color: #002b49;
-		cursor: pointer;
-		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.0);
-		transform: scale(95%);
-	}
-
-	@media (max-width: 1199.9px) {
-
-		.amtx-s6h {
-
-			width: 180px;
-			height: 190px;
-		}
-	}
-
-	@media (max-width: 991.9px) {
-
-		.amtx-s6h {
-
-			width: 204px;
-			height: 167px;
-		}
-	}
-
-	@media (max-width: 767.67px) {
-		#amtx-section-6e {
-			position: relative;
-			display: inline-block;
-			width: 100%;
-			padding: 70px 0px 70px 0px;
-		}
-
-		.amtx-s6h {
-
-			width: 100%;
-			height: 167px;
-
-		}
-	}
-</style>
 <div class="hero-row">
 	<div class="row">
 		<div class="col-sm-12">
@@ -152,20 +25,6 @@
 		</div>
 	</div>
 </div>
-
-
-<?php /* <div id="who-we-are__video" style="display: none;">
-	<div class="container">
-		<div class="row">
-			<div class="videoWrap col-12 px-0">
-				<iframe style="box-shadow: 0px 0px 11px rgb(0 0 0 / 20%);" width="560" height="315" src="https://www.youtube.com/embed/kGTiU6QUzmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-		</div>
-	</div>
-</div> */ ?>
-
-
-
 
 <div class="pepi-row pepi-row__mt">
 	<div class="container">
@@ -181,166 +40,255 @@
 	</div>
 </div>
 
-<div id="amtx-section-6e" class="bg-lighter-grey pepi-row">
+<div id="amtx-section-6e" class="pepi-row" style="background-image:url(<?php echo get_template_directory_uri(); ?>/library/images/reboot/recruitment-campaign/recruitment-campaign-bg.jpg); background-size: 100% auto; background-position: bottom; background-repeat: no-repeat; background-color: #fff">
 	<div class="container">
 		<div class="row">
-			<a href="<?php echo get_site_url(); ?>/global-leadership/" class="col-md-6 pl-md-0 mb-4 mb-md-0">
-				<div class="wwa-left d-flex justify-content-center align-items-end pb-5">
-					<h3 class="text-white font-57-cd font-size-34 line-height-34">Global Leadership</h3>
-				</div>
-			</a>
+			<?php
+			// Custom query for recruitment campaigns
+			$recruitment_campaigns = new WP_Query(array(
+				'post_type' => 'recruitmentcampaigns',
+				'posts_per_page' => -1, // Get all posts
+				'post_status' => 'publish'
+			));
 
-			<a href="<?php echo get_site_url(); ?>/team/" class="col-md-6 pr-md-0">
-				<div class="wwa-right d-flex justify-content-center align-items-end pb-5">
-					<h3 class="text-white font-57-cd font-size-34 line-height-34">Global Team</h3>
+			if ($recruitment_campaigns->have_posts()) :
+				while ($recruitment_campaigns->have_posts()) : $recruitment_campaigns->the_post();
+				$recruitment_campaign_fields = get_field('recruitment_campaign_fields');
+				$excerpt = $recruitment_campaign_fields['excerpt'];
+				$video_embed = $recruitment_campaign_fields['video_embed']; ?>
+				<div class="col-md-6 pl-md-0 mb-4 mb-md-0">
+					<div class="recruitment-campaign-item" style="background-color: #fff; height: 100%; display: flex; flex-direction: column;">
+						<?php if (has_post_thumbnail()) : ?>
+							<div class="campaign-thumbnail mb-3">
+								<?php the_post_thumbnail('medium', array('class' => 'img-fluid w-100')); ?>
+							</div>
+						<?php endif; ?>
+						
+						<div class="campaign-content p-5" style="height: 100%; display: flex; flex-direction: row; flex-wrap: wrap;">
+							<div>
+								<h2 class="section-title mb-3"><?php the_title(); ?></h2>
+								<div class="short-border"></div>
+							</div>
+							<?php if ($excerpt) : ?>
+								<p class="mt-3 mb-4"><?php echo $excerpt; ?></p>
+							<?php endif; ?>
+
+							<!-- click here -->
+							<a href="#" class="cta-btn watch-video-trigger" data-video-id="<?php echo get_the_ID(); ?>" style="align-self: flex-end; margin-top: auto;">
+								<div class="cta-inner d-flex align-items-center">
+									<span class="arrow_carrot-right"></span>
+									<span class="btn-label amblue">Watch Video</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					
+					<!-- fixed screen take over video modal -->
+					<div class="campaign-video-modal" id="video-modal-<?php echo get_the_ID(); ?>" style="display: none;">
+						<div class="modal-overlay">
+							<button class="modal-close" aria-label="Close modal">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<div class="modal-content">
+								<?php if ($video_embed) : ?>
+									<div class="video-container">
+										<?php echo $video_embed; ?>
+									</div>
+								<?php endif; ?>
+							</div>
+						</div>
+					</div>
 				</div>
-			</a>
+			<?php
+				endwhile;
+				wp_reset_postdata();
+			else :
+			?>
+				<div class="col-md-12">
+					<p>No recruitment campaigns found.</p>
+				</div>
+			<?php endif; ?>
 
 		</div>
 	</div>
 	<div id="g-markets"></div>
 </div>
 
-
-<div id="global-markets">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 px-md-0">
-				<h1 class="section-title mt-mn-md-3">Global Markets</h1>
-				<div class="short-border"></div>
-			</div>
-		</div>
-		<style>
-			@media (min-width: 768px) {
-				#global-markets .amtx-s6h {
-					width: 100%;
-					height: auto;
-					aspect-ratio: 204 / 167;
-					max-width: 100%;
-				}
-			}
-
-			@media (min-width: 991px) {
-				#global-markets .amtx-s6h {
-					width: 204px;
-					height: 167px;
-					aspect-ratio: 204/167;
-					max-width: 100%;
-				}
-			}
-		</style>
-		<div class="row justify-content-center justify-content-lg-between ">
-			<div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-				<a href="<?php echo get_site_url(); ?>/global-leadership-asia/">
-
-					<div class="amtx-s6h">
-						<img class="gm-ico-1"
-							src="<?php bloginfo('template_url'); ?>/library/images/reboot/who-we-are/global-resources/gm-ico-1.svg"
-							width="118" />
-						<h3>Asia</h3>
-					</div>
-				</a>
-			</div>
-			<!--/-->
-			<div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-				<a href="<?php echo get_site_url(); ?>/global-leadership-australia/">
-
-					<div class="amtx-s6h">
-						<img class="gm-ico-1 mb-2"
-							src="<?php bloginfo('template_url'); ?>/images/reboot/who-we-are/global-resources/AMTAG_GlobalMarket_Australia_081123.png"
-							width="118" style="width: 100px;
-							height: auto; max-width: 100%;" />
-						<h3>Australia</h3>
-					</div>
-				</a>
-			</div>
-			<!--/-->
-
-			<div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-				<a href="<?php echo get_site_url(); ?>/global-leadership-europe/">
-					<div class="amtx-s6h mx-md-auto">
-						<img class="gm-ico-1"
-							src="<?php bloginfo('template_url'); ?>/library/images/reboot/who-we-are/global-resources/gm-ico-2.svg"
-							width="93" />
-						<h3>Europe & Middle East (EMEA)</h3>
-
-					</div>
-				</a>
-			</div>
-			<!--/-->
-
-			<div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-				<a href="<?php echo get_site_url(); ?>/global-leadership-india/">
-
-					<div class="amtx-s6h ml-md-auto">
-						<img class="gm-ico-1"
-							src="<?php bloginfo('template_url'); ?>/library/images/reboot/who-we-are/global-resources/gm-ico-3.svg"
-							width="118" />
-						<h3>India</h3>
-					</div>
-				</a>
-
-			</div>
-			<!--/-->
-
-			<div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4 mb-sm-0">
-				<a href="<?php echo get_site_url(); ?>/global-leadership-latin-america/">
-
-					<div class="amtx-s6h mx-md-auto">
-						<img class="gm-ico-1"
-							src="<?php bloginfo('template_url'); ?>/library/images/reboot/who-we-are/global-resources/gm-ico-4.svg"
-							width="85" />
-						<h3>Latin America</h3>
-
-					</div>
-				</a>
-			</div>
-			<!--/-->
-
-			<div class="col-12 col-sm-6 col-md-4 col-lg-2">
-				<a href="<?php echo get_site_url(); ?>/global-leadership-us-canada/">
-					<div class="amtx-s6h mx-md-auto">
-						<img class="gm-ico-1"
-							src="<?php bloginfo('template_url'); ?>/library/images/reboot/who-we-are/global-resources/gm-ico-5.svg"
-							width="90" />
-						<h3>U.S. & Canada</h3>
-
-					</div>
-				</a>
-			</div>
-			<!--/-->
-		</div>
-	</div>
-
-</div>
 <div id="amtax-careers" class="pepi-row pepi-row__mt">
 	<div class="container">
-		<div class="row justify-content-between">
-			<div class="col-lg-6 px-md-0 overflow-hidden mb-4 mb-lg-0">
-				<img src="<?php bloginfo('template_url'); ?>/library/images/reboot/who-we-are/who-we-are_careers.jpeg"
-					class="img-fluid w-100 scale-120" />
-			</div>
-			<div class="col-lg-5 px-lg-0 forty-two">
-				<h1 class="section-title mt-mn-lg-3">Careers</h1>
+		<div class="row justify-content-between align-items-center">
+			
+			<div class="col-lg-7 p-5 forty-two content-left">
+				<h2 class="section-title mt-mn-lg-3">Careers</h2>
 				<div class="short-border"></div>
-
-				<p>Our Alvarez & Marsal Global Transaction Advisory Group is continuously expanding across the world to deliver an integrated approach and give exceptional client service to our clients throughout the entire investment lifecycle.</p>
-				<p>
-					Take your Big 4 experience to the next level. If you are looking for an organization — and a culture — that will value, recognize and reward your talent, drive and results, visit our Careers site for opportunities.</p>
-
-				<a href="https://careers.alvarezandmarsal.com/search/category/consulting-transaction-advisory/jobs/in/country/united-states" target="_blank" class="cta-btn mt-2">
-					<div class="cta-inner cta-inner d-flex align-items-center"><span
-							class="arrow_carrot-right"></span><span class="btn-label amblue">Join Our Team</span>
+				<p>Contact us today to learn more about how our team can provide tailored SPA services to help you achieve your transaction objectives.</p>
+				<a href="https://careers.alvarezandmarsal.com/search/category/consulting-transaction-advisory/jobs/in/country/united-states" target="_blank" class="cta-btn mt-4">
+					<div class="cta-inner cta-inner--white d-flex align-items-center"><span
+							class="arrow_carrot-right"></span><span class="btn-label">Join Our Team</span>
 					</div>
 				</a>
+			</div>
 
+			<div class="col-lg-5 px-md-0 overflow-hidden mb-4 mb-lg-0" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/reboot/recruitment-campaign/careers.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;">
+				<img src="<?php bloginfo('template_url'); ?>/library/images/reboot/recruitment-campaign/careers.jpg" alt="Careers at Alvarez & Marsal"
+					class="img-fluid w-100 scale-120" />
 			</div>
 		</div>
 	</div>
 </div>
 
+<style>
+	#amtax-careers .container {
+		background-color: #0084C7;
+	}
 
+	#amtax-careers .content-left h2 {
+		color: #fff;
+	}
 
+	#amtax-careers .content-left .short-border {
+		background: #fff;
+	}
 
+	#amtax-careers .content-left p {
+		color: #fff;
+	}
+
+	/* Video Modal Styles */
+	.campaign-video-modal {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 999999;
+		background: rgba(0, 0, 0, 0.9);
+	}
+
+	.modal-overlay {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		padding: 20px;
+		position: relative;
+	}
+
+	.modal-content {
+		position: relative;
+		width: 70%;
+		max-width: 900px;
+		background: #000;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	.modal-close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		background: rgba(0, 0, 0, 0.7);
+		border: none;
+		color: white;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		cursor: pointer;
+		z-index: 10000;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background-color 0.3s ease, transform 0.2s ease;
+	}
+
+	.modal-close:hover {
+		background: rgba(0, 0, 0, 0.9);
+		transform: scale(1.1);
+	}
+
+	.modal-close svg {
+		width: 24px;
+		height: 24px;
+	}
+
+	.video-container {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 56.25%; /* 16:9 aspect ratio */
+	}
+
+	.video-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	/* Responsive adjustments */
+	@media (max-width: 768px) {
+		.modal-content {
+			width: 85%;
+		}
+		
+		.modal-close {
+			top: 15px;
+			right: 15px;
+			width: 45px;
+			height: 45px;
+		}
+		
+		.modal-close svg {
+			width: 22px;
+			height: 22px;
+		}
+	}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	// Get all watch video triggers
+	const videoTriggers = document.querySelectorAll('.watch-video-trigger');
+	
+	videoTriggers.forEach(function(trigger) {
+		trigger.addEventListener('click', function(e) {
+			e.preventDefault();
+			
+			const videoId = this.getAttribute('data-video-id');
+			const modal = document.getElementById('video-modal-' + videoId);
+			
+			if (modal) {
+				modal.style.display = 'block';
+				document.body.style.overflow = 'hidden'; // Prevent background scrolling
+			}
+		});
+	});
+	
+	// Get all modal close buttons
+	const closeButtons = document.querySelectorAll('.modal-close');
+	
+	closeButtons.forEach(function(button) {
+		button.addEventListener('click', function() {
+			const modal = this.closest('.campaign-video-modal');
+			if (modal) {
+				modal.style.display = 'none';
+				document.body.style.overflow = 'auto'; // Restore scrolling
+				
+				// Stop video playback by reloading iframe
+				const iframe = modal.querySelector('iframe');
+				if (iframe) {
+					const src = iframe.src;
+					iframe.src = '';
+					iframe.src = src;
+				}
+			}
+		});
+	});
+});
+</script>
 
 <?php get_footer(); ?>
