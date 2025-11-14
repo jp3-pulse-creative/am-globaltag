@@ -34,6 +34,8 @@ header("Expires: 0");
             <?php } else { */ ?>
                 <div class="col-12">
                     <p class="text-black">Add your Name, Position, Phone numbers, Email and Office Address.
+                        <br>-- For phone numbers: Please include the country (e.g., US) in the Region section.
+                        <br>-- Add the country code (e.g., +1) as part of each phone number.
                         <br>To avoid inconsistencies, capitalization must be entered correctly.
                         <br>Name and Title should be first letter capitalized.
                         <br>Email should be all lowercase.
@@ -141,6 +143,7 @@ header("Expires: 0");
                                                                     </tr>
                                                                     <tr>
                                                                         <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; color: #000000 !important;">Website: </span>
                                                                             <a id="signature-website-link" href="http://am-globaltag.com" target="_blank" style="text-decoration: underline !important; color: #0084C7 !important;"><span id="signature-website" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 14px; text-decoration: underline !important; color: #0084C7 !important;">am-globaltag.com</span></a>
                                                                         </td>
                                                                     </tr>
@@ -155,8 +158,8 @@ header("Expires: 0");
                                                                     </tr>
 
                                                                     <tr>
-                                                                        <td style="width: 100%; padding: 0; font-family:  Arial, sans-serif; font-size: 11pt; line-height: 14px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="margin: 0; font-family:  Arial, sans-serif; font-size: 11pt; line-height: 14px; "><a style="text-decoration: underline !important; color: #0084C7 !important;" href="https://alvarezandmarsal.com/" target="_blank" rel="noopener"><span style="font-family:  Arial, sans-serif; font-size: 11pt; line-height: 14px; color: #0084C7 !important;">www.alvarezandmarsal.com</span></a></span>
+                                                                        <td style="width: 100%; padding: 0; font-family:  Arial, sans-serif; font-size: 12px; line-height: 14px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="margin: 0; font-family:  Arial, sans-serif; font-size: 12px; line-height: 14px; "><a style="text-decoration: underline !important; color: #0084C7 !important;" href="https://alvarezandmarsal.com/" target="_blank" rel="noopener"><span style="font-family:  Arial, sans-serif; font-size: 12px; line-height: 14px; color: #0084C7 !important;">www.alvarezandmarsal.com</span></a></span>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
