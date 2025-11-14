@@ -16,6 +16,12 @@
 <?php get_header(); ?>
 
 <style>
+
+	#amtx-section-6e {
+		margin-bottom: 0;
+		padding-bottom: 100px;
+		padding-top: 100px;
+	}
 	#amtax-careers .container {
 		background-color: #0084C7;
 	}
@@ -122,6 +128,13 @@
 		.modal-close svg {
 			width: 22px;
 			height: 22px;
+		}
+	}
+
+	@media (max-width: 990px) {
+		#amtx-section-6e {
+			padding-bottom: 70px;
+			padding-top: 70px;
 		}
 	}
 </style>
@@ -235,7 +248,7 @@
 				<h2 class="section-title mt-mn-lg-3">Careers</h2>
 				<div class="short-border"></div>
 				<p>Contact us today to learn more about how our team can provide tailored SPA services to help you achieve your transaction objectives.</p>
-				<a href="https://careers.alvarezandmarsal.com/search/category/consulting-transaction-advisory/jobs/in/country/united-states" target="_blank" class="cta-btn mt-4">
+				<a href="https://am-globaltag.com/join-us/" target="_blank" class="cta-btn mt-4">
 					<div class="cta-inner cta-inner--white d-flex align-items-center"><span
 							class="arrow_carrot-right"></span><span class="btn-label">Join Our Team</span>
 					</div>
