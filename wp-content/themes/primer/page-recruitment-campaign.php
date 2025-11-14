@@ -184,7 +184,7 @@
 							<?php endif; ?>
 
 							<!-- click here -->
-							<a href="#" class="cta-btn watch-video-trigger" data-video-id="<?php echo get_the_ID(); ?>" style="align-self: flex-end; margin-top: auto;">
+							<a href="#" class="cta-btn watch-video-trigger mt-4" data-video-id="<?php echo get_the_ID(); ?>" style="align-self: flex-end; margin-top: auto;">
 								<div class="cta-inner d-flex align-items-center">
 									<span class="arrow_carrot-right"></span>
 									<span class="btn-label amblue">Watch Video</span>
