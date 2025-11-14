@@ -15,6 +15,116 @@
 
 <?php get_header(); ?>
 
+<style>
+	#amtax-careers .container {
+		background-color: #0084C7;
+	}
+
+	#amtax-careers .content-left h2 {
+		color: #fff;
+	}
+
+	#amtax-careers .content-left .short-border {
+		background: #fff;
+	}
+
+	#amtax-careers .content-left p {
+		color: #fff;
+	}
+
+	/* Video Modal Styles */
+	.campaign-video-modal {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 999999;
+		background: rgba(0, 0, 0, 0.9);
+	}
+
+	.modal-overlay {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		padding: 20px;
+		position: relative;
+	}
+
+	.modal-content {
+		position: relative;
+		width: 70%;
+		max-width: 900px;
+		background: #000;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	.modal-close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		background: rgba(0, 0, 0, 0.7);
+		border: none;
+		color: white;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		cursor: pointer;
+		z-index: 10000;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background-color 0.3s ease, transform 0.2s ease;
+	}
+
+	.modal-close:hover {
+		background: rgba(0, 0, 0, 0.9);
+		transform: scale(1.1);
+	}
+
+	.modal-close svg {
+		width: 24px;
+		height: 24px;
+	}
+
+	.video-container {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 56.25%; /* 16:9 aspect ratio */
+	}
+
+	.video-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	/* Responsive adjustments */
+	@media (max-width: 768px) {
+		.modal-content {
+			width: 85%;
+		}
+		
+		.modal-close {
+			top: 15px;
+			right: 15px;
+			width: 45px;
+			height: 45px;
+		}
+		
+		.modal-close svg {
+			width: 22px;
+			height: 22px;
+		}
+	}
+</style>
+
 <div class="hero-row">
 	<div class="row">
 		<div class="col-sm-12">
@@ -131,123 +241,13 @@
 				</a>
 			</div>
 
-			<div class="col-lg-5 px-md-0 overflow-hidden mb-4 mb-lg-0" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/reboot/recruitment-campaign/careers.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;">
+			<div class="col-lg-5 px-md-0" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/reboot/recruitment-campaign/careers.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;">
 				<img src="<?php bloginfo('template_url'); ?>/library/images/reboot/recruitment-campaign/careers.jpg" alt="Careers at Alvarez & Marsal"
-					class="img-fluid w-100 scale-120" />
+					class="img-fluid w-100 scale-120" style="visibility: hidden;" />
 			</div>
 		</div>
 	</div>
 </div>
-
-<style>
-	#amtax-careers .container {
-		background-color: #0084C7;
-	}
-
-	#amtax-careers .content-left h2 {
-		color: #fff;
-	}
-
-	#amtax-careers .content-left .short-border {
-		background: #fff;
-	}
-
-	#amtax-careers .content-left p {
-		color: #fff;
-	}
-
-	/* Video Modal Styles */
-	.campaign-video-modal {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 999999;
-		background: rgba(0, 0, 0, 0.9);
-	}
-
-	.modal-overlay {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-		padding: 20px;
-		position: relative;
-	}
-
-	.modal-content {
-		position: relative;
-		width: 70%;
-		max-width: 900px;
-		background: #000;
-		border-radius: 8px;
-		overflow: hidden;
-	}
-
-	.modal-close {
-		position: absolute;
-		top: 20px;
-		right: 20px;
-		background: rgba(0, 0, 0, 0.7);
-		border: none;
-		color: white;
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
-		cursor: pointer;
-		z-index: 10000;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		transition: background-color 0.3s ease, transform 0.2s ease;
-	}
-
-	.modal-close:hover {
-		background: rgba(0, 0, 0, 0.9);
-		transform: scale(1.1);
-	}
-
-	.modal-close svg {
-		width: 24px;
-		height: 24px;
-	}
-
-	.video-container {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding-bottom: 56.25%; /* 16:9 aspect ratio */
-	}
-
-	.video-container iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-
-	/* Responsive adjustments */
-	@media (max-width: 768px) {
-		.modal-content {
-			width: 85%;
-		}
-		
-		.modal-close {
-			top: 15px;
-			right: 15px;
-			width: 45px;
-			height: 45px;
-		}
-		
-		.modal-close svg {
-			width: 22px;
-			height: 22px;
-		}
-	}
-</style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
