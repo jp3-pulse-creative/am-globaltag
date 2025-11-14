@@ -95,6 +95,7 @@
 		width: 100%;
 		height: 0;
 		padding-bottom: 56.25%; /* 16:9 aspect ratio */
+		padding-top: 0;
 	}
 
 	.video-container iframe {
@@ -264,6 +265,19 @@ document.addEventListener('DOMContentLoaded', function() {
 			if (modal) {
 				modal.style.display = 'block';
 				document.body.style.overflow = 'hidden'; // Prevent background scrolling
+				
+				// Auto-play Vimeo video
+				const iframe = modal.querySelector('iframe');
+				if (iframe && iframe.src.includes('vimeo.com')) {
+					// Add autoplay parameter to Vimeo iframe
+					let src = iframe.src;
+					if (src.includes('?')) {
+						src += '&autoplay=1';
+					} else {
+						src += '?autoplay=1';
+					}
+					iframe.src = src;
+				}
 			}
 		});
 	});
@@ -278,9 +292,18 @@ document.addEventListener('DOMContentLoaded', function() {
 				modal.style.display = 'none';
 				document.body.style.overflow = 'auto'; // Restore scrolling
 				
-				// Stop video playback by reloading iframe
+				// Stop Vimeo video playback
 				const iframe = modal.querySelector('iframe');
-				if (iframe) {
+				if (iframe && iframe.src.includes('vimeo.com')) {
+					// Remove autoplay parameter and reload iframe to stop video
+					let src = iframe.src;
+					src = src.replace(/[?&]autoplay=1/g, '');
+					iframe.src = '';
+					setTimeout(() => {
+						iframe.src = src;
+					}, 100);
+				} else if (iframe) {
+					// Fallback for other video types
 					const src = iframe.src;
 					iframe.src = '';
 					iframe.src = src;
