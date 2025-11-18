@@ -153,11 +153,11 @@
 <div class="pepi-row pepi-row__mt">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3 pl-md-0 mb-md-0">
+			<div class="col-12 col-md-4 col-xl-3 pl-md-0 mb-md-0">
 				<h2 class="section-title">Our Leaders. <br>Our Vision. <br>Our Future.</h2>
 				<div class="short-border"></div>
 			</div>
-			<div class="col-md-9 pr-md-0 pl-md-5">
+			<div class="col-12 col-md-8 col-xl-9 pr-md-0 pl-md-4 pl-xl-5">
 				<p class="mt-2">Welcome to our new series, “Why A&M,” where we delve into the stories and perspectives that make Alvarez & Marsal (A&M) a truly distinctive professional services firm. Through the voices of Managing Directors from our Global Transaction Advisory Group and Corporate Transactions Group, we explore their unique journeys to A&M, the values that shape our culture, and how our entrepreneurial spirit sets us apart. Discover why A&M is more than a workplace—it’s a community committed to client success and personal career growth.</p>
 			</div>
 		</div>
