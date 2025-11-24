@@ -159,7 +159,7 @@ header("Expires: 0");
 
                                                                     <tr>
                                                                         <td style="width: 100%; padding: 0; font-family:  Arial, sans-serif; font-size: 12px; line-height: 14px; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="margin: 0; font-family:  Arial, sans-serif; font-size: 12px; line-height: 14px; "><a style="text-decoration: underline !important; color: #0084C7 !important;" href="https://alvarezandmarsal.com/" target="_blank" rel="noopener"><span style="font-family:  Arial, sans-serif; font-size: 12px; line-height: 14px; color: #0084C7 !important;">www.alvarezandmarsal.com</span></a></span>
+                                                                            <span style="margin: 0; font-family:  Arial, sans-serif; font-size: 12px; line-height: 14px; "><a style="text-decoration: underline !important; color: #0084C7 !important;" href="https://www.alvarezandmarsal.com/" target="_blank" rel="noopener"><span style="font-family:  Arial, sans-serif; font-size: 12px; line-height: 14px; color: #0084C7 !important;">www.alvarezandmarsal.com</span></a></span>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -527,3 +527,205 @@ header("Expires: 0");
     }
 </script>
 <?php get_footer(); ?>
+
+<script>
+    // Minimal, low-risk handler: prevent Enter from triggering GF validation.
+    // Capturing listener so it runs before Gravity Forms' handlers.
+    (function() {
+        try {
+            var formId = <?php echo $form_id; ?>;
+            var gfSelector = 'form#gform_' + formId;
+
+            function handleEnterCapture(e) {
+                if (e.key !== 'Enter') return;
+                var t = e.target;
+                if (!t) return;
+                var tag = (t.tagName || '').toLowerCase();
+                // allow Enter in textareas and contenteditable
+                if (tag === 'textarea') return;
+                if (t.isContentEditable) return;
+                // allow Enter on explicit buttons/submit controls
+                var type = (t.type || '').toLowerCase();
+                if (type === 'submit' || type === 'button') return;
+
+                // Prevent default and stop immediate propagation so GF's validation
+                // handlers (which often run on key events) do not fire.
+                e.preventDefault();
+                e.stopImmediatePropagation();
+
+                // Run preview-only update if available
+                try {
+                    if (typeof updateSignature === 'function') updateSignature(true);
+                } catch (err) {
+                    console.error('updateSignature preview call failed:', err);
+                }
+            }
+
+            // Attach to document with capture so it runs before other listeners.
+            document.addEventListener('keydown', function(e) {
+                // Only act when inside the Gravity Forms form
+                var target = e.target;
+                if (!target) return;
+                if (!target.closest) {
+                    // If closest isn't available (very old browsers), find form manually
+                    var node = target;
+                    var inside = false;
+                    while (node) {
+                        if (node.nodeType === 1 && node.tagName && node.tagName.toLowerCase() === 'form' && node.id === 'gform_' + formId) {
+                            inside = true;
+                            break;
+                        }
+                        node = node.parentNode;
+                    }
+                    if (!inside) return;
+                } else {
+                    if (!target.closest(gfSelector)) return;
+                }
+                handleEnterCapture(e);
+            }, true);
+        } catch (ex) {
+            console.error('Error installing minimal Enter suppression:', ex);
+        }
+    })();
+</script>
+
+<script>
+    /*
+     Explanation: Gravity Forms (and many libraries) sometimes attach handlers
+     to the `keypress` event (not just `keydown`) inside the form wrapper
+     (elements with class `.gform_wrapper` or id `gform_wrapper_{id}`).
+
+     Differences (short):
+     - keydown: fires when a key is depressed; fires for all keys.
+     - keypress: historically fires for printable characters and Enter;
+       some libraries (including older GF code) listen on keypress for
+       Enter to kick off validation or special behavior.
+     - keyup: fires when the key is released.
+
+     Strategy: intercept `keypress` in the capture phase as early as possible
+     and call `stopImmediatePropagation()` + `preventDefault()` for Enter on
+     non-textareas. Also call preview `updateSignature(true)` so the UI updates.
+
+     This is intentionally minimal and safe: it doesn't touch GF internals
+     and only blocks Enter pressed inside a `.gform_wrapper` element.
+    */
+    (function() {
+        try {
+            var wrapperSelector = '.gform_wrapper';
+
+            function onWrapperKeypress(e) {
+                if (e.key !== 'Enter') return;
+                var t = e.target;
+                if (!t) return;
+                var tag = (t.tagName || '').toLowerCase();
+                if (tag === 'textarea') return; // allow Enter in textareas
+                if (t.isContentEditable) return; // allow contenteditable
+                var type = (t.type || '').toLowerCase();
+                if (type === 'submit' || type === 'button') return; // allow explicit submits
+
+                // Stop other handlers (including Gravity Forms') from seeing this Enter
+                e.preventDefault();
+                try {
+                    e.stopImmediatePropagation();
+                } catch (err) {}
+                try {
+                    e.stopPropagation();
+                } catch (err) {}
+
+                // update preview without validation
+                try {
+                    if (typeof updateSignature === 'function') updateSignature(true);
+                } catch (err) {
+                    console.error('updateSignature preview failed:', err);
+                }
+            }
+
+            // Capture phase listener on document to intercept before library handlers
+            document.addEventListener('keypress', function(e) {
+                var tgt = e.target;
+                if (!tgt || !tgt.closest) return;
+                var wrapper = tgt.closest(wrapperSelector);
+                if (wrapper) onWrapperKeypress(e);
+            }, true);
+
+            // Also attach directly to any existing wrappers (extra safety)
+            document.querySelectorAll(wrapperSelector).forEach(function(w) {
+                w.addEventListener('keypress', onWrapperKeypress, true);
+            });
+        } catch (ex) {
+            console.error('Error installing gform_wrapper keypress handler:', ex);
+        }
+    })();
+</script>
+
+<script>
+    // Extra: block Enter on both keydown and keypress for .gform_wrapper and form#gform_{id}
+    (function() {
+        try {
+            var formId = <?php echo $form_id; ?>;
+            var wrapperSelector = '.gform_wrapper';
+            var formSelector = 'form#gform_' + formId;
+
+            function blockEnterInGF(e) {
+                if (e.key !== 'Enter') return;
+                var t = e.target;
+                if (!t) return;
+                var tag = (t.tagName || '').toLowerCase();
+                if (tag === 'textarea') return;
+                if (t.isContentEditable) return;
+                var type = (t.type || '').toLowerCase();
+                if (type === 'submit' || type === 'button') return;
+
+                var inside = false;
+                try {
+                    if (t.closest) {
+                        inside = !!(t.closest(wrapperSelector) || t.closest(formSelector));
+                    } else {
+                        var node = t;
+                        while (node) {
+                            if (node.nodeType === 1) {
+                                if (node.classList && node.classList.contains('gform_wrapper')) {
+                                    inside = true;
+                                    break;
+                                }
+                                if (node.tagName && node.tagName.toLowerCase() === 'form' && node.id === 'gform_' + formId) {
+                                    inside = true;
+                                    break;
+                                }
+                            }
+                            node = node.parentNode;
+                        }
+                    }
+                } catch (ex) {
+                    // fallback: do nothing
+                }
+                if (!inside) return;
+
+                e.preventDefault();
+                try {
+                    e.stopImmediatePropagation();
+                } catch (err) {}
+                try {
+                    e.stopPropagation();
+                } catch (err) {}
+
+                try {
+                    if (typeof updateSignature === 'function') updateSignature(true);
+                } catch (err) {
+                    console.error('updateSignature preview failed:', err);
+                }
+            }
+
+            document.addEventListener('keydown', blockEnterInGF, true);
+            document.addEventListener('keypress', blockEnterInGF, true);
+
+            // Attach directly to any existing wrappers too
+            document.querySelectorAll(wrapperSelector).forEach(function(w) {
+                w.addEventListener('keydown', blockEnterInGF, true);
+                w.addEventListener('keypress', blockEnterInGF, true);
+            });
+        } catch (e) {
+            console.error('Error installing enhanced GF Enter blocker:', e);
+        }
+    })();
+</script>

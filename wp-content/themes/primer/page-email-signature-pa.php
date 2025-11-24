@@ -83,14 +83,14 @@ header("Expires: 0");
                                                             <table border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-collapse: collapse; border-spacing: 0;">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 12px; font-weight: 700; line-height: 14px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
-                                                                            <span style="margin: 0; font-family: Arial, sans-serif; font-size: 12px; font-weight: 700; line-height: 14px; color: #00244A;">Paul Aversano</span>
+                                                                        <td style="width: 100%; padding: 0; font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; line-height: 16px; color: #00244A; border: none !important; border-collapse: collapse; border-spacing: 0;" align="left">
+                                                                            <span style="margin: 0; font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; line-height: 16px; color: #00244A;">Paul Aversano</span>
                                                                         </td>
                                                                     </tr>
 
                                                                     <tr>
-                                                                        <td style="width: 100%;padding: 0 0 16px;font-family:  Arial, sans-serif;font-size: 12px;line-height: 14px;font-weight: 700;color:#00244A;border: none !important;border-collapse: collapse;border-spacing: 0;" align="left">
-                                                                            <span style="margin: 0; font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; font-weight: 700; color:#00244A;">Managing Director and Global Practice Leader<br>Global Transaction Advisory Group &amp; Corporate Transactions Group</span>
+                                                                        <td style="width: 100%;padding: 0 0 16px;font-family:  Arial, sans-serif;font-size: 12px;line-height: 14px;font-weight: 400;color:#00244A;border: none !important;border-collapse: collapse;border-spacing: 0;" align="left">
+                                                                            <span style="margin: 0; font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; font-weight: 400; color:#00244A;">Managing Director and Global Practice Leader<br>Global Transaction Advisory Group &amp; Corporate Transactions Group</span>
                                                                         </td>
                                                                     </tr>
 
@@ -134,7 +134,7 @@ header("Expires: 0");
                                                                     <tr>
                                                                         <td style="width:100%;padding:0 0 16px;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#00244A;border:none !important;border-collapse:collapse;border-spacing:0;" align="left">
                                                                             <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important; display:inline-block; vertical-align:baseline;">Mobile:</span> <a href="tel:+12012736250" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">+1-201-273-6250</a> |
-                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important; display:inline-block; vertical-align:baseline;">Email:</span> <a href="mailto:kate.lowry@alvarezandmarsal.com" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">kate.lowry@alvarezandmarsal.com</a>
+                                                                            <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important; display:inline-block; vertical-align:baseline;">Email:</span> <a href="mailto:klowry@alvarezandmarsal.com" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">klowry@alvarezandmarsal.com</a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -144,7 +144,7 @@ header("Expires: 0");
                                                                     </tr>
                                                                     <td style="width:100%;padding:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#00244A;border:none !important;border-collapse:collapse;border-spacing:0;" align="left">
                                                                         <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important; display:inline-block; vertical-align:baseline;">Mobile:</span> <a href="tel:+19175324174" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">+1-917-532-4174</a> |
-                                                                        <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important; display:inline-block; vertical-align:baseline;">Email:</span> <a href="mailto:lacanas.tucker@alvarezandmarsal.com" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">lacanas.tucker@alvarezandmarsal.com</a>
+                                                                        <span style="margin:0;font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;color:#000000 !important; display:inline-block; vertical-align:baseline;">Email:</span> <a href="mailto:ltucker@alvarezandmarsal.com" style="font-family:Arial, sans-serif;font-size:12px;font-weight:400;line-height:14px;text-decoration:underline !important;color:#0084C7 !important;">ltucker@alvarezandmarsal.com</a>
                                                                     </td>
 
                                                                 </tbody>
