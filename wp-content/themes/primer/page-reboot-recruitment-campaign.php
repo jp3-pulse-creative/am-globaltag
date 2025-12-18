@@ -137,6 +137,11 @@
 			padding-top: 70px;
 		}
 	}
+
+	/* Play button hover effect */
+	.video-cover:hover .play-button {
+		transform: scale(1.1);
+	}
 </style>
 
 <div class="hero-row">
@@ -153,12 +158,21 @@
 <div class="pepi-row pepi-row__mt">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-5 col-xl-3 pl-md-0 mb-md-0">
-				<video class="w-100" src="<?php echo get_template_directory_uri(); ?>/library/images/reboot/recruitment-campaign/paulaversano-holyairball.mp4" controls></video>
+			<div class="col-12 col-md-5 col-xl-3 pl-md-0 mb-4 mb-md-0">
+				<div class="video-wrapper" style="position: relative; cursor: pointer;">
+					<video class="w-100" src="<?php echo get_template_directory_uri(); ?>/library/images/reboot/recruitment-campaign/paulaversano-holyairball.mp4"></video>
+					<div class="video-cover" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('<?php echo get_template_directory_uri(); ?>/library/images/reboot/recruitment-campaign/holyairball-cover.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+						<div class="play-button" style="width: 60px; height: 60px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.3s ease;">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8 5v14l11-7z" fill="#0084C7"/>
+							</svg>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="col-12 col-md-7 col-xl-9 pr-md-0 pl-md-4 pl-xl-5">
 				<h2 class="section-title">Our Leaders. <br>Our Vision. <br>Our Future.</h2>
-				<div class="short-border"></div>
+				<div class="short-border mb-4 mb-md-5"></div>
 				<p class="mt-2">Welcome to our new series, “Why A&M,” where we delve into the stories and perspectives that make Alvarez & Marsal (A&M) a truly distinctive professional services firm. Through the voices of Managing Directors from our Global Transaction Advisory Group and Corporate Transactions Group, we explore their unique journeys to A&M, the values that shape our culture, and how our entrepreneurial spirit sets us apart. Discover why A&M is more than a workplace—it’s a community committed to client success and personal career growth.</p>
 			</div>
 		</div>
@@ -266,6 +280,20 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+	// Video cover click handler
+	const videoCover = document.querySelector('.video-cover');
+	const video = document.querySelector('.video-wrapper video');
+	
+	if (videoCover && video) {
+		videoCover.addEventListener('click', function() {
+			// Hide the cover
+			this.style.display = 'none';
+			// Add controls and autoplay to video
+			video.setAttribute('controls', 'true');
+			video.play();
+		});
+	}
+
 	// Get all watch video triggers
 	const videoTriggers = document.querySelectorAll('.watch-video-trigger');
 	
