@@ -8,6 +8,12 @@
 <!--<![endif]-->
 
 <head>
+    <script>
+        // Remove no-js class as soon as possible
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <?php
     $uri = $_SERVER['REQUEST_URI'];
@@ -126,45 +132,25 @@
         <meta property="og:site_name" content="A&M Capital" />
     -->
 
-    <?php
-    $uri = $_SERVER['REQUEST_URI'];
-
-    $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-
-    $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-
-    if (strpos($url, 'pulsecreative-clients.com') !== false) { ?>
-        <script>
-            window.Userback = window.Userback || {};
-            Userback.access_token = '6800|22166|CwgO141js7MVj1ZBJuipKBsFjEhiKQyEzORUR4autPOHMNRgfs';
-            (function(d) {
-                var s = d.createElement('script');
-                s.async = true;
-                s.src = 'https://static.userback.io/widget/v1.js';
-                (d.head || d.body).appendChild(s);
-            })(document);
-        </script>
-    <?php } ?>
-
-
-
-
-
     <!-- Preloader -->
     <script type="text/javascript">
         //<![CDATA[
         jQuery(window).on('load', function() { // makes sure the whole site is loaded
-            jQuery('#status, .logo-loader').fadeOut(); // will first fade out the loading animation
-            jQuery('#preloader').delay(150).fadeOut(); // will fade out the white DIV that covers the website.
+            // Add fade-out class to trigger CSS transition
+            jQuery('#preloader').addClass('fade-out');
 
+            // Fade the hero overlay at the same time
+            jQuery('#homeSliderBS .carousel-item:first-child').addClass('fade-overlay');
+
+            // After CSS transition completes, hide completely
+            setTimeout(function() {
+                jQuery('#preloader').addClass('hidden');
+            }, 2000); // Match total CSS transition time
 
             jQuery("#homeSliderBS").delay(150).attr('data-ride', "carousel");
             jQuery(".carousel-indicators, .carousel-arrows").delay(150).addClass('go');
-
-
         })
         //]]>
-        //
     </script>
 
     <style>
@@ -172,27 +158,33 @@
             overflow-x: hidden;
         }
 
-        /* Preloader */
+        /* Preloader - always visible by default */
         #preloader {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: #fff;
-            /* change if the mask should have another color then white */
+            background-color: #002b49;
             z-index: 9999999999999;
-            /* makes sure it stays on top */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             width: 100%;
             height: 100%;
+            opacity: 1;
         }
 
-        .no-js {
-            #preloader: display: none;
+        /* Transitions only apply when fading out */
+        #preloader.fade-out {
+            opacity: 0;
+            transition: opacity 1000ms ease-in-out 800ms;
+        }
+
+        #preloader.hidden {
+            display: none;
+            z-index: -1;
+        }
+
+        .no-js #preloader {
+            display: none;
         }
     </style>
 
@@ -201,18 +193,6 @@
 <body itemscope itemtype="//schema.org/WebPage">
 
     <!-- Preloader -->
-    <div id="preloader">
-        <div class="logo-loader text-center" style="display: block!important; margin-bottom: 2rem; width: 300px; height: auto;">
-            <img src="<?php echo get_template_directory_uri(); ?>/library/images/reboot/am-tag-logo-color.svg" width="220" height="68" alt="Alvarez and Marsal - Global TAG" />
-        </div>
-        <div id="status">
-
-
-            <div class="spinner-border text--dark text-center" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-    </div>
 
     <header id="sticky-header" class="header<?php if (is_front_page()) {
                                                 // This is the blog posts index

@@ -583,38 +583,310 @@ class MMB_Installer extends MMB_Core
             $additional_updates['woocommerce/woocommerce.php'] = 1;
         }
 
+        if (array_key_exists('elementor/elementor.php', $plugin_upgrades) && is_plugin_active('elementor/elementor.php') && $this->has_elementor_db_update()) {
+            $additional_updates['elementor/elementor.php'] = 1;
+        }
+
+        if (array_key_exists('elementor-pro/elementor-pro.php', $plugin_upgrades) && is_plugin_active('elementor-pro/elementor-pro.php') && $this->has_elementor_pro_db_update()) {
+            $additional_updates['elementor-pro/elementor-pro.php'] = 1;
+        }
+
         return $additional_updates;
     }
 
+    /**
+     * Check if WooCommerce requires a database update after plugin upgrade.
+     * 
+     * Uses WooCommerce's official API when available, with fallbacks for compatibility.
+     *
+     * @return bool
+     */
     private function has_woocommerce_db_update()
     {
+        // Method 1: Use WooCommerce's official API (WC 3.0+)
+        // This is the most reliable method as it uses WC's internal migration list
+        if (class_exists('WC_Install') && method_exists('WC_Install', 'needs_db_update')) {
+            return \WC_Install::needs_db_update();
+        }
+
+        // Method 2: Fallback - Compare db_version with plugin version
         $current_db_version = get_option('woocommerce_db_version', null);
-        $current_wc_version = get_option('woocommerce_version');
-        if (version_compare($current_wc_version, '3.0.0', '<')) {
+        $current_wc_version = get_option('woocommerce_version', null);
+
+        if (is_null($current_db_version) || is_null($current_wc_version)) {
+            return false;
+        }
+
+        // If db version is lower than plugin version, update is likely needed
+        if (version_compare($current_db_version, $current_wc_version, '<')) {
             return true;
         }
 
+        // Method 3: Legacy fallback - parse WC install file (for edge cases)
         $latestUpdate = $this->get_wc_db_latest_update();
+        if (!is_null($latestUpdate)) {
+            return version_compare($current_db_version, $latestUpdate, '<');
+        }
 
-        return !is_null($current_db_version) && !is_null($latestUpdate) &&
-            version_compare($current_db_version, $latestUpdate, '<');
+        return false;
     }
 
+    /**
+     * Get the latest database update version from WooCommerce's install file.
+     * 
+     * This is a legacy fallback method. Prefer using WC_Install::needs_db_update().
+     *
+     * @return string|null
+     */
     private function get_wc_db_latest_update()
     {
-        $regexp   = "{'(\d+\.)(\d+\.)(\d+)'}"; // version in single quote '1.0.0', '2.1.3', '3.1.22' etc
-        $fileName = WP_PLUGIN_DIR.'/woocommerce/includes/class-wc-install.php';
-
-        if (file_exists($fileName)) {
-            $fileContent = file_get_contents($fileName);
-            preg_match_all($regexp, $fileContent, $matches);
-
-            if (!empty($matches[0])) {
-                $latestUpdate = trim(end($matches[0]), "'");
-                return $latestUpdate;
+        // Try to get from WC_Install class directly (most reliable)
+        if (class_exists('WC_Install')) {
+            try {
+                $reflection = new \ReflectionClass('WC_Install');
+                if ($reflection->hasProperty('db_update_callbacks')) {
+                    $property = $reflection->getProperty('db_update_callbacks');
+                    $property->setAccessible(true);
+                    $callbacks = $property->getValue();
+                    
+                    if (!empty($callbacks) && is_array($callbacks)) {
+                        $versions = array_keys($callbacks);
+                        usort($versions, function($a, $b) {
+                            $comparison = version_compare($a, $b);
+                            return $comparison <=> 0;
+                        });
+                        return end($versions);
+                    }
+                }
+            } catch (\ReflectionException $e) {
+                // Fall through to legacy method if reflection fails
+            } catch (\Exception $e) {
+                // Catch any other unexpected errors and fall through to legacy method
             }
         }
+
+        // Legacy: Parse the install file (kept for backward compatibility)
+        $fileName = WP_PLUGIN_DIR . '/woocommerce/includes/class-wc-install.php';
+
+        if (!file_exists($fileName)) {
+            return null;
+        }
+
+        $fileContent = file_get_contents($fileName);
+        if ($fileContent === false) {
+            return null;
+        }
+
+        // Look for db_update_callbacks array and extract versions
+        // Pattern matches: 'X.X.X' => array( or 'X.X.X' => [
+        $regexp = "/['\"](\d+\.\d+\.\d+)['\"]\\s*=>\\s*(?:array\\s*\\(|\\[)/";
+        
+        if (preg_match_all($regexp, $fileContent, $matches) && !empty($matches[1])) {
+            $versions = $matches[1];
+            usort($versions, function($a, $b) {
+                $comparison = version_compare($a, $b);
+                return $comparison <=> 0;
+            });
+            return end($versions);
+        }
+
         return null;
+    }
+
+    /**
+     * Check if Elementor requires a database update after plugin upgrade.
+     *
+     * Uses Elementor's upgrade manager when available, with fallbacks for compatibility.
+     *
+     * @return bool
+     */
+    private function has_elementor_db_update()
+    {
+        $current_db_version = get_option('elementor_db_version', null);
+
+        if (empty($current_db_version)) {
+            return false;
+        }
+
+        if (class_exists(\Elementor\Plugin::class) && isset(\Elementor\Plugin::$instance) && isset(\Elementor\Plugin::$instance->upgrade)) {
+            $upgrade_manager = \Elementor\Plugin::$instance->upgrade;
+            if (is_object($upgrade_manager)) {
+                if (method_exists($upgrade_manager, 'should_upgrade')) {
+                    return $upgrade_manager->should_upgrade();
+                }
+                if (method_exists($upgrade_manager, 'is_update_required')) {
+                    return $upgrade_manager->is_update_required();
+                }
+            }
+        }
+
+        $latest_update = $this->get_elementor_db_latest_update();
+        if (!is_null($latest_update)) {
+            return version_compare($current_db_version, $latest_update, '<');
+        }
+
+        return false;
+    }
+
+    /**
+     * Check if Elementor Pro requires a database update after plugin upgrade.
+     *
+     * @return bool
+     */
+    private function has_elementor_pro_db_update()
+    {
+        if (class_exists(\ElementorPro\Plugin::class) && isset(\ElementorPro\Plugin::$instance) && isset(\ElementorPro\Plugin::$instance->upgrade)) {
+            $upgrade_manager = \ElementorPro\Plugin::$instance->upgrade;
+            if (is_object($upgrade_manager)) {
+                if (method_exists($upgrade_manager, 'should_upgrade')) {
+                    return $upgrade_manager->should_upgrade();
+                }
+                if (method_exists($upgrade_manager, 'is_update_required')) {
+                    return $upgrade_manager->is_update_required();
+                }
+            }
+        }
+
+        $current_db_version = get_option('elementor_pro_db_version', null);
+        if (empty($current_db_version)) {
+            $current_db_version = get_option('elementor_pro_version', null);
+        }
+
+        if (empty($current_db_version)) {
+            return false;
+        }
+
+        $latest_update = $this->get_elementor_pro_db_latest_update();
+        if (!is_null($latest_update)) {
+            return version_compare($current_db_version, $latest_update, '<');
+        }
+
+        return false;
+    }
+
+    /**
+     * Get the latest database update version from Elementor Pro's upgrade file.
+     *
+     * @return string|null
+     */
+    private function get_elementor_pro_db_latest_update()
+    {
+        $file_name = WP_PLUGIN_DIR . '/elementor-pro/core/upgrade/upgrades.php';
+        if (!$this->is_safe_plugin_file($file_name) || !file_exists($file_name)) {
+            return null;
+        }
+
+        $file_content = $this->read_plugin_file_contents($file_name);
+        if ($file_content === false) {
+            return null;
+        }
+
+        $versions = array();
+
+        if (preg_match_all("/['\"](\d+\.\d+\.\d+)['\"]\\s*=>/", $file_content, $matches) > 0) {
+            $versions = array_merge($versions, $matches[1]);
+        }
+
+        if (preg_match_all('/_v_(\d+)_(\d+)_(\d+)/', $file_content, $matches) > 0) {
+            foreach ($matches[1] as $index => $major) {
+                $versions[] = sprintf('%s.%s.%s', $major, $matches[2][$index], $matches[3][$index]);
+            }
+        }
+
+        if (empty($versions)) {
+            return null;
+        }
+
+        $versions = array_unique($versions);
+        usort($versions, function ($a, $b) {
+            $comparison = version_compare($a, $b);
+            return $comparison <=> 0;
+        });
+
+        return end($versions);
+    }
+
+    /**
+     * Get the latest database update version from Elementor's upgrade file.
+     *
+     * @return string|null
+     */
+    private function get_elementor_db_latest_update()
+    {
+        $file_name = WP_PLUGIN_DIR . '/elementor/core/upgrade/upgrades.php';
+        if (!$this->is_safe_plugin_file($file_name) || !file_exists($file_name)) {
+            return null;
+        }
+
+        $file_content = $this->read_plugin_file_contents($file_name);
+        if ($file_content === false) {
+            return null;
+        }
+
+        $versions = array();
+
+        if (preg_match_all("/['\"](\d+\.\d+\.\d+)['\"]\\s*=>/", $file_content, $matches) > 0) {
+            $versions = array_merge($versions, $matches[1]);
+        }
+
+        if (preg_match_all('/_v_(\d+)_(\d+)_(\d+)/', $file_content, $matches) > 0) {
+            foreach ($matches[1] as $index => $major) {
+                $versions[] = sprintf('%s.%s.%s', $major, $matches[2][$index], $matches[3][$index]);
+            }
+        }
+
+        if (empty($versions)) {
+            return null;
+        }
+
+        $versions = array_unique($versions);
+        usort($versions, function ($a, $b) {
+            $comparison = version_compare($a, $b);
+            return $comparison <=> 0;
+        });
+
+        return end($versions);
+    }
+
+    /**
+     * Validate that the file path is inside the plugin directory.
+     *
+     * @param string $fileName
+     *
+     * @return bool
+     */
+    private function is_safe_plugin_file($fileName)
+    {
+        $realPath = realpath($fileName);
+        $pluginDir = realpath(WP_PLUGIN_DIR);
+
+        if ($realPath === false || $pluginDir === false) {
+            return false;
+        }
+
+        $realPath = rtrim($realPath, DIRECTORY_SEPARATOR);
+        $pluginDir = rtrim($pluginDir, DIRECTORY_SEPARATOR);
+
+        return strpos($realPath, $pluginDir . DIRECTORY_SEPARATOR) === 0;
+    }
+
+    /**
+     * Read file contents using WP filesystem when available.
+     *
+     * @param string $fileName
+     *
+     * @return string|false
+     */
+    private function read_plugin_file_contents($fileName)
+    {
+        if (!isset($GLOBALS['wp_filesystem']) || !is_object($GLOBALS['wp_filesystem'])) {
+            return false;
+        }
+
+        /** @var WP_Filesystem_Base $fs */
+        $fs = $GLOBALS['wp_filesystem'];
+
+        return $fs->get_contents($fileName);
     }
 
     public function upgrade_themes($themes = false)
