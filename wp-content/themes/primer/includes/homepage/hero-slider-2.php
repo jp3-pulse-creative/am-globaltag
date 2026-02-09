@@ -39,6 +39,7 @@
 					<ol id="hero-indicators" class="carousel-indicators position-static justify-content-start">
 						<li data-target="#homeSliderBS" data-slide-to="0" class="active mx-0 w-100" style="flex: auto;"></li>
 						<li data-target="#homeSliderBS" data-slide-to="1" class="mx-0 w-100" style="flex: auto;"></li>
+						<li data-target="#homeSliderBS" data-slide-to="3" class="mx-0 w-100" style="flex: auto;"></li>
 
 					</ol>
 					<div class="carousel-arrows d-none d-md-block"><a class="carousel-control-prev position-static"
@@ -173,7 +174,21 @@ height: 257px;
 							</div>
 						</div>
 					</div>
-
+					<div class="carousel-item d-block gradient-2"
+						style="background-image:url(<?php echo get_template_directory_uri(); ?>/library/images/reboot/home/am-globaltag-1.jpeg);">
+						<span role="img" aria-label="Global Transaction Advisory"></span>
+						<div class="container h-100">
+							<div class="row h-100 align-items-center justify-content-center">
+								<img
+									class="d-none d-lg-block"
+									src="<?php echo get_template_directory_uri(); ?>/library/images/reboot/home/am-globaltag-heading.svg" width="814"
+									border="0">
+								<img class="d-lg-none"
+									src="<?php echo get_template_directory_uri(); ?>/library/images/reboot/home/am-globaltag-heading-mobile.svg"
+									border="0">
+							</div>
+						</div>
+					</div>
 					<div class="carousel-item d-block gradient-2"
 						style="background-image:url(<?php echo get_template_directory_uri(); ?>/library/images/reboot/am-globaltag-home-hero-1-bg.jpeg);">
 						<span role="img" aria-label="Global Transaction Advisory"></span>
