@@ -37,7 +37,7 @@
 
             </div>
         </div>
-        <img class="paul-headshot d-none d-md-block img-fluid" src="<?php echo site_url(); ?>/wp-content/uploads/2025/12/paul_aversano_landscape_0_new@1.5x.png); " alt="<?php echo get_field('first_name', 2933); ?> <?php echo get_field('last_name', 2933); ?>" width="289" height="auto">
+        <img class="paul-headshot d-none d-md-block img-fluid" src="<?php echo site_url(); ?>/wp-content/uploads/2026/04/paul_aversano_landscape_0_new@1.5x.png); " alt="<?php echo get_field('first_name', 2933); ?> <?php echo get_field('last_name', 2933); ?>" width="289" height="auto">
 
     </div>
 
