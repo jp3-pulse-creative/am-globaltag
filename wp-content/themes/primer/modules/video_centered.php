@@ -73,32 +73,33 @@ if ($video_thumb) {
         <div class="container-lg">
             <div class="row">
                 <div class="col-sm-12 px-0">
-                    <div class="hero-image video-bg" style="background-image: none !important;
-    position: relative;
-    height: 0;
-    padding-top: 56.5265%;">
-                        <iframe src="https://player.vimeo.com/video/<?php echo esc_html($video_id); ?>" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true"></iframe>
+                    <div class="hero-image video-bg" style="background-image: none !important; position: relative; height: 0; padding-top: 56.5265%;">
+                        <?php if ($video_id) { ?>
+                            <iframe src="https://player.vimeo.com/video/<?php echo esc_html($video_id); ?>" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true"></iframe>
+                        
 
-                        <script>
-                            $(document).ready(function() {
-                                var iframe = $('#videoCentered_<?php echo esc_js($sectionID); ?> .video-bg iframe');
-                                var player = new Vimeo.Player(iframe);
-                                $("#videoCentered_<?php echo esc_js($sectionID); ?> .video-bg-cover").click(function(e) {
-                                    console.log('hit video-bg-cover');
-                                    $("videoCentered_<?php echo esc_js($sectionID); ?> .vid-hero-ctn").hide();
-                                    $(this).hide();
-                                    player.play();
+                            <script>
+                                $(document).ready(function() {
+                                    var iframe = $('#videoCentered_<?php echo esc_js($sectionID); ?> .video-bg iframe');
+                                    var player = new Vimeo.Player(iframe);
+                                    $("#videoCentered_<?php echo esc_js($sectionID); ?> .video-bg-cover").click(function(e) {
+                                        console.log('hit video-bg-cover');
+                                        $("videoCentered_<?php echo esc_js($sectionID); ?> .vid-hero-ctn").hide();
+                                        $(this).hide();
+                                        player.play();
+                                    });
+                                    $("#videoCentered_<?php echo esc_js($sectionID); ?> .vid-hero-ctn").click(function(e) {
+                                        console.log('hit video-hero-ctn');
+                                        $("#videoCentered_<?php echo esc_js($sectionID); ?> .video-bg-cover").hide();
+                                        $(this).hide();
+                                        player.play();
+                                    });
                                 });
-                                $("#videoCentered_<?php echo esc_js($sectionID); ?> .vid-hero-ctn").click(function(e) {
-                                    console.log('hit video-hero-ctn');
-                                    $("#videoCentered_<?php echo esc_js($sectionID); ?> .video-bg-cover").hide();
-                                    $(this).hide();
-                                    player.play();
-                                });
-                            });
-                        </script>
+                            </script>
+                        <?php } ?>
                         <div class="video-bg-cover" style="background-image:url(<?php echo esc_url($video_thumb_url); ?>)">
                             <span role="img" aria-label="<?php echo esc_attr($video_thumb_alt); ?>"> </span>
+                            <?php if ($video_id) { ?>
                             <div id="playButton_<?php echo esc_attr($sectionID); ?>" class="svg-wrap play-button position-absolute m-5">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="63.291" height="63.291" viewBox="0 0 63.291 63.291">
                                     <g id="play_button_-_placeholder" data-name="play button - placeholder" opacity="0.841">
@@ -106,8 +107,8 @@ if ($video_thumb) {
                                         <path id="Polygon_1" data-name="Polygon 1" d="M14.963,0,29.925,23.818H0Z" transform="translate(46.593 16.682) rotate(90)" fill="#fff" />
                                     </g>
                                 </svg>
-
                             </div>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

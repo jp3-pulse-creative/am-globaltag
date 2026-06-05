@@ -99,11 +99,11 @@ function scrollFunction() {
 
 $(window).scroll(function() {
   if ($(this).scrollTop() > 220){
-      console.log('> 220');
+      // console.log('> 220');
       $('.event-page h1').addClass('hide');
   }
   else{
-      console.log('< 220');
+      // console.log('< 220');
       $('.event-page h1').removeClass('hide');
  }
   });
