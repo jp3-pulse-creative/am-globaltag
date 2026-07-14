@@ -18,10 +18,10 @@
                     if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="col-md-4">
                 <div class="insight-block">
-                    <div class="insight-img"
+                    <a href="<?php echo get_permalink()?>"  class="insight-img d-block"
                         style="background-image:url(<?php echo get_field('home-thumb'); ?>)">
-                    </div>
-                    <h3><?php echo mb_strimwidth(get_the_title(), 0, 50, '...'); ?></h3>
+                    </a>
+                    <h3><a style="font-size: 28px !important; text-transform: uppercase; font-family: 'Helvetica Neue LT W05_57 Cond', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #002549;" href="<?php echo get_permalink()?>"><?php echo mb_strimwidth(get_the_title(), 0, 50, '...'); ?></a></h3>
                     <div class="short-border"></div>
                     <p><?php echo  mb_strimwidth(get_field('home-excerpt'), 0, 120, '...');?></p>
                     <a class="plain-btn" href="<?php echo get_permalink()?>">Read More <i
