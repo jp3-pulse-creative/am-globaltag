@@ -13,7 +13,7 @@
 
                     </p>
                     <p class="mb-4 pb-4 mb-lg-5 pb-lg-5">
-                        The firm’s Global Transaction Advisory Group includes over 1200+ professionals and 40+ offices offices worldwide. Our global team has extensive industry knowledge across multiple sectors and is free from audit-based conflicts of interests.
+                        The firm’s Global Transaction Advisory Group includes over 1300+ professionals and 45+ offices offices worldwide. Our global team has extensive industry knowledge across multiple sectors and is free from audit-based conflicts of interests.
                     </p>
                 </div>
             </div>

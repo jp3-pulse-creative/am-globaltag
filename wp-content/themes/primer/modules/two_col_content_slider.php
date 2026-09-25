@@ -41,6 +41,10 @@ $heading = get_sub_field('section_heading');
 
     }
 
+    .controls-wrap {
+        width: 265px;
+    }
+
 
     @media (min-width: 768px) {
 
@@ -50,10 +54,10 @@ $heading = get_sub_field('section_heading');
 
         }
 
-        .controls-wrap {
+        /* .controls-wrap {
             width: calc(90% - 30px);
 
-        }
+        } */
 
         .controls-wrap .border-indicator-track .border-indicator[data-label-active="financial-due-diligence"] {
             width: 272px;
@@ -71,12 +75,12 @@ $heading = get_sub_field('section_heading');
         }
     }
 
-    @media (min-width: 991px) {
+    /* @media (min-width: 991px) {
         .controls-wrap {
             width: 745px;
 
         }
-    }
+    } */
 </style>
 
 <section id="twoColConentSlider_<?php echo esc_attr($sectionID); ?>" class="two-col-content-slider two-col-content-slider_<?php echo esc_attr($sectionID); ?> pepi-row__pad-y">
