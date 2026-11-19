@@ -79,6 +79,13 @@
       <feComposite operator="in" in2="blur-9"/>
       <feComposite in="SourceGraphic"/>
     </filter>
+    <filter id="JAKARTA" x="750.745" y="294.384" width="59" height="22" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-9"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-9"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
     <filter id="SHANGHAI" x="712.413" y="204.486" width="54" height="22" filterUnits="userSpaceOnUse">
       <feOffset dy="2" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="1.5" result="blur-10"/>
@@ -846,7 +853,12 @@
         <line id="Line_59" data-name="Line 59" x2="29.141" transform="translate(115.473 92.618)" fill="none" stroke="#fff" stroke-width="1"/>
         <line id="Line_60-2" data-name="Line 60" x1="15.937" transform="translate(75.404 154.543)" fill="none" stroke="#fff" stroke-width="1"/>
         <line id="Line_61-4" data-name="Line 61" x2="21.401" transform="translate(103.645 64.936)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="Line_60-2" data-name="Line 60" x1="15.937" transform="translate(94.404 174.543)" fill="none" stroke="#fff" stroke-width="1"/>
         <path id="Path_741" data-name="Path 741" d="M0,0H22.4" transform="translate(91.943 44.84)" fill="none" stroke="#fff" stroke-width="1"/>
+
+        <g transform="matrix(1, 0, 0, 1, -648.98, -128)" filter="url(#Path_281-3)">
+          <path id="Path_281-36" data-name="Path 281" d="M471.373,108.037a4.772,4.772,0,0,1-.457,2.046c-.74,1.564-4.108,6.4-4.108,6.4s-3.288-4.783-4.05-6.282a4.772,4.772,0,0,1-.515-2.166,4.567,4.567,0,1,1,9.13,0Z" transform="translate(270.99 192.07)" fill="#acacac"></path>
+        </g>
         <g transform="matrix(1, 0, 0, 1, -660.98, -150.17)" filter="url(#Path_281-3)">
           <path id="Path_281-36" data-name="Path 281" d="M471.373,108.037a4.772,4.772,0,0,1-.457,2.046c-.74,1.564-4.108,6.4-4.108,6.4s-3.288-4.783-4.05-6.282a4.772,4.772,0,0,1-.515-2.166,4.567,4.567,0,1,1,9.13,0Z" transform="translate(270.99 192.07)" fill="#acacac"/>
         </g>
@@ -862,6 +874,9 @@
         <g transform="matrix(1, 0, 0, 1, -660.98, -150.17)" filter="url(#SINGAPORE)">
           <text id="SINGAPORE-2" data-name="SINGAPORE" transform="translate(755.25 307.88)" fill="#fff" font-size="11" font-family="HelveticaNeue-CondensedBold, Helvetica Neue" font-weight="700" letter-spacing="-0.01em"><tspan x="0" y="0">SINGAPORE</tspan></text>
         </g>
+        <g transform="matrix(1, 0, 0, 1, -640.98, -130.17)" filter="url(#JAKARTA)">
+          <text id="JAKARTA-2" data-name="JAKARTA" transform="translate(755.25 307.88)" fill="#fff" font-size="11" font-family="HelveticaNeue-CondensedBold, Helvetica Neue" font-weight="700" letter-spacing="-0.01em"><tspan x="0" y="0">JAKARTA</tspan></text>
+        </g>
         <g transform="matrix(1, 0, 0, 1, -660.98, -150.17)" filter="url(#SHANGHAI)">
           <text id="SHANGHAI-4" data-name="SHANGHAI" transform="translate(716.91 217.99)" fill="#fff" font-size="11" font-family="HelveticaNeue-CondensedBold, Helvetica Neue" font-weight="700" letter-spacing="-0.01em"><tspan x="0" y="0">SHANGHAI</tspan></text>
         </g>
@@ -869,6 +884,7 @@
           <text id="BEIJING-2" data-name="BEIJING" transform="translate(716.23 199.51)" fill="#fff" font-size="11" font-family="HelveticaNeue-CondensedBold, Helvetica Neue" font-weight="700" letter-spacing="-0.01em"><tspan x="0" y="0">BEIJING</tspan></text>
         </g>
         <text id="HONG_KONG_-_HQ" data-name="HONG KONG - HQ" transform="translate(134.838 96.248)" fill="#002b49" font-size="11" font-family="HelveticaNeue-CondensedBold, Helvetica Neue" font-weight="700" letter-spacing="-0.01em"><tspan x="0" y="0">HONG KONG - HQ</tspan></text>
+        <circle id="Ellipse_3-3" data-name="Ellipse 3" cx="1.624" cy="1.624" r="1.624" transform="translate(87.188 170.201)" fill="#fff"/>
         <circle id="Ellipse_3-3" data-name="Ellipse 3" cx="1.624" cy="1.624" r="1.624" transform="translate(75.188 148.201)" fill="#fff"/>
         <circle id="Ellipse_3-4" data-name="Ellipse 3" cx="1.624" cy="1.624" r="1.624" transform="translate(114.346 86.276)" fill="#fff"/>
         <circle id="Ellipse_3-5" data-name="Ellipse 3" cx="1.624" cy="1.624" r="1.624" transform="translate(114.346 39.832)" fill="#fff"/>
